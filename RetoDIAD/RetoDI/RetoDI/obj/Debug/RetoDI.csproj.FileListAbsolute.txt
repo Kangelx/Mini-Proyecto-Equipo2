@@ -8,3 +8,15 @@ D:\Usuarios\dam2\Desktop\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Generate
 D:\Usuarios\dam2\Desktop\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache
 D:\Usuarios\dam2\Desktop\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.exe
 D:\Usuarios\dam2\Desktop\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe.config
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.pdb
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.AssemblyReference.cache
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Properties.Resources.resources
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.GenerateResource.cache
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.exe
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Botones.resources
+D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.GestiiónInterna.resources

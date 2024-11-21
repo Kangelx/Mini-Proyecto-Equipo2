@@ -30,10 +30,10 @@
         {
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +50,6 @@
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(170, 20);
             this.txtContrasenia.TabIndex = 1;
-
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(236, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-
             // 
             // btnIniciar
             // 
@@ -72,7 +60,7 @@
             this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
-
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // lblContrasenia
             // 
@@ -83,7 +71,6 @@
             this.lblContrasenia.Size = new System.Drawing.Size(87, 20);
             this.lblContrasenia.TabIndex = 5;
             this.lblContrasenia.Text = "Contraseña";
-
             // 
             // lblUsuario
             // 
@@ -94,6 +81,16 @@
             this.lblUsuario.Size = new System.Drawing.Size(63, 20);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RetoDI.Properties.Resources.logoprovisional;
+            this.pictureBox1.Location = new System.Drawing.Point(207, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(343, 261);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
@@ -107,7 +104,6 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

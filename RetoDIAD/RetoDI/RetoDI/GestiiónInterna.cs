@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RetoDI
 {
-    public partial class frmLogin : System.Windows.Forms.Form
+    public partial class GestiiónInterna : Form
     {
-        public frmLogin()
+        public GestiiónInterna()
         {
             InitializeComponent();
             try
@@ -21,13 +21,8 @@ namespace RetoDI
                 this.BackgroundImage = img;
             }
             catch (Exception ex) { }
-            
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-            Botones botones = new Botones();
-            botones.ShowDialog();
-        }
+       
     }
 }
