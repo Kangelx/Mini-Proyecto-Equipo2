@@ -8,7 +8,7 @@ namespace RetoDI.Configuración
 {
     public static class ConfiguracionAPI
     {
-        public static string BaseUrl = "  ";   
+        //public static string BaseUrl = " localhost:4000 ";   
 
     }
 }
