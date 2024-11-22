@@ -39,10 +39,9 @@
             // btnGestion
             // 
             this.btnGestion.Font = new System.Drawing.Font("Noto Sans", 8.25F);
-            this.btnGestion.Location = new System.Drawing.Point(730, 398);
-            this.btnGestion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestion.Location = new System.Drawing.Point(548, 323);
             this.btnGestion.Name = "btnGestion";
-            this.btnGestion.Size = new System.Drawing.Size(149, 69);
+            this.btnGestion.Size = new System.Drawing.Size(112, 56);
             this.btnGestion.TabIndex = 10;
             this.btnGestion.Text = "Gestión Interna";
             this.btnGestion.UseVisualStyleBackColor = true;
@@ -51,10 +50,9 @@
             // btProyectos
             // 
             this.btProyectos.Font = new System.Drawing.Font("Noto Sans", 8.25F);
-            this.btProyectos.Location = new System.Drawing.Point(462, 398);
-            this.btProyectos.Margin = new System.Windows.Forms.Padding(4);
+            this.btProyectos.Location = new System.Drawing.Point(346, 323);
             this.btProyectos.Name = "btProyectos";
-            this.btProyectos.Size = new System.Drawing.Size(149, 69);
+            this.btProyectos.Size = new System.Drawing.Size(112, 56);
             this.btProyectos.TabIndex = 9;
             this.btProyectos.Text = "Proyectos";
             this.btProyectos.UseVisualStyleBackColor = true;
@@ -63,10 +61,9 @@
             // btnAministracion
             // 
             this.btnAministracion.Font = new System.Drawing.Font("Noto Sans", 8.25F);
-            this.btnAministracion.Location = new System.Drawing.Point(179, 398);
-            this.btnAministracion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAministracion.Location = new System.Drawing.Point(134, 323);
             this.btnAministracion.Name = "btnAministracion";
-            this.btnAministracion.Size = new System.Drawing.Size(149, 69);
+            this.btnAministracion.Size = new System.Drawing.Size(112, 56);
             this.btnAministracion.TabIndex = 8;
             this.btnAministracion.Text = "Administración";
             this.btnAministracion.UseVisualStyleBackColor = true;
@@ -74,20 +71,20 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RetoDI.Properties.Resources.logoprovisional;
-            this.pictureBox1.Location = new System.Drawing.Point(333, 122);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo_png;
+            this.pictureBox1.Location = new System.Drawing.Point(250, 99);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(403, 243);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 197);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(23, 30);
+            this.btnSalir.Location = new System.Drawing.Point(17, 24);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(56, 19);
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -95,15 +92,14 @@
             // 
             // Botones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGestion);
             this.Controls.Add(this.btProyectos);
             this.Controls.Add(this.btnAministracion);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Botones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Botones";

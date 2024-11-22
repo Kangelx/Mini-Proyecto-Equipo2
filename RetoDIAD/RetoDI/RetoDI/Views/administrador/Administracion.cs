@@ -13,10 +13,10 @@ namespace RetoDI.Administrador
 {
     public partial class Administracion : Form
     {
-        private readonly ApiService _apiService;
+        // private readonly ApiService _apiService;
         public Administracion()
         {
-            _apiService = new ApiService();
+           // _apiService = new ApiService();
             InitializeComponent();
             try
             {
@@ -51,28 +51,28 @@ namespace RetoDI.Administrador
 
         private async Task CargarDatosAlumnosAsync()
         {
-            try
-            {
-                var alumnos = await _apiService.ObtenerAlumnosAsync();
-                dataGridView1.DataSource = alumnos;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar datos de alumnos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    var alumnos = await _apiService.ObtenerAlumnosAsync();
+            //    dataGridView1.DataSource = alumnos;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error al cargar datos de alumnos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private async Task CargarDatosProfesoresAsync()
         {
-            try
-            {
-                var profesores = await _apiService.ObtenerProfesoresAsync();
-                dataGridView1.DataSource = profesores;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar datos de profesores: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    var profesores = await _apiService.ObtenerProfesoresAsync();
+            //    dataGridView1.DataSource = profesores;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error al cargar datos de profesores: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
