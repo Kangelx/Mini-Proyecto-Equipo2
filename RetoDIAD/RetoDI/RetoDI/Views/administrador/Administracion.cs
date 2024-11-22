@@ -22,9 +22,9 @@ namespace RetoDI.Administrador
             {
                 Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
                 this.BackgroundImage = img;
+                this.BackgroundImageLayout = ImageLayout.Zoom;
             }
             catch (Exception ex) { }
-            dataGridView1.AutoGenerateColumns = true;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

@@ -75,12 +75,6 @@
     <Compile Include="Views\administrador\GestiiónInterna.Designer.cs">
       <DependentUpon>GestiiónInterna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\administrador\Subirarchivoproyecto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\administrador\Subirarchivoproyecto.Designer.cs">
-      <DependentUpon>Subirarchivoproyecto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\alumnos\Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,9 +130,6 @@
     <EmbeddedResource Include="Views\administrador\GestiiónInterna.resx">
       <DependentUpon>GestiiónInterna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\administrador\Subirarchivoproyecto.resx">
-      <DependentUpon>Subirarchivoproyecto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\alumnos\Alumno.resx">
       <DependentUpon>Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,14 +165,15 @@
   <ItemGroup>
     <None Include="Resources\logoprovisional.PNG" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logoprovisional1.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\fondo2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
