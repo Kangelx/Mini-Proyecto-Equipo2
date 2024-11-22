@@ -18,13 +18,17 @@ namespace RetoDI.Administrador
         {
            // _apiService = new ApiService();
             InitializeComponent();
+            pnlDatosAlumnos.Visible = false;
+            pnlDatosProfesores.Visible = false;
+            pnlDatosProyecto.Visible = false;
+            pnlConsultarDatos.Visible = false;
             try
             {
                 Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
                 this.BackgroundImage = img;
             }
             catch (Exception ex) { }
-            dataGridView1.AutoGenerateColumns = true;
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -42,11 +46,19 @@ namespace RetoDI.Administrador
         private async void btnDatosAlumnos_Click(object sender, EventArgs e)
         {
             await CargarDatosAlumnosAsync();
+            pnlDatosAlumnos.Visible = true;
+            pnlDatosProfesores.Visible = false;
+            pnlDatosProyecto.Visible = false;
+            pnlConsultarDatos.Visible = false;
         }
 
         private async void btnDatoProfesores_Click(object sender, EventArgs e)
         {
             await CargarDatosAlumnosAsync();
+            pnlDatosAlumnos.Visible = false;
+            pnlDatosProfesores.Visible = true;
+            pnlDatosProyecto.Visible = false;
+            pnlConsultarDatos.Visible = false;
         }
 
         private async Task CargarDatosAlumnosAsync()
@@ -87,6 +99,22 @@ namespace RetoDI.Administrador
                 login.Show();
                 this.Hide(); 
             }
+        }
+
+        private void btnDatoProyecto_Click(object sender, EventArgs e)
+        {
+            pnlDatosAlumnos.Visible = false;
+            pnlDatosProfesores.Visible = false;
+            pnlDatosProyecto.Visible = true;
+            pnlConsultarDatos.Visible = false;
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            pnlDatosAlumnos.Visible = false;
+            pnlDatosProfesores.Visible = false;
+            pnlDatosProyecto.Visible = false;
+            pnlConsultarDatos.Visible = true;
         }
     }
 }
