@@ -68,6 +68,7 @@
             // lblContrasenia
             // 
             this.lblContrasenia.AutoSize = true;
+            this.lblContrasenia.BackColor = System.Drawing.Color.Transparent;
             this.lblContrasenia.Font = new System.Drawing.Font("Noto Sans Lisu", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasenia.Location = new System.Drawing.Point(203, 350);
             this.lblContrasenia.Name = "lblContrasenia";
@@ -78,6 +79,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Noto Sans Lisu", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(229, 302);
             this.lblUsuario.Name = "lblUsuario";
@@ -88,6 +90,7 @@
             // lkblContrasenia
             // 
             this.lkblContrasenia.AutoSize = true;
+            this.lkblContrasenia.BackColor = System.Drawing.Color.Transparent;
             this.lkblContrasenia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lkblContrasenia.Location = new System.Drawing.Point(310, 390);
             this.lkblContrasenia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -101,7 +104,7 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo_png;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(167, 29);
             this.pictureBox1.Name = "pictureBox1";
