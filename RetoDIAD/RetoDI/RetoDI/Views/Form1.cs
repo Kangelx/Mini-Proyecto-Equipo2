@@ -20,7 +20,6 @@ namespace RetoDI
         public frmLogin()
         {
             InitializeComponent();
-            try{Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo2.jpg");this.BackgroundImage = img;}catch (Exception ex) { }
             this.KeyDown += LoginForm_KeyDown;
             this.KeyPreview = true;
             
