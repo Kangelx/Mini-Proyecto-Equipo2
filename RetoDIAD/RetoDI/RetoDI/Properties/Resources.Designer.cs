@@ -63,9 +63,9 @@ namespace RetoDI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap logoprovisional {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("logoprovisional", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace RetoDI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logoprovisional {
+        internal static System.Drawing.Bitmap logoprovisional1 {
             get {
-                object obj = ResourceManager.GetObject("logoprovisional", resourceCulture);
+                object obj = ResourceManager.GetObject("logoprovisional1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

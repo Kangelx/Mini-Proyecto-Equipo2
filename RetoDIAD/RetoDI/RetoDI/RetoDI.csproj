@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,41 +49,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Botones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Botones.Designer.cs">
-      <DependentUpon>Botones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestiiónInterna.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestiiónInterna.Designer.cs">
-      <DependentUpon>GestiiónInterna.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Configuración\ConfiguracionAPI.cs" />
+    <Compile Include="Entidades\Post.cs" />
+    <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subirarchivoproyecto.cs">
+    <Compile Include="UtilidadesAPI\Consumer.cs" />
+    <Compile Include="UtilidadesAPI\Reply.cs" />
+    <Compile Include="Views\administrador\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subirarchivoproyecto.Designer.cs">
+    <Compile Include="Views\administrador\Administracion.Designer.cs">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\administrador\Botones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\administrador\Botones.Designer.cs">
+      <DependentUpon>Botones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\administrador\GestiiónInterna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\administrador\GestiiónInterna.Designer.cs">
+      <DependentUpon>GestiiónInterna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\administrador\Subirarchivoproyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\administrador\Subirarchivoproyecto.Designer.cs">
       <DependentUpon>Subirarchivoproyecto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Botones.resx">
-      <DependentUpon>Botones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Views\alumnos\Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\alumnos\Alumno.Designer.cs">
+      <DependentUpon>Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestiiónInterna.resx">
-      <DependentUpon>GestiiónInterna.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
+    <Compile Include="Views\profesores\CalificarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\profesores\CalificarAlumnos.Designer.cs">
+      <DependentUpon>CalificarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\profesores\ComentarProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\profesores\ComentarProyectos.Designer.cs">
+      <DependentUpon>ComentarProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\profesores\Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\profesores\Profesor.Designer.cs">
+      <DependentUpon>Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\profesores\SubirArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\profesores\SubirArchivos.Designer.cs">
+      <DependentUpon>SubirArchivos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -91,6 +127,37 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\administrador\Administracion.resx">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\administrador\Botones.resx">
+      <DependentUpon>Botones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\administrador\GestiiónInterna.resx">
+      <DependentUpon>GestiiónInterna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\administrador\Subirarchivoproyecto.resx">
+      <DependentUpon>Subirarchivoproyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\alumnos\Alumno.resx">
+      <DependentUpon>Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\profesores\CalificarAlumnos.resx">
+      <DependentUpon>CalificarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\profesores\ComentarProyectos.resx">
+      <DependentUpon>ComentarProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\profesores\Profesor.resx">
+      <DependentUpon>Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\profesores\SubirArchivos.resx">
+      <DependentUpon>SubirArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,10 +172,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\img\logo.ico" />
+    <None Include="Resources\logoprovisional.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logoprovisional.PNG" />
+    <Folder Include="bin\Debug\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoprovisional1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
