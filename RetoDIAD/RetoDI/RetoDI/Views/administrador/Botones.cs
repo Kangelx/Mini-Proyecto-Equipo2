@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RetoDI.Administrador;
+using WinFormsApp1;
+
 
 
 
@@ -19,7 +21,6 @@ namespace RetoDI
         public Botones()
         {
             InitializeComponent();
-            try{Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");this.BackgroundImage = img;}catch (Exception ex) { }
         }
 
         private void btnAministracion_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace RetoDI
 
         private void btProyectos_Click(object sender, EventArgs e)
         {
-            Subirarchivoproyecto subir = new Subirarchivoproyecto();
+            SubirArchivos subir = new SubirArchivos();
             subir.ShowDialog();
             this.Hide();
         }
@@ -45,7 +46,7 @@ namespace RetoDI
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
+            frmLogin form = new frmLogin();
             form.ShowDialog();
             this.Hide();
         }

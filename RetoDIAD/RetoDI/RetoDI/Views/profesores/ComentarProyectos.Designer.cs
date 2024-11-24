@@ -31,134 +31,135 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ColumnAlumno = new DataGridViewTextBoxColumn();
-            CaolumnPoroyecto = new DataGridViewTextBoxColumn();
-            ColumnCalificación = new DataGridViewTextBoxColumn();
-            ColumnComentario = new DataGridViewTextBoxColumn();
-            lblNombreproyecto = new Label();
-            btnBuscar = new Button();
-            textBox1 = new TextBox();
-            txtxComentario = new TextBox();
-            lblComentario = new Label();
-            btnAñadir = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblNombreproyecto = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtxComentario = new System.Windows.Forms.TextBox();
+            this.lblComentario = new System.Windows.Forms.Label();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.ColumnAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CaolumnPoroyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCalificación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnComentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnAlumno, CaolumnPoroyecto, ColumnCalificación, ColumnComentario });
-            dataGridView1.Location = new Point(12, 34);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(638, 334);
-            dataGridView1.TabIndex = 4;
-            // 
-            // ColumnAlumno
-            // 
-            ColumnAlumno.HeaderText = "Alumno";
-            ColumnAlumno.MinimumWidth = 6;
-            ColumnAlumno.Name = "ColumnAlumno";
-            ColumnAlumno.Width = 200;
-            // 
-            // CaolumnPoroyecto
-            // 
-            CaolumnPoroyecto.HeaderText = "Proyecto";
-            CaolumnPoroyecto.MinimumWidth = 6;
-            CaolumnPoroyecto.Name = "CaolumnPoroyecto";
-            CaolumnPoroyecto.Width = 200;
-            // 
-            // ColumnCalificación
-            // 
-            ColumnCalificación.HeaderText = "Calificación";
-            ColumnCalificación.MinimumWidth = 6;
-            ColumnCalificación.Name = "ColumnCalificación";
-            ColumnCalificación.Width = 125;
-            // 
-            // ColumnComentario
-            // 
-            ColumnComentario.HeaderText = "Comentario";
-            ColumnComentario.MinimumWidth = 6;
-            ColumnComentario.Name = "ColumnComentario";
-            ColumnComentario.Width = 125;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnAlumno,
+            this.CaolumnPoroyecto,
+            this.ColumnCalificación,
+            this.ColumnComentario});
+            this.dataGridView1.Location = new System.Drawing.Point(10, 29);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(506, 289);
+            this.dataGridView1.TabIndex = 4;
             // 
             // lblNombreproyecto
             // 
-            lblNombreproyecto.AutoSize = true;
-            lblNombreproyecto.Location = new Point(666, 34);
-            lblNombreproyecto.Name = "lblNombreproyecto";
-            lblNombreproyecto.Size = new Size(98, 15);
-            lblNombreproyecto.TabIndex = 5;
-            lblNombreproyecto.Text = "NombreProyecto";
+            this.lblNombreproyecto.AutoSize = true;
+            this.lblNombreproyecto.Location = new System.Drawing.Point(541, 28);
+            this.lblNombreproyecto.Name = "lblNombreproyecto";
+            this.lblNombreproyecto.Size = new System.Drawing.Size(86, 13);
+            this.lblNombreproyecto.TabIndex = 5;
+            this.lblNombreproyecto.Text = "NombreProyecto";
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(666, 96);
-            btnBuscar.Margin = new Padding(3, 2, 3, 2);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(82, 22);
-            btnBuscar.TabIndex = 6;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += btnBuscar_Click;
+            this.btnBuscar.Location = new System.Drawing.Point(541, 82);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(70, 19);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(666, 62);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 23);
-            textBox1.TabIndex = 7;
+            this.textBox1.Location = new System.Drawing.Point(541, 53);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(172, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // txtxComentario
             // 
-            txtxComentario.Location = new Point(666, 174);
-            txtxComentario.Margin = new Padding(3, 2, 3, 2);
-            txtxComentario.Multiline = true;
-            txtxComentario.Name = "txtxComentario";
-            txtxComentario.Size = new Size(200, 142);
-            txtxComentario.TabIndex = 8;
+            this.txtxComentario.Location = new System.Drawing.Point(541, 150);
+            this.txtxComentario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtxComentario.Multiline = true;
+            this.txtxComentario.Name = "txtxComentario";
+            this.txtxComentario.Size = new System.Drawing.Size(172, 124);
+            this.txtxComentario.TabIndex = 8;
             // 
             // lblComentario
             // 
-            lblComentario.AutoSize = true;
-            lblComentario.Location = new Point(666, 146);
-            lblComentario.Name = "lblComentario";
-            lblComentario.Size = new Size(70, 15);
-            lblComentario.TabIndex = 9;
-            lblComentario.Text = "Comentario";
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.Location = new System.Drawing.Point(541, 126);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(60, 13);
+            this.lblComentario.TabIndex = 9;
+            this.lblComentario.Text = "Comentario";
             // 
             // btnAñadir
             // 
-            btnAñadir.Location = new Point(666, 328);
-            btnAñadir.Margin = new Padding(3, 2, 3, 2);
-            btnAñadir.Name = "btnAñadir";
-            btnAñadir.Size = new Size(136, 32);
-            btnAñadir.TabIndex = 10;
-            btnAñadir.Text = "Añadir Comentario";
-            btnAñadir.UseVisualStyleBackColor = true;
-            btnAñadir.Click += btnAñadir_Click;
+            this.btnAñadir.Location = new System.Drawing.Point(541, 283);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(117, 28);
+            this.btnAñadir.TabIndex = 10;
+            this.btnAñadir.Text = "Añadir Comentario";
+            this.btnAñadir.UseVisualStyleBackColor = true;
+            // 
+            // ColumnAlumno
+            // 
+            this.ColumnAlumno.HeaderText = "Alumno";
+            this.ColumnAlumno.MinimumWidth = 6;
+            this.ColumnAlumno.Name = "ColumnAlumno";
+            // 
+            // CaolumnPoroyecto
+            // 
+            this.CaolumnPoroyecto.HeaderText = "Proyecto";
+            this.CaolumnPoroyecto.MinimumWidth = 6;
+            this.CaolumnPoroyecto.Name = "CaolumnPoroyecto";
+            // 
+            // ColumnCalificación
+            // 
+            this.ColumnCalificación.HeaderText = "Calificación";
+            this.ColumnCalificación.MinimumWidth = 6;
+            this.ColumnCalificación.Name = "ColumnCalificación";
+            this.ColumnCalificación.Width = 125;
+            // 
+            // ColumnComentario
+            // 
+            this.ColumnComentario.HeaderText = "Comentario";
+            this.ColumnComentario.MinimumWidth = 6;
+            this.ColumnComentario.Name = "ColumnComentario";
+            this.ColumnComentario.Width = 125;
             // 
             // ComentarProyectos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(902, 394);
-            Controls.Add(btnAñadir);
-            Controls.Add(lblComentario);
-            Controls.Add(txtxComentario);
-            Controls.Add(textBox1);
-            Controls.Add(btnBuscar);
-            Controls.Add(lblNombreproyecto);
-            Controls.Add(dataGridView1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "ComentarProyectos";
-            Text = "ComentarProyectos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(733, 341);
+            this.Controls.Add(this.btnAñadir);
+            this.Controls.Add(this.lblComentario);
+            this.Controls.Add(this.txtxComentario);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.lblNombreproyecto);
+            this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ComentarProyectos";
+            this.Text = "ComentarProyectos";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -166,13 +167,13 @@ namespace WinFormsApp1
         private DataGridView dataGridView1;
         private Label lblNombreproyecto;
         private Button btnBuscar;
-        private DataGridViewTextBoxColumn ColumnAlumno;
-        private DataGridViewTextBoxColumn CaolumnPoroyecto;
-        private DataGridViewTextBoxColumn ColumnCalificación;
-        private DataGridViewTextBoxColumn ColumnComentario;
         private TextBox textBox1;
         private TextBox txtxComentario;
         private Label lblComentario;
         private Button btnAñadir;
+        private DataGridViewTextBoxColumn ColumnAlumno;
+        private DataGridViewTextBoxColumn CaolumnPoroyecto;
+        private DataGridViewTextBoxColumn ColumnCalificación;
+        private DataGridViewTextBoxColumn ColumnComentario;
     }
 }

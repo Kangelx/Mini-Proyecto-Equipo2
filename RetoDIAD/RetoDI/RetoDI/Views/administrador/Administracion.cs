@@ -26,9 +26,13 @@ namespace RetoDI.Administrador
             {
                 Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
                 this.BackgroundImage = img;
+                this.BackgroundImageLayout = ImageLayout.Zoom;
             }
-            catch (Exception ex) { }
+            catch (Exception ex) 
+            {
             
+            }     
+
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

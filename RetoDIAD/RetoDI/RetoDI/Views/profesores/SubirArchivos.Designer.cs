@@ -31,111 +31,113 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            lblSeleccionearchivo = new Label();
-            label1 = new Label();
-            btnBuscar = new Button();
-            btnSubir = new Button();
-            lblAlumno = new Label();
-            dataGridView1 = new DataGridView();
-            ColumnNombre = new DataGridViewTextBoxColumn();
-            ColumnApellido = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.lblSeleccionearchivo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnSubir = new System.Windows.Forms.Button();
+            this.lblAlumno = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // lblSeleccionearchivo
             // 
-            lblSeleccionearchivo.AutoSize = true;
-            lblSeleccionearchivo.Location = new Point(10, 28);
-            lblSeleccionearchivo.Name = "lblSeleccionearchivo";
-            lblSeleccionearchivo.Size = new Size(175, 15);
-            lblSeleccionearchivo.TabIndex = 0;
-            lblSeleccionearchivo.Text = "Seleccione el Archivo para Subir";
+            this.lblSeleccionearchivo.AutoSize = true;
+            this.lblSeleccionearchivo.Location = new System.Drawing.Point(9, 24);
+            this.lblSeleccionearchivo.Name = "lblSeleccionearchivo";
+            this.lblSeleccionearchivo.Size = new System.Drawing.Size(161, 13);
+            this.lblSeleccionearchivo.TabIndex = 0;
+            this.lblSeleccionearchivo.Text = "Seleccione el Archivo para Subir";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ControlLightLight;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Location = new Point(10, 56);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 0, 175, 0);
-            label1.Size = new Size(215, 17);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(9, 49);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 150, 0);
+            this.label1.Size = new System.Drawing.Size(187, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(246, 52);
-            btnBuscar.Margin = new Padding(3, 2, 3, 2);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(82, 22);
-            btnBuscar.TabIndex = 2;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(211, 45);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(70, 19);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnSubir
             // 
-            btnSubir.Location = new Point(266, 348);
-            btnSubir.Margin = new Padding(3, 2, 3, 2);
-            btnSubir.Name = "btnSubir";
-            btnSubir.Size = new Size(134, 41);
-            btnSubir.TabIndex = 3;
-            btnSubir.Text = "Subir Archivo";
-            btnSubir.UseVisualStyleBackColor = true;
-            btnSubir.Click += btnSubir_Click;
+            this.btnSubir.Location = new System.Drawing.Point(346, 300);
+            this.btnSubir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubir.Name = "btnSubir";
+            this.btnSubir.Size = new System.Drawing.Size(115, 36);
+            this.btnSubir.TabIndex = 3;
+            this.btnSubir.Text = "Subir Archivo";
+            this.btnSubir.UseVisualStyleBackColor = true;
             // 
             // lblAlumno
             // 
-            lblAlumno.AutoSize = true;
-            lblAlumno.Location = new Point(10, 96);
-            lblAlumno.Name = "lblAlumno";
-            lblAlumno.Size = new Size(247, 15);
-            lblAlumno.TabIndex = 4;
-            lblAlumno.Text = "Seleccione un Alumno para asignar el archivo";
+            this.lblAlumno.AutoSize = true;
+            this.lblAlumno.Location = new System.Drawing.Point(9, 83);
+            this.lblAlumno.Name = "lblAlumno";
+            this.lblAlumno.Size = new System.Drawing.Size(223, 13);
+            this.lblAlumno.TabIndex = 4;
+            this.lblAlumno.Text = "Seleccione un Alumno para asignar el archivo";
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNombre, ColumnApellido });
-            dataGridView1.Location = new Point(10, 121);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(401, 185);
-            dataGridView1.TabIndex = 5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNombre,
+            this.ColumnApellido});
+            this.dataGridView1.Location = new System.Drawing.Point(9, 105);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(452, 160);
+            this.dataGridView1.TabIndex = 5;
             // 
             // ColumnNombre
             // 
-            ColumnNombre.HeaderText = "Nombre";
-            ColumnNombre.MinimumWidth = 6;
-            ColumnNombre.Name = "ColumnNombre";
-            ColumnNombre.Width = 200;
+            this.ColumnNombre.HeaderText = "Nombre";
+            this.ColumnNombre.MinimumWidth = 6;
+            this.ColumnNombre.Name = "ColumnNombre";
+            this.ColumnNombre.Width = 200;
             // 
             // ColumnApellido
             // 
-            ColumnApellido.HeaderText = "Apellidos";
-            ColumnApellido.MinimumWidth = 6;
-            ColumnApellido.Name = "ColumnApellido";
-            ColumnApellido.Width = 200;
+            this.ColumnApellido.HeaderText = "Apellidos";
+            this.ColumnApellido.MinimumWidth = 6;
+            this.ColumnApellido.Name = "ColumnApellido";
+            this.ColumnApellido.Width = 200;
             // 
             // SubirArchivos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(481, 438);
-            Controls.Add(dataGridView1);
-            Controls.Add(lblAlumno);
-            Controls.Add(btnSubir);
-            Controls.Add(btnBuscar);
-            Controls.Add(label1);
-            Controls.Add(lblSeleccionearchivo);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "SubirArchivos";
-            RightToLeft = RightToLeft.No;
-            Text = "SubirArchivos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(489, 370);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblAlumno);
+            this.Controls.Add(this.btnSubir);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSeleccionearchivo);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "SubirArchivos";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "SubirArchivos";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -72,9 +72,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo_png;
-            this.pictureBox1.Location = new System.Drawing.Point(250, 99);
+            this.pictureBox1.Location = new System.Drawing.Point(249, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 197);
+            this.pictureBox1.Size = new System.Drawing.Size(316, 203);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -82,7 +82,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(17, 24);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(56, 19);
             this.btnSalir.TabIndex = 11;
@@ -94,6 +94,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::RetoDI.Properties.Resources.fondo2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGestion);
