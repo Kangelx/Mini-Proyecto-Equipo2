@@ -120,5 +120,35 @@ namespace RetoDI.Administrador
             pnlDatosProyecto.Visible = false;
             pnlConsultarDatos.Visible = true;
         }
+
+        private void btnAceptarAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptarProfesor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarProfesor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptarProyecto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarProyecto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
