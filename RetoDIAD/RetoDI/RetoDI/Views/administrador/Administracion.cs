@@ -18,6 +18,12 @@ namespace RetoDI.Administrador
         {
            // _apiService = new ApiService();
             InitializeComponent();
+            //nos aseguramos de que todo este en dock fill
+            pnlConsultarDatos.Dock = DockStyle.Fill;
+            pnlDatosAlumnos.Dock = DockStyle.Fill;
+            pnlDatosProfesores.Dock = DockStyle.Fill;
+            pnlDatosProyecto.Dock = DockStyle.Fill;
+            //nos aseguramos de que todo este invisible
             pnlDatosAlumnos.Visible = false;
             pnlDatosProfesores.Visible = false;
             pnlDatosProyecto.Visible = false;
