@@ -12,41 +12,43 @@ namespace WinFormsApp1
     {
         //Declaramos el controlador, un objeto que controla la lógica
         //para obtener los personajes de la API
-        private ControlAlumnos ControlAlumnos;
+        private ControlRealizan ControlRealizan;
         //Inicializamos el modelo, es un objeto que almacena los datos
         //deserializados de la API
-        private Alumnos alumnos;
+        private Realizadas realizan;
 
         public ComentarProyectos()
         {
             InitializeComponent();
-            ControlAlumnos = new ControlAlumnos();
-            alumnos = new Alumnos();
+            ControlRealizan = new ControlRealizan();
+            realizan = new Realizadas();
         }
 
         //Método asíncrono para obtener los personajes de la API
-        private async void GetAlumnos()
+        private async void GetRealizan()
         {
             //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
-            alumnos = await ControlAlumnos.GetAllAlumnos();
+            realizan = await ControlRealizan.GetAllRealizas();
 
             //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
 
-            if (alumnos != null)
+            if (realizan != null)
             {
                 //Recorre la lista de resultados (alumnos) obtenidos desde la API
-                foreach (var alumno in alumnos?.results)// ? e ! para permitir nulos y evitar errores
+                foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
                 {
                     // Crear un nuevo item 
-                    //ListViewItem item = new ListViewItem(alumno.Alumno); // Primera columna
+                    ListViewItem item = new ListViewItem(realiza.alumno); // Primera columna
 
                     // Agregar los subítems (equivalentes a las celdas de las otras columnas)
 
-                   // item.SubItems.Add(alumno.Proyecto); // Segunda columna
-                    //item.SubItems.Add(alumno.Calificacion);  // Tercera columna
+                    item.SubItems.Add(realiza.proyecto); // Segunda columna
+                    item.SubItems.Add(realiza.calificacion); // tercera columna
+                    item.SubItems.Add(realiza.comentario); // cuarta columna
+
 
                     // Agregar el item al ListView
-                    //lvAlumnos.Items.Add(item);
+                    lblcomentar.Items.Add(item);
                 }
             }
 
@@ -59,7 +61,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GetAlumnos();
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -75,14 +77,14 @@ namespace WinFormsApp1
             bool encontrado = false;
 
             // Recorrer los elementos del ListView de proyectos
-            foreach (ListViewItem item in listViewProyectos.Items)
+            foreach (ListViewItem item in lblcomentar.Items)
             {
                 // Si el nombre del proyecto coincide con el texto de búsqueda
                 if (item.Text.ToLower().Contains(nombreProyecto.ToLower()))  // Búsqueda insensible a mayúsculas/minúsculas
                 {
                     // Seleccionar el item correspondiente en el ListView
                     item.Selected = true;
-                    listViewProyectos.EnsureVisible(item.Index); // Asegurar que el proyecto sea visible
+                    lblcomentar.EnsureVisible(item.Index); // Asegurar que el proyecto sea visible
                     encontrado = true;
                     break;
                 }
@@ -97,7 +99,7 @@ namespace WinFormsApp1
         private async Task btnAñadir_ClickAsync(object sender, EventArgs e)
         {
             // Verificar si un proyecto ha sido seleccionado
-            if (listViewProyectos.SelectedItems.Count == 0)
+            if (lblcomentar.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Por favor, seleccione un proyecto.");
                 return;

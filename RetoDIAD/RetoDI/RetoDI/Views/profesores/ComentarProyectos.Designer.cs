@@ -37,7 +37,7 @@ namespace WinFormsApp1
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.lblComentario = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.Button();
-            this.listViewProyectos = new System.Windows.Forms.ListView();
+            this.lblcomentar = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -99,21 +99,21 @@ namespace WinFormsApp1
             this.btnAñadir.Text = "Añadir Comentario";
             this.btnAñadir.UseVisualStyleBackColor = true;
             // 
-            // listViewProyectos
+            // lblcomentar
             // 
-            this.listViewProyectos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lblcomentar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listViewProyectos.HideSelection = false;
-            this.listViewProyectos.Location = new System.Drawing.Point(9, 22);
-            this.listViewProyectos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listViewProyectos.Name = "listViewProyectos";
-            this.listViewProyectos.Size = new System.Drawing.Size(513, 151);
-            this.listViewProyectos.TabIndex = 11;
-            this.listViewProyectos.UseCompatibleStateImageBehavior = false;
-            this.listViewProyectos.View = System.Windows.Forms.View.Details;
+            this.lblcomentar.HideSelection = false;
+            this.lblcomentar.Location = new System.Drawing.Point(9, 22);
+            this.lblcomentar.Margin = new System.Windows.Forms.Padding(2);
+            this.lblcomentar.Name = "lblcomentar";
+            this.lblcomentar.Size = new System.Drawing.Size(513, 151);
+            this.lblcomentar.TabIndex = 11;
+            this.lblcomentar.UseCompatibleStateImageBehavior = false;
+            this.lblcomentar.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -140,7 +140,7 @@ namespace WinFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 387);
-            this.Controls.Add(this.listViewProyectos);
+            this.Controls.Add(this.lblcomentar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.lblComentario);
             this.Controls.Add(this.txtComentario);
@@ -162,7 +162,7 @@ namespace WinFormsApp1
         private TextBox txtComentario;
         private Label lblComentario;
         private Button btnAñadir;
-        private ListView listViewProyectos;
+        private ListView lblcomentar;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;

@@ -11,46 +11,47 @@ namespace WinFormsApp1
     {
         //Declaramos el controlador, un objeto que controla la lógica
         //para obtener los personajes de la API
-        private ControlAlumnos ControlAlumnos;
+        private ControlRealizan ControlRealizan;
         //Inicializamos el modelo, es un objeto que almacena los datos
         //deserializados de la API
-        private Alumnos alumnos;
+        private Realizadas realizan;
 
         public CalificarAlumnos()
         {
-                InitializeComponent();
-                ControlAlumnos= new ControlAlumnos();
-                alumnos = new Alumnos();           
+            InitializeComponent();
+            ControlRealizan = new ControlRealizan();
+            realizan = new Realizadas();
         }
 
         //Método asíncrono para obtener los personajes de la API
-        private async void GetAlumnos()
+        private async void GetRealizan()
         {
             //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
-            alumnos = await ControlAlumnos.GetAllAlumnos();
+            realizan = await ControlRealizan.GetAllRealizas();
 
             //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
 
-            if (alumnos != null)
+            if (realizan != null)
             {
                 //Recorre la lista de resultados (alumnos) obtenidos desde la API
-                //foreach (Alumno alumno in alumnos?.results)// ? e ! para permitir nulos y evitar errores
+                foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
                 {
                     // Crear un nuevo item 
-                    //ListViewItem item = new ListViewItem(alumno.Nombre); // Primera columna
+                    ListViewItem item = new ListViewItem(realiza.alumno); // Primera columna
 
                     // Agregar los subítems (equivalentes a las celdas de las otras columnas)
-                   
-                    //item.SubItems.Add(alumno.Proyecto); // Segunda columna
-                    //item.SubItems.Add(alumno.Calificacion);  // Tercera columna
+
+                    item.SubItems.Add(realiza.proyecto); // Segunda columna
+                    item.SubItems.Add(realiza.comentario); // tercera columna
+
 
                     // Agregar el item al ListView
-                   // lvAlumnos.Items.Add(item);
+                    lvAlumnos.Items.Add(item);
                 }
             }
 
             else
-            {                
+            {
                 MessageBox.Show("No se pudo obtener la petición", "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -58,7 +59,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GetAlumnos();
+           
         }
     
 

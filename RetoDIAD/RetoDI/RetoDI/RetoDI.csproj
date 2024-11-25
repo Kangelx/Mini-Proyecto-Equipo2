@@ -52,13 +52,15 @@
     <Compile Include="Controles\ControlAlumnos.cs" />
     <Compile Include="Controles\ControlProfesores.cs" />
     <Compile Include="Controles\ControlProyectos.cs" />
-    <Compile Include="Entidades\Post.cs" />
+    <Compile Include="Controles\ControlRealizan.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Alumnos.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Profesores.cs" />
     <Compile Include="Models\Proyecto.cs" />
     <Compile Include="Models\Proyectos.cs" />
+    <Compile Include="Models\Realizada.cs" />
+    <Compile Include="Models\Realizadas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\administrador\Administracion.cs">
