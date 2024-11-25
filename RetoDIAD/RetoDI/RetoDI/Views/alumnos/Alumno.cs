@@ -16,5 +16,29 @@ namespace RetoDI.Alumno
         {
             InitializeComponent();
         }
+
+        private void btn_Cerrarsesion_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                         "¿Está seguro de que desea salir de la aplicación?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                         "Se va a cerrar sesion, ¿Está seguro de que desea salir de la aplicación?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }
