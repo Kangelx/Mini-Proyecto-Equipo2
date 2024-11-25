@@ -48,7 +48,7 @@ public class AlumnoController {
     }
 
     @GetMapping("/{dni}")
-    public ResponseEntity<?> getAlumnoByDni(@RequestParam("dni") String dni) {
+    public ResponseEntity<?> getAlumnoByDni(@PathVariable("dni") String dni) {
         Alumno alumno = alumnoRepository.findByDni(dni);
         if(alumno == null){
             return ResponseEntity.notFound().build();

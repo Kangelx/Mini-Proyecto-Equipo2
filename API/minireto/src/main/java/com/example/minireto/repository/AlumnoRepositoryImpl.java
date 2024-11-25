@@ -16,6 +16,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
+
 @Repository
 public class AlumnoRepositoryImpl implements AlumnoRepository {
 
@@ -24,7 +26,10 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
 
     public AlumnoRepositoryImpl(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
+
     }
+
+
 
 
     @Override
@@ -52,6 +57,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
 
     @Override
     public int save(Alumno alumno) {
+        alumno.setIdAlumno(UUID.randomUUID().toString());
         String sql = "INSERT INTO alumnos (idalumno,nombre, apellidos, dni, email, password_encr, telefono, genero, fechaNac, activo, ciclo_actual) VALUES (?,?, ?, ?,?,md5(?),?,?,?,?,?)";
         return jdbcTemplate.update(sql, alumno.getIdAlumno(),alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),alumno.getPassword(), alumno.getTelefono(), alumno.getGenero(),
                 alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo());
