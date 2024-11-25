@@ -49,14 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuración\ConfiguracionAPI.cs" />
     <Compile Include="Entidades\Post.cs" />
     <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\Alumnos.cs" />
     <Compile Include="Models\Profesor.cs" />
+    <Compile Include="Models\Profesores.cs" />
+    <Compile Include="Models\Proyecto.cs" />
+    <Compile Include="Models\Proyectos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UtilidadesAPI\Consumer.cs" />
-    <Compile Include="UtilidadesAPI\Reply.cs" />
     <Compile Include="Views\administrador\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +100,11 @@
     <Compile Include="Views\profesores\ComentarProyectos.Designer.cs">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\profesores\Profesor.cs">
+    <Compile Include="Views\profesores\Proyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\profesores\Profesor.Designer.cs">
-      <DependentUpon>Profesor.cs</DependentUpon>
+    <Compile Include="Views\profesores\Proyectos.Designer.cs">
+      <DependentUpon>Proyectos.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\profesores\SubirArchivos.cs">
       <SubType>Form</SubType>
@@ -142,8 +143,8 @@
     <EmbeddedResource Include="Views\profesores\ComentarProyectos.resx">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\profesores\Profesor.resx">
-      <DependentUpon>Profesor.cs</DependentUpon>
+    <EmbeddedResource Include="Views\profesores\Proyectos.resx">
+      <DependentUpon>Proyectos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\profesores\SubirArchivos.resx">
       <DependentUpon>SubirArchivos.cs</DependentUpon>
@@ -165,7 +166,9 @@
   <ItemGroup>
     <None Include="Resources\logoprovisional.PNG" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controles\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoprovisional1.PNG" />
   </ItemGroup>

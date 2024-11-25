@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RetoDI.Profesor;
 using System.Net.Http;
 
 
@@ -17,6 +16,8 @@ namespace RetoDI
 {
     public partial class frmLogin : System.Windows.Forms.Form
     {
+        
+
         public frmLogin()
         {
             InitializeComponent();
@@ -33,15 +34,15 @@ namespace RetoDI
 
             if (usuario == "Administrador" && contrasenia == "12345")
             {
- 
-                Botones adminVentana = new Botones();
+
+                Botones adminVentana = new Botones(true);
                 adminVentana.Show();
                 this.Hide();
             }
             else if (usuario == "Profesor" && contrasenia == "12345")
             {
-                Profesor.Profesor profesorVentana = new Profesor.Profesor();
-                profesorVentana.Show();
+                Botones profVentana = new Botones(false);
+                profVentana.Show();
                 this.Hide();
             }
             else if (usuario == "Alumno" && contrasenia == "12345")
@@ -54,6 +55,8 @@ namespace RetoDI
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+            
         }
 
         
