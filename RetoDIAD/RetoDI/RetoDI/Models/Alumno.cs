@@ -22,6 +22,7 @@ namespace RetoDI.Models
         public DateTime FechaNacimiento { get; set; }
         public bool EsAlumnoActual { get; set; }
         public string CicloFormativo { get; set; }
+       
     }
    
     }

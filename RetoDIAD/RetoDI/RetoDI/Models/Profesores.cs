@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RetoDI.Models
 {
-    internal class Profesores
+    public class Profesores
     {
+        public List<Profesores> results { get; set; }
     }
 }

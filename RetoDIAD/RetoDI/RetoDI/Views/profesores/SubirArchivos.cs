@@ -1,55 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using RetoDI.Controles;
+using RetoDI.Models;
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
     public partial class SubirArchivos : Form
     {
+        //Declaramos el controlador, un objeto que controla la lógica
+        //para obtener los personajes de la API
+        private ControlAlumnos ControlAlumnos;
+        //Inicializamos el modelo, es un objeto que almacena los datos
+        //deserializados de la API
+        private Alumnos alumnos;
         public SubirArchivos()
         {
             InitializeComponent();
+            ControlAlumnos = new ControlAlumnos();
+            alumnos = new Alumnos();
+        }
+
+        //Método asíncrono para obtener los personajes de la API
+        private async void GetAlumnos()
+        {
+            //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
+            alumnos = await ControlAlumnos.GetAllAlumnos();
+
+            //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
+
+            if (alumnos != null)
+            {
+                //Recorre la lista de resultados (alumnos) obtenidos desde la API
+                foreach (Alumno alumno in alumnos?.results)// ? e ! para permitir nulos y evitar errores
+                {
+                    // Crear un nuevo item 
+                    ListViewItem item = new ListViewItem(alumno.Nombre); // Primera columna
+
+                    // Agregar los subítems (equivalentes a las celdas de las otras columnas)
+
+                    item.SubItems.Add(alumno.Apellidos); // Segunda columna
+                    
+
+                    // Agregar el item al ListView
+                    lvAlumnos.Items.Add(item);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("No se pudo obtener la petición", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
-            //perguntar si esta seguro y mostrar los detalles
+
+            
+
         }
 
        
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Llamamos a la API y obtenemos los alumnos
-            //List<Alumno> alumnos = await ObtenerAlumnos();
-
-            // Limpiar el ListView antes de agregar nuevos elementos
-            listView1.Items.Clear();
-
-           /* Agregar los alumnos al ListView
-            if (alumnos != null)
-            {
-                foreach (Alumno alumno in alumnos)
-                {
-                    // Crear un nuevo item con el nombre y apellido del alumno
-                    ListViewItem item = new ListViewItem(alumno.Nombre);
-                    item.SubItems.Add(alumno.Apellido);
-
-                    // Agregar el item al ListView
-                    listView1.Items.Add(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se pudieron cargar los alumnos.");
-            }*/
+            
         }
 
 
@@ -67,6 +83,11 @@ namespace WinFormsApp1
                 // Llamar al método para subir el archivo a la API
                 // SubirArchivoAAPI(filePath, fileName);
             }
+        }
+
+        private void btnSubir_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
