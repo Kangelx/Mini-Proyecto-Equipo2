@@ -18,6 +18,12 @@ namespace RetoDI.Administrador
         {
            // _apiService = new ApiService();
             InitializeComponent();
+            //nos aseguramos de que todo este en dock fill
+            pnlConsultarDatos.Dock = DockStyle.Fill;
+            pnlDatosAlumnos.Dock = DockStyle.Fill;
+            pnlDatosProfesores.Dock = DockStyle.Fill;
+            pnlDatosProyecto.Dock = DockStyle.Fill;
+            //nos aseguramos de que todo este invisible
             pnlDatosAlumnos.Visible = false;
             pnlDatosProfesores.Visible = false;
             pnlDatosProyecto.Visible = false;
@@ -49,6 +55,8 @@ namespace RetoDI.Administrador
 
         private async void btnDatosAlumnos_Click(object sender, EventArgs e)
         {
+
+            //cargamos los datos y hacemos que solo se muestre el panel deaseado
             await CargarDatosAlumnosAsync();
             pnlDatosAlumnos.Visible = true;
             pnlDatosProfesores.Visible = false;
