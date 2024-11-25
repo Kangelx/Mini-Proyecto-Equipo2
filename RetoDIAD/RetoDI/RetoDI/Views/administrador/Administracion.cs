@@ -11,21 +11,17 @@ using System.Windows.Forms;
 
 namespace RetoDI.Administrador
 {
-    
     public partial class Administracion : Form
     {
-        
         // private readonly ApiService _apiService;
         public Administracion()
         {
            // _apiService = new ApiService();
             InitializeComponent();
-            
             pnlDatosAlumnos.Visible = false;
             pnlDatosProfesores.Visible = false;
             pnlDatosProyecto.Visible = false;
             pnlConsultarDatos.Visible = false;
-
             try
             {
                 Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
@@ -41,7 +37,7 @@ namespace RetoDI.Administrador
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Botones botones = new Botones(true);
+            Botones botones = new Botones();
             botones.ShowDialog();
             this.Hide();
         }
@@ -123,6 +119,36 @@ namespace RetoDI.Administrador
             pnlDatosProfesores.Visible = false;
             pnlDatosProyecto.Visible = false;
             pnlConsultarDatos.Visible = true;
+        }
+
+        private void btnAceptarAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptarProfesor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarProfesor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptarProyecto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarProyecto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
