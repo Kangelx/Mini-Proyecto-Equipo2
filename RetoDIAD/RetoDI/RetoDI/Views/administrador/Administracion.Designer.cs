@@ -34,8 +34,8 @@
             this.btnDatoProfesores = new System.Windows.Forms.Button();
             this.btnDatosAlumnos = new System.Windows.Forms.Button();
             this.pnlDatosAlumnos = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelarAlumnos = new System.Windows.Forms.Button();
+            this.btnAceptarAlumnos = new System.Windows.Forms.Button();
             this.txtCicloAlumno = new System.Windows.Forms.TextBox();
             this.txtActivoAlumno = new System.Windows.Forms.TextBox();
             this.TextFechaNacAlumno = new System.Windows.Forms.TextBox();
@@ -88,29 +88,29 @@
             this.lblApellidosProfesor = new System.Windows.Forms.Label();
             this.lblNombreProfesor = new System.Windows.Forms.Label();
             this.pnlDatosProyecto = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtCicloProyecto = new System.Windows.Forms.TextBox();
+            this.txtComentariosProyecto = new System.Windows.Forms.TextBox();
+            this.txtArchivosProyecto = new System.Windows.Forms.TextBox();
+            this.txtMemoriaProyecto = new System.Windows.Forms.TextBox();
+            this.txtLogoProyectos = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtAnnoProyecto = new System.Windows.Forms.TextBox();
+            this.txtResumenProyecto = new System.Windows.Forms.TextBox();
+            this.txtTipoProyecto = new System.Windows.Forms.TextBox();
+            this.txtNombreProyecto = new System.Windows.Forms.TextBox();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblCicloProyecto = new System.Windows.Forms.Label();
+            this.lblComentariosProyecto = new System.Windows.Forms.Label();
+            this.lblArchivosProyectos = new System.Windows.Forms.Label();
+            this.lblMemoriaProyecto = new System.Windows.Forms.Label();
+            this.lblLogoProyectos = new System.Windows.Forms.Label();
+            this.lblFechaProyecto = new System.Windows.Forms.Label();
+            this.lblAnnoProyecto = new System.Windows.Forms.Label();
+            this.lblResumenProyecto = new System.Windows.Forms.Label();
+            this.lblTipoProyecto = new System.Windows.Forms.Label();
+            this.lblNombreProyecto = new System.Windows.Forms.Label();
             this.pnlConsultarDatos = new System.Windows.Forms.Panel();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -139,6 +139,10 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnAceptarProyecto = new System.Windows.Forms.Button();
+            this.btnCancelarProyecto = new System.Windows.Forms.Button();
+            this.txtTutorProyecto = new System.Windows.Forms.TextBox();
+            this.lblTutorProyecto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -167,9 +171,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.splitContainer1.Panel2.Controls.Add(this.pnlDatosProyecto);
             this.splitContainer1.Panel2.Controls.Add(this.pnlDatosAlumnos);
             this.splitContainer1.Panel2.Controls.Add(this.pnlDatosProfesores);
-            this.splitContainer1.Panel2.Controls.Add(this.pnlDatosProyecto);
             this.splitContainer1.Panel2.Controls.Add(this.pnlConsultarDatos);
             this.splitContainer1.Size = new System.Drawing.Size(763, 354);
             this.splitContainer1.SplitterDistance = 254;
@@ -222,8 +226,8 @@
             // 
             // pnlDatosAlumnos
             // 
-            this.pnlDatosAlumnos.Controls.Add(this.button1);
-            this.pnlDatosAlumnos.Controls.Add(this.button2);
+            this.pnlDatosAlumnos.Controls.Add(this.btnCancelarAlumnos);
+            this.pnlDatosAlumnos.Controls.Add(this.btnAceptarAlumnos);
             this.pnlDatosAlumnos.Controls.Add(this.txtCicloAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.txtActivoAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.TextFechaNacAlumno);
@@ -245,29 +249,30 @@
             this.pnlDatosAlumnos.Controls.Add(this.lblDNIAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.lblApellidosAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.lblNombreAlumno);
-            this.pnlDatosAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatosAlumnos.Location = new System.Drawing.Point(0, 0);
             this.pnlDatosAlumnos.Name = "pnlDatosAlumnos";
-            this.pnlDatosAlumnos.Size = new System.Drawing.Size(506, 354);
+            this.pnlDatosAlumnos.Size = new System.Drawing.Size(360, 49);
             this.pnlDatosAlumnos.TabIndex = 0;
             // 
-            // button1
+            // btnCancelarAlumnos
             // 
-            this.button1.Location = new System.Drawing.Point(281, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelarAlumnos.Location = new System.Drawing.Point(280, 315);
+            this.btnCancelarAlumnos.Name = "btnCancelarAlumnos";
+            this.btnCancelarAlumnos.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarAlumnos.TabIndex = 26;
+            this.btnCancelarAlumnos.Text = "Cancelar";
+            this.btnCancelarAlumnos.UseVisualStyleBackColor = true;
+            this.btnCancelarAlumnos.Click += new System.EventHandler(this.btnCancelarAlumnos_Click);
             // 
-            // button2
+            // btnAceptarAlumnos
             // 
-            this.button2.Location = new System.Drawing.Point(392, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAceptarAlumnos.Location = new System.Drawing.Point(390, 315);
+            this.btnAceptarAlumnos.Name = "btnAceptarAlumnos";
+            this.btnAceptarAlumnos.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarAlumnos.TabIndex = 25;
+            this.btnAceptarAlumnos.Text = "Aceptar";
+            this.btnAceptarAlumnos.UseVisualStyleBackColor = true;
+            this.btnAceptarAlumnos.Click += new System.EventHandler(this.btnAceptarAlumnos_Click);
             // 
             // txtCicloAlumno
             // 
@@ -349,7 +354,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(217, 354);
+            this.listView1.Size = new System.Drawing.Size(217, 49);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -481,29 +486,30 @@
             this.pnlDatosProfesores.Controls.Add(this.lblDNIProfesor);
             this.pnlDatosProfesores.Controls.Add(this.lblApellidosProfesor);
             this.pnlDatosProfesores.Controls.Add(this.lblNombreProfesor);
-            this.pnlDatosProfesores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDatosProfesores.Location = new System.Drawing.Point(0, 0);
+            this.pnlDatosProfesores.Location = new System.Drawing.Point(3, 55);
             this.pnlDatosProfesores.Name = "pnlDatosProfesores";
-            this.pnlDatosProfesores.Size = new System.Drawing.Size(506, 354);
+            this.pnlDatosProfesores.Size = new System.Drawing.Size(357, 46);
             this.pnlDatosProfesores.TabIndex = 21;
             // 
             // btnCancelarProfesor
             // 
-            this.btnCancelarProfesor.Location = new System.Drawing.Point(278, 319);
+            this.btnCancelarProfesor.Location = new System.Drawing.Point(280, 315);
             this.btnCancelarProfesor.Name = "btnCancelarProfesor";
             this.btnCancelarProfesor.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarProfesor.TabIndex = 24;
             this.btnCancelarProfesor.Text = "Cancelar";
             this.btnCancelarProfesor.UseVisualStyleBackColor = true;
+            this.btnCancelarProfesor.Click += new System.EventHandler(this.btnCancelarProfesor_Click);
             // 
             // btnAceptarProfesor
             // 
-            this.btnAceptarProfesor.Location = new System.Drawing.Point(389, 319);
+            this.btnAceptarProfesor.Location = new System.Drawing.Point(390, 315);
             this.btnAceptarProfesor.Name = "btnAceptarProfesor";
             this.btnAceptarProfesor.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarProfesor.TabIndex = 23;
             this.btnAceptarProfesor.Text = "Aceptar";
             this.btnAceptarProfesor.UseVisualStyleBackColor = true;
+            this.btnAceptarProfesor.Click += new System.EventHandler(this.btnAceptarProfesor_Click);
             // 
             // lblEspecialidadProfesor
             // 
@@ -601,7 +607,7 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(0, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(217, 354);
+            this.listView2.Size = new System.Drawing.Size(217, 46);
             this.listView2.TabIndex = 10;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -708,67 +714,70 @@
             // 
             // pnlDatosProyecto
             // 
-            this.pnlDatosProyecto.Controls.Add(this.textBox11);
-            this.pnlDatosProyecto.Controls.Add(this.textBox12);
-            this.pnlDatosProyecto.Controls.Add(this.textBox13);
-            this.pnlDatosProyecto.Controls.Add(this.textBox14);
-            this.pnlDatosProyecto.Controls.Add(this.textBox15);
+            this.pnlDatosProyecto.Controls.Add(this.txtTutorProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblTutorProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.btnCancelarProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.btnAceptarProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtCicloProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtComentariosProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtArchivosProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtMemoriaProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtLogoProyectos);
             this.pnlDatosProyecto.Controls.Add(this.textBox16);
-            this.pnlDatosProyecto.Controls.Add(this.textBox17);
-            this.pnlDatosProyecto.Controls.Add(this.textBox18);
-            this.pnlDatosProyecto.Controls.Add(this.textBox19);
-            this.pnlDatosProyecto.Controls.Add(this.textBox20);
+            this.pnlDatosProyecto.Controls.Add(this.txtAnnoProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtResumenProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtTipoProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.txtNombreProyecto);
             this.pnlDatosProyecto.Controls.Add(this.listView3);
-            this.pnlDatosProyecto.Controls.Add(this.label12);
-            this.pnlDatosProyecto.Controls.Add(this.label13);
-            this.pnlDatosProyecto.Controls.Add(this.label14);
-            this.pnlDatosProyecto.Controls.Add(this.label15);
-            this.pnlDatosProyecto.Controls.Add(this.label16);
-            this.pnlDatosProyecto.Controls.Add(this.label17);
-            this.pnlDatosProyecto.Controls.Add(this.label18);
-            this.pnlDatosProyecto.Controls.Add(this.label19);
-            this.pnlDatosProyecto.Controls.Add(this.label20);
-            this.pnlDatosProyecto.Controls.Add(this.label21);
-            this.pnlDatosProyecto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDatosProyecto.Location = new System.Drawing.Point(0, 0);
+            this.pnlDatosProyecto.Controls.Add(this.lblCicloProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblComentariosProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblArchivosProyectos);
+            this.pnlDatosProyecto.Controls.Add(this.lblMemoriaProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblLogoProyectos);
+            this.pnlDatosProyecto.Controls.Add(this.lblFechaProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblAnnoProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblResumenProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblTipoProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.lblNombreProyecto);
+            this.pnlDatosProyecto.Location = new System.Drawing.Point(3, 110);
             this.pnlDatosProyecto.Name = "pnlDatosProyecto";
-            this.pnlDatosProyecto.Size = new System.Drawing.Size(506, 354);
+            this.pnlDatosProyecto.Size = new System.Drawing.Size(357, 46);
             this.pnlDatosProyecto.TabIndex = 22;
             // 
-            // textBox11
+            // txtCicloProyecto
             // 
-            this.textBox11.Location = new System.Drawing.Point(328, 253);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 20;
+            this.txtCicloProyecto.Location = new System.Drawing.Point(328, 253);
+            this.txtCicloProyecto.Name = "txtCicloProyecto";
+            this.txtCicloProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtCicloProyecto.TabIndex = 20;
             // 
-            // textBox12
+            // txtComentariosProyecto
             // 
-            this.textBox12.Location = new System.Drawing.Point(328, 227);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 19;
+            this.txtComentariosProyecto.Location = new System.Drawing.Point(328, 227);
+            this.txtComentariosProyecto.Name = "txtComentariosProyecto";
+            this.txtComentariosProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtComentariosProyecto.TabIndex = 19;
             // 
-            // textBox13
+            // txtArchivosProyecto
             // 
-            this.textBox13.Location = new System.Drawing.Point(328, 201);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 18;
+            this.txtArchivosProyecto.Location = new System.Drawing.Point(328, 201);
+            this.txtArchivosProyecto.Name = "txtArchivosProyecto";
+            this.txtArchivosProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtArchivosProyecto.TabIndex = 18;
             // 
-            // textBox14
+            // txtMemoriaProyecto
             // 
-            this.textBox14.Location = new System.Drawing.Point(328, 175);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 17;
+            this.txtMemoriaProyecto.Location = new System.Drawing.Point(328, 175);
+            this.txtMemoriaProyecto.Name = "txtMemoriaProyecto";
+            this.txtMemoriaProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtMemoriaProyecto.TabIndex = 17;
             // 
-            // textBox15
+            // txtLogoProyectos
             // 
-            this.textBox15.Location = new System.Drawing.Point(328, 149);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 16;
+            this.txtLogoProyectos.Location = new System.Drawing.Point(328, 149);
+            this.txtLogoProyectos.Name = "txtLogoProyectos";
+            this.txtLogoProyectos.Size = new System.Drawing.Size(100, 20);
+            this.txtLogoProyectos.TabIndex = 16;
             // 
             // textBox16
             // 
@@ -777,33 +786,33 @@
             this.textBox16.Size = new System.Drawing.Size(100, 20);
             this.textBox16.TabIndex = 15;
             // 
-            // textBox17
+            // txtAnnoProyecto
             // 
-            this.textBox17.Location = new System.Drawing.Point(328, 97);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 14;
+            this.txtAnnoProyecto.Location = new System.Drawing.Point(328, 97);
+            this.txtAnnoProyecto.Name = "txtAnnoProyecto";
+            this.txtAnnoProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtAnnoProyecto.TabIndex = 14;
             // 
-            // textBox18
+            // txtResumenProyecto
             // 
-            this.textBox18.Location = new System.Drawing.Point(328, 71);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 13;
+            this.txtResumenProyecto.Location = new System.Drawing.Point(328, 71);
+            this.txtResumenProyecto.Name = "txtResumenProyecto";
+            this.txtResumenProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtResumenProyecto.TabIndex = 13;
             // 
-            // textBox19
+            // txtTipoProyecto
             // 
-            this.textBox19.Location = new System.Drawing.Point(328, 45);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 12;
+            this.txtTipoProyecto.Location = new System.Drawing.Point(328, 45);
+            this.txtTipoProyecto.Name = "txtTipoProyecto";
+            this.txtTipoProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtTipoProyecto.TabIndex = 12;
             // 
-            // textBox20
+            // txtNombreProyecto
             // 
-            this.textBox20.Location = new System.Drawing.Point(328, 19);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
-            this.textBox20.TabIndex = 11;
+            this.txtNombreProyecto.Location = new System.Drawing.Point(328, 19);
+            this.txtNombreProyecto.Name = "txtNombreProyecto";
+            this.txtNombreProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreProyecto.TabIndex = 11;
             // 
             // listView3
             // 
@@ -815,7 +824,7 @@
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(0, 0);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(217, 354);
+            this.listView3.Size = new System.Drawing.Size(217, 46);
             this.listView3.TabIndex = 10;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -830,95 +839,95 @@
             this.columnHeader4.Text = "Apellidos";
             this.columnHeader4.Width = 150;
             // 
-            // label12
+            // lblCicloProyecto
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(228, 260);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Ciclo Actual*";
+            this.lblCicloProyecto.AutoSize = true;
+            this.lblCicloProyecto.Location = new System.Drawing.Point(228, 260);
+            this.lblCicloProyecto.Name = "lblCicloProyecto";
+            this.lblCicloProyecto.Size = new System.Drawing.Size(67, 13);
+            this.lblCicloProyecto.TabIndex = 9;
+            this.lblCicloProyecto.Text = "Ciclo Actual*";
             // 
-            // label13
+            // lblComentariosProyecto
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(228, 234);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Activo*";
+            this.lblComentariosProyecto.AutoSize = true;
+            this.lblComentariosProyecto.Location = new System.Drawing.Point(228, 234);
+            this.lblComentariosProyecto.Name = "lblComentariosProyecto";
+            this.lblComentariosProyecto.Size = new System.Drawing.Size(65, 13);
+            this.lblComentariosProyecto.TabIndex = 8;
+            this.lblComentariosProyecto.Text = "Comentarios";
             // 
-            // label14
+            // lblArchivosProyectos
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(228, 204);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 13);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "FechaNac";
+            this.lblArchivosProyectos.AutoSize = true;
+            this.lblArchivosProyectos.Location = new System.Drawing.Point(228, 204);
+            this.lblArchivosProyectos.Name = "lblArchivosProyectos";
+            this.lblArchivosProyectos.Size = new System.Drawing.Size(48, 13);
+            this.lblArchivosProyectos.TabIndex = 7;
+            this.lblArchivosProyectos.Text = "Archivos";
             // 
-            // label15
+            // lblMemoriaProyecto
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(228, 178);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Genero*";
+            this.lblMemoriaProyecto.AutoSize = true;
+            this.lblMemoriaProyecto.Location = new System.Drawing.Point(228, 178);
+            this.lblMemoriaProyecto.Name = "lblMemoriaProyecto";
+            this.lblMemoriaProyecto.Size = new System.Drawing.Size(47, 13);
+            this.lblMemoriaProyecto.TabIndex = 6;
+            this.lblMemoriaProyecto.Text = "Memoria";
             // 
-            // label16
+            // lblLogoProyectos
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(228, 152);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Telefono*";
+            this.lblLogoProyectos.AutoSize = true;
+            this.lblLogoProyectos.Location = new System.Drawing.Point(228, 152);
+            this.lblLogoProyectos.Name = "lblLogoProyectos";
+            this.lblLogoProyectos.Size = new System.Drawing.Size(31, 13);
+            this.lblLogoProyectos.TabIndex = 5;
+            this.lblLogoProyectos.Text = "Logo";
             // 
-            // label17
+            // lblFechaProyecto
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(228, 126);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Password*";
+            this.lblFechaProyecto.AutoSize = true;
+            this.lblFechaProyecto.Location = new System.Drawing.Point(228, 126);
+            this.lblFechaProyecto.Name = "lblFechaProyecto";
+            this.lblFechaProyecto.Size = new System.Drawing.Size(37, 13);
+            this.lblFechaProyecto.TabIndex = 4;
+            this.lblFechaProyecto.Text = "Fecha";
             // 
-            // label18
+            // lblAnnoProyecto
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(228, 100);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(36, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Email*";
+            this.lblAnnoProyecto.AutoSize = true;
+            this.lblAnnoProyecto.Location = new System.Drawing.Point(228, 100);
+            this.lblAnnoProyecto.Name = "lblAnnoProyecto";
+            this.lblAnnoProyecto.Size = new System.Drawing.Size(32, 13);
+            this.lblAnnoProyecto.TabIndex = 3;
+            this.lblAnnoProyecto.Text = "Año?";
             // 
-            // label19
+            // lblResumenProyecto
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(228, 74);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 13);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "DNI*";
+            this.lblResumenProyecto.AutoSize = true;
+            this.lblResumenProyecto.Location = new System.Drawing.Point(228, 74);
+            this.lblResumenProyecto.Name = "lblResumenProyecto";
+            this.lblResumenProyecto.Size = new System.Drawing.Size(52, 13);
+            this.lblResumenProyecto.TabIndex = 2;
+            this.lblResumenProyecto.Text = "Resumen";
             // 
-            // label20
+            // lblTipoProyecto
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(228, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 13);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Apellidos*";
+            this.lblTipoProyecto.AutoSize = true;
+            this.lblTipoProyecto.Location = new System.Drawing.Point(228, 48);
+            this.lblTipoProyecto.Name = "lblTipoProyecto";
+            this.lblTipoProyecto.Size = new System.Drawing.Size(32, 13);
+            this.lblTipoProyecto.TabIndex = 1;
+            this.lblTipoProyecto.Text = "Tipo*";
             // 
-            // label21
+            // lblNombreProyecto
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(228, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 13);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Nombre*";
+            this.lblNombreProyecto.AutoSize = true;
+            this.lblNombreProyecto.Location = new System.Drawing.Point(228, 22);
+            this.lblNombreProyecto.Name = "lblNombreProyecto";
+            this.lblNombreProyecto.Size = new System.Drawing.Size(48, 13);
+            this.lblNombreProyecto.TabIndex = 0;
+            this.lblNombreProyecto.Text = "Nombre*";
             // 
             // pnlConsultarDatos
             // 
@@ -943,10 +952,9 @@
             this.pnlConsultarDatos.Controls.Add(this.label29);
             this.pnlConsultarDatos.Controls.Add(this.label30);
             this.pnlConsultarDatos.Controls.Add(this.label31);
-            this.pnlConsultarDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlConsultarDatos.Location = new System.Drawing.Point(0, 0);
+            this.pnlConsultarDatos.Location = new System.Drawing.Point(3, 161);
             this.pnlConsultarDatos.Name = "pnlConsultarDatos";
-            this.pnlConsultarDatos.Size = new System.Drawing.Size(506, 354);
+            this.pnlConsultarDatos.Size = new System.Drawing.Size(357, 46);
             this.pnlConsultarDatos.TabIndex = 23;
             // 
             // textBox21
@@ -1029,7 +1037,7 @@
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(0, 0);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(217, 354);
+            this.listView4.Size = new System.Drawing.Size(217, 46);
             this.listView4.TabIndex = 10;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -1138,11 +1146,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lisu", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(422, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 22);
+            this.label1.Size = new System.Drawing.Size(175, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Profesor Administrador ";
             // 
@@ -1151,7 +1159,7 @@
             this.btnRegresar.Location = new System.Drawing.Point(9, 7);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(56, 19);
+            this.btnRegresar.Size = new System.Drawing.Size(67, 19);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -1167,6 +1175,42 @@
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnAceptarProyecto
+            // 
+            this.btnAceptarProyecto.Location = new System.Drawing.Point(390, 315);
+            this.btnAceptarProyecto.Name = "btnAceptarProyecto";
+            this.btnAceptarProyecto.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarProyecto.TabIndex = 21;
+            this.btnAceptarProyecto.Text = "Aceptar";
+            this.btnAceptarProyecto.UseVisualStyleBackColor = true;
+            this.btnAceptarProyecto.Click += new System.EventHandler(this.btnAceptarProyecto_Click);
+            // 
+            // btnCancelarProyecto
+            // 
+            this.btnCancelarProyecto.Location = new System.Drawing.Point(280, 315);
+            this.btnCancelarProyecto.Name = "btnCancelarProyecto";
+            this.btnCancelarProyecto.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarProyecto.TabIndex = 22;
+            this.btnCancelarProyecto.Text = "Cancelar";
+            this.btnCancelarProyecto.UseVisualStyleBackColor = true;
+            this.btnCancelarProyecto.Click += new System.EventHandler(this.btnCancelarProyecto_Click);
+            // 
+            // txtTutorProyecto
+            // 
+            this.txtTutorProyecto.Location = new System.Drawing.Point(328, 279);
+            this.txtTutorProyecto.Name = "txtTutorProyecto";
+            this.txtTutorProyecto.Size = new System.Drawing.Size(100, 20);
+            this.txtTutorProyecto.TabIndex = 24;
+            // 
+            // lblTutorProyecto
+            // 
+            this.lblTutorProyecto.AutoSize = true;
+            this.lblTutorProyecto.Location = new System.Drawing.Point(228, 282);
+            this.lblTutorProyecto.Name = "lblTutorProyecto";
+            this.lblTutorProyecto.Size = new System.Drawing.Size(32, 13);
+            this.lblTutorProyecto.TabIndex = 23;
+            this.lblTutorProyecto.Text = "Tutor";
             // 
             // Administracion
             // 
@@ -1284,34 +1328,38 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel pnlDatosProyecto;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtCicloProyecto;
+        private System.Windows.Forms.TextBox txtComentariosProyecto;
+        private System.Windows.Forms.TextBox txtArchivosProyecto;
+        private System.Windows.Forms.TextBox txtMemoriaProyecto;
+        private System.Windows.Forms.TextBox txtLogoProyectos;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtAnnoProyecto;
+        private System.Windows.Forms.TextBox txtResumenProyecto;
+        private System.Windows.Forms.TextBox txtTipoProyecto;
+        private System.Windows.Forms.TextBox txtNombreProyecto;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblCicloProyecto;
+        private System.Windows.Forms.Label lblComentariosProyecto;
+        private System.Windows.Forms.Label lblArchivosProyectos;
+        private System.Windows.Forms.Label lblMemoriaProyecto;
+        private System.Windows.Forms.Label lblLogoProyectos;
+        private System.Windows.Forms.Label lblFechaProyecto;
+        private System.Windows.Forms.Label lblAnnoProyecto;
+        private System.Windows.Forms.Label lblResumenProyecto;
+        private System.Windows.Forms.Label lblTipoProyecto;
+        private System.Windows.Forms.Label lblNombreProyecto;
         private System.Windows.Forms.Label lblEspecialidadProfesor;
         private System.Windows.Forms.TextBox txtEspecialidadProfesor;
         private System.Windows.Forms.Button btnCancelarProfesor;
         private System.Windows.Forms.Button btnAceptarProfesor;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelarAlumnos;
+        private System.Windows.Forms.Button btnAceptarAlumnos;
+        private System.Windows.Forms.Button btnCancelarProyecto;
+        private System.Windows.Forms.Button btnAceptarProyecto;
+        private System.Windows.Forms.TextBox txtTutorProyecto;
+        private System.Windows.Forms.Label lblTutorProyecto;
     }
 }
