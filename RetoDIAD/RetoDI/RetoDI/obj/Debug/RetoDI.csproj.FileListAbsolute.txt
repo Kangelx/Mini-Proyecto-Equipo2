@@ -92,7 +92,6 @@ D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\o
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.CalificarAlumnos.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.ComentarProyectos.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Profesor.Profesor.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.SubirArchivos.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.GenerateResource.cache
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache

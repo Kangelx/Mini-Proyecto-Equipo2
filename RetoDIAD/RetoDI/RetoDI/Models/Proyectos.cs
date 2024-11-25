@@ -8,6 +8,6 @@ namespace RetoDI.Models
 {
     public class Proyectos
     {
-        public List<Proyectos> results { get; set; }
+        public List<Proyecto> results { get; set; }
     }
 }

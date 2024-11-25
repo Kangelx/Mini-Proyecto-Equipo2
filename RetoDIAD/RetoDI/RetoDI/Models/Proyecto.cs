@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RetoDI.Models
 {
-    internal class Proyecto
+    public class Proyecto
     {
         public string Nombre { get; set; }
         public string tipo { get; set; }
