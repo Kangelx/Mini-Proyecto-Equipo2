@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controles\ControlAlumnos.cs" />
+    <Compile Include="Controles\ControlProfesores.cs" />
+    <Compile Include="Controles\ControlProyectos.cs" />
     <Compile Include="Entidades\Post.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Alumnos.cs" />
@@ -166,9 +169,7 @@
   <ItemGroup>
     <None Include="Resources\logoprovisional.PNG" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controles\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logoprovisional1.PNG" />
   </ItemGroup>

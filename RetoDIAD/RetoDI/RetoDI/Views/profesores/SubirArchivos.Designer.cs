@@ -35,10 +35,11 @@ namespace WinFormsApp1
             this.btnSubir = new System.Windows.Forms.Button();
             this.lblAlumno = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvAlumnos = new System.Windows.Forms.ListView();
+            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Apellidos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblSeleccionearchivo
@@ -52,14 +53,14 @@ namespace WinFormsApp1
             // 
             // btnSubir
             // 
-            this.btnSubir.Location = new System.Drawing.Point(11, 260);
+            this.btnSubir.Location = new System.Drawing.Point(56, 91);
             this.btnSubir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(115, 36);
             this.btnSubir.TabIndex = 3;
             this.btnSubir.Text = "Subir Archivo";
             this.btnSubir.UseVisualStyleBackColor = true;
-            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click_1);
+            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click_2);
             // 
             // lblAlumno
             // 
@@ -70,41 +71,48 @@ namespace WinFormsApp1
             this.lblAlumno.TabIndex = 4;
             this.lblAlumno.Text = "Seleccione un Alumno para asignar el archivo";
             // 
-            // listView1
+            // lvAlumnos
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(238, 57);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(232, 288);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lvAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nombre,
+            this.Apellidos});
+            this.lvAlumnos.HideSelection = false;
+            this.lvAlumnos.Location = new System.Drawing.Point(238, 57);
+            this.lvAlumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvAlumnos.Name = "lvAlumnos";
+            this.lvAlumnos.Size = new System.Drawing.Size(232, 288);
+            this.lvAlumnos.TabIndex = 6;
+            this.lvAlumnos.UseCompatibleStateImageBehavior = false;
+            this.lvAlumnos.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // Nombre
             // 
-            this.columnHeader1.Text = "Nombre";
-            this.columnHeader1.Width = 135;
+            this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 135;
             // 
-            // columnHeader2
+            // Apellidos
             // 
-            this.columnHeader2.Text = "Apellidos";
-            this.columnHeader2.Width = 163;
+            this.Apellidos.Text = "Apellidos";
+            this.Apellidos.Width = 163;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(13, 57);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // SubirArchivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 370);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lvAlumnos);
             this.Controls.Add(this.lblAlumno);
             this.Controls.Add(this.btnSubir);
             this.Controls.Add(this.lblSeleccionearchivo);
@@ -123,9 +131,10 @@ namespace WinFormsApp1
         private Button btnSubir;
         private Label lblAlumno;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ListView listView1;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
+        private ListView lvAlumnos;
+        private ColumnHeader Nombre;
+        private ColumnHeader Apellidos;
         private OpenFileDialog openFileDialog1;
+        private TextBox textBox1;
     }
 }

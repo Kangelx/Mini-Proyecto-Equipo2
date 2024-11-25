@@ -37,10 +37,10 @@ namespace WinFormsApp1
             this.txtBuscarAlumno = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombreproyecto = new System.Windows.Forms.Label();
-            this.listViewAlumnos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvAlumnos = new System.Windows.Forms.ListView();
+            this.Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Proyecto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Calificacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -59,7 +59,7 @@ namespace WinFormsApp1
             this.lblCalificacion.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.Location = new System.Drawing.Point(382, 248);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(102, 26);
+            this.lblCalificacion.Size = new System.Drawing.Size(86, 22);
             this.lblCalificacion.TabIndex = 1;
             this.lblCalificacion.Text = "Calificación";
             // 
@@ -67,14 +67,14 @@ namespace WinFormsApp1
             // 
             this.txtCalificacion.Location = new System.Drawing.Point(387, 288);
             this.txtCalificacion.Name = "txtCalificacion";
-            this.txtCalificacion.Size = new System.Drawing.Size(213, 22);
+            this.txtCalificacion.Size = new System.Drawing.Size(213, 20);
             this.txtCalificacion.TabIndex = 2;
             // 
             // txtBuscarAlumno
             // 
             this.txtBuscarAlumno.Location = new System.Drawing.Point(12, 288);
             this.txtBuscarAlumno.Name = "txtBuscarAlumno";
-            this.txtBuscarAlumno.Size = new System.Drawing.Size(253, 22);
+            this.txtBuscarAlumno.Size = new System.Drawing.Size(253, 20);
             this.txtBuscarAlumno.TabIndex = 10;
             // 
             // btnBuscar
@@ -91,43 +91,43 @@ namespace WinFormsApp1
             this.lblNombreproyecto.AutoSize = true;
             this.lblNombreproyecto.Location = new System.Drawing.Point(12, 248);
             this.lblNombreproyecto.Name = "lblNombreproyecto";
-            this.lblNombreproyecto.Size = new System.Drawing.Size(104, 16);
+            this.lblNombreproyecto.Size = new System.Drawing.Size(82, 13);
             this.lblNombreproyecto.TabIndex = 8;
             this.lblNombreproyecto.Text = "Nombre Alumno";
             // 
-            // listViewAlumnos
+            // lvAlumnos
             // 
-            this.listViewAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listViewAlumnos.HideSelection = false;
-            this.listViewAlumnos.Location = new System.Drawing.Point(15, 22);
-            this.listViewAlumnos.Name = "listViewAlumnos";
-            this.listViewAlumnos.Size = new System.Drawing.Size(585, 205);
-            this.listViewAlumnos.TabIndex = 11;
-            this.listViewAlumnos.UseCompatibleStateImageBehavior = false;
-            this.listViewAlumnos.View = System.Windows.Forms.View.Details;
+            this.lvAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Alumno,
+            this.Proyecto,
+            this.Calificacion});
+            this.lvAlumnos.HideSelection = false;
+            this.lvAlumnos.Location = new System.Drawing.Point(15, 23);
+            this.lvAlumnos.Name = "lvAlumnos";
+            this.lvAlumnos.Size = new System.Drawing.Size(585, 205);
+            this.lvAlumnos.TabIndex = 11;
+            this.lvAlumnos.UseCompatibleStateImageBehavior = false;
+            this.lvAlumnos.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // Alumno
             // 
-            this.columnHeader1.Text = "Alumno";
-            this.columnHeader1.Width = 159;
+            this.Alumno.Text = "Alumno";
+            this.Alumno.Width = 159;
             // 
-            // columnHeader2
+            // Proyecto
             // 
-            this.columnHeader2.Text = "Proyecto";
-            this.columnHeader2.Width = 213;
+            this.Proyecto.Text = "Proyecto";
+            this.Proyecto.Width = 213;
             // 
-            // columnHeader3
+            // Calificacion
             // 
-            this.columnHeader3.Text = "Calificación";
-            this.columnHeader3.Width = 200;
+            this.Calificacion.Text = "Calificación";
+            this.Calificacion.Width = 200;
             // 
             // CalificarAlumnos
             // 
             this.ClientSize = new System.Drawing.Size(615, 416);
-            this.Controls.Add(this.listViewAlumnos);
+            this.Controls.Add(this.lvAlumnos);
             this.Controls.Add(this.txtBuscarAlumno);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombreproyecto);
@@ -149,9 +149,9 @@ namespace WinFormsApp1
         private TextBox txtBuscarAlumno;
         private Button btnBuscar;
         private Label lblNombreproyecto;
-        private ListView listViewAlumnos;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
+        private ListView lvAlumnos;
+        private ColumnHeader Alumno;
+        private ColumnHeader Proyecto;
+        private ColumnHeader Calificacion;
     }
 }

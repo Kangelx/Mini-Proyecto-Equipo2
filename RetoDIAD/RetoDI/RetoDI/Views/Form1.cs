@@ -35,13 +35,13 @@ namespace RetoDI
             if (usuario == "Administrador" && contrasenia == "12345")
             {
 
-                Botones adminVentana = new Botones(true);
+                Botones adminVentana = new Botones();
                 adminVentana.Show();
                 this.Hide();
             }
             else if (usuario == "Profesor" && contrasenia == "12345")
             {
-                Botones profVentana = new Botones(false);
+                Botones profVentana = new Botones();
                 profVentana.Show();
                 this.Hide();
             }

@@ -1,8 +1,7 @@
-﻿using RetoDI.Models;
-
-using RetoDI.Views.profesores;
+﻿using RetoDI.Alumno;
+using RetoDI.Controles;
+using RetoDI.Models;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,13 +10,57 @@ namespace WinFormsApp1
 {
     public partial class ComentarProyectos : Form
     {
-       
+        //Declaramos el controlador, un objeto que controla la lógica
+        //para obtener los personajes de la API
+        private ControlAlumnos ControlAlumnos;
+        //Inicializamos el modelo, es un objeto que almacena los datos
+        //deserializados de la API
+        private Alumnos alumnos;
 
         public ComentarProyectos()
         {
             InitializeComponent();
-            
-        }       
+            ControlAlumnos = new ControlAlumnos();
+            alumnos = new Alumnos();
+        }
+
+        //Método asíncrono para obtener los personajes de la API
+        private async void GetAlumnos()
+        {
+            //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
+            alumnos = await ControlAlumnos.GetAllAlumnos();
+
+            //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
+
+            if (alumnos != null)
+            {
+                //Recorre la lista de resultados (alumnos) obtenidos desde la API
+                foreach (var alumno in alumnos?.results)// ? e ! para permitir nulos y evitar errores
+                {
+                    // Crear un nuevo item 
+                    //ListViewItem item = new ListViewItem(alumno.Alumno); // Primera columna
+
+                    // Agregar los subítems (equivalentes a las celdas de las otras columnas)
+
+                   // item.SubItems.Add(alumno.Proyecto); // Segunda columna
+                    //item.SubItems.Add(alumno.Calificacion);  // Tercera columna
+
+                    // Agregar el item al ListView
+                    //lvAlumnos.Items.Add(item);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("No se pudo obtener la petición", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetAlumnos();
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
