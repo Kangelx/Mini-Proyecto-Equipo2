@@ -70,6 +70,7 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
         public Profesor mapRow(ResultSet rs, int rowNum) throws SQLException {
             Profesor profesor = new Profesor();
 
+            profesor.setIdprofesor(rs.getString("idprofesor"));
             profesor.setNombre(rs.getString("nombre"));
             profesor.setApellidos(rs.getString("apellidos"));
             profesor.setDni(rs.getString("dni"));

@@ -35,7 +35,7 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
 
     @Override
     public Proyecto findById(int id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM proyectos where idproyecto = ?", new ProyectoRowMapper(), id);
+        return jdbcTemplate.queryForObject("SELECT * FROM proyectos inner join ciclos on codciclo = ciclo inner join profesores on idprofesor = tutor where idproyecto = ?", new ProyectoRowMapper(), id);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
         String sql = "INSERT INTO proyectos (nombre, tipo, resumen, anno_acad, fecha_pres, logo, memoria, archivos, comentarios, ciclo, tutor) "+
                 "Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        return jdbcTemplate.update(sql, proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(), proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(), proyecto.getComentarios(), proyecto.getCiclo(), proyecto.getTutor());
+        return jdbcTemplate.update(sql, proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(), proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(), proyecto.getComentarios(), proyecto.getCiclo().getCodCiclo(), proyecto.getTutor().getIdprofesor());
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
             return jdbcTemplate.update(
                     "UPDATE proyectos SET nombre = ?, tipo = ?, resumen = ?, anno_acad = ?, fecha_pres = ?, logo = ?, memoria = ?, archivos = ?, comentarios = ?, ciclo = ?, tutor = ? " +
                             " WHERE idProfesor = ?",
-                    proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(), proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(), proyecto.getComentarios(), proyecto.getCiclo(), proyecto.getTutor()
+                    proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(), proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(), proyecto.getComentarios(), proyecto.getCiclo().getCodCiclo(), proyecto.getTutor().getIdprofesor()
 
             );
         }catch (Exception e){

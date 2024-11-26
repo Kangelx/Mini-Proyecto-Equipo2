@@ -38,7 +38,7 @@ public class AlumnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getAlumnoById(@PathVariable String id) {
+    public ResponseEntity<Alumno> getAlumnoById(@PathVariable String id) {
         Alumno alumno = alumnoRepository.findById(id);
         if(alumno == null){
             return ResponseEntity.notFound().build();
@@ -47,8 +47,8 @@ public class AlumnoController {
         }
     }
 
-    @GetMapping("/{dni}")
-    public ResponseEntity<?> getAlumnoByDni(@PathVariable String dni) {
+    @GetMapping("/dni/{dni}")
+    public ResponseEntity<Alumno> getAlumnoByDni(@PathVariable String dni) {
         Alumno alumno = alumnoRepository.findByDni(dni);
         if(alumno == null){
             return ResponseEntity.notFound().build();
@@ -64,7 +64,7 @@ public class AlumnoController {
         }else{
             alumno.setIdAlumno(id);
             alumnoRepository.update(alumno);
-            return ResponseEntity.ok(alumnoExiste);
+            return ResponseEntity.ok(alumno);
         }
     }
 
