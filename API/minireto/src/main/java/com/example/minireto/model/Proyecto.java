@@ -16,14 +16,14 @@ public class Proyecto {
     private String memoria;
     private String archivos;
     private String comentarios;
-    private String ciclo;
-    private String tutor;
+    private Ciclo ciclo;
+    private Profesor tutor;
 
     public Proyecto(){
 
     }
 
-    public Proyecto(int idproyecto, String tutor, String ciclo, String archivos, String memoria, String comentarios, String logo, int anno_acad, Date fecha_pres, String resumen, TIPO tipo, String nombre) {
+    public Proyecto(int idproyecto, Profesor tutor, Ciclo ciclo, String archivos, String memoria, String comentarios, String logo, int anno_acad, Date fecha_pres, String resumen, TIPO tipo, String nombre) {
         this.idproyecto = idproyecto;
         this.tutor = tutor;
         this.ciclo = ciclo;
@@ -38,19 +38,19 @@ public class Proyecto {
         this.nombre = nombre;
     }
 
-    public String getTutor() {
+    public Profesor getTutor() {
         return tutor;
     }
 
-    public void setTutor(String tutor) {
+    public void setTutor(Profesor tutor) {
         this.tutor = tutor;
     }
 
-    public String getCiclo() {
+    public Ciclo getCiclo() {
         return ciclo;
     }
 
-    public void setCiclo(String ciclo) {
+    public void setCiclo(Ciclo ciclo) {
         this.ciclo = ciclo;
     }
 
