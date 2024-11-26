@@ -31,12 +31,12 @@ public class RealizanRepositoryImpl implements RealizanRepository {
 
     @Override
     public List<Realizan> findAll() {
-        return jdbcTemplate.query("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM realizan", new RealizanRowMapper());
+        return jdbcTemplate.query("SELECT id , calificacion, alumno, proyecto, comentario  FROM realizan", new RealizanRowMapper());
     }
 
     @Override
     public Realizan findById(int id) {
-        return jdbcTemplate.queryForObject("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM realizan where id = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
+        return jdbcTemplate.queryForObject("SELECT id , calificacion, alumno, proyecto, comentario FROM realizan where id = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class RealizanRepositoryImpl implements RealizanRepository {
 
     @Override
     public int update(Realizan realizan) {
-        return jdbcTemplate.update("UPDATE realizan SET calificacion = ?, alumno = ?, proyexto = ?, comentario = ? WHERE id = ?",realizan.getCalificacion(), realizan.getAlumno().getIdAlumno(), realizan.getProyecto().getIdproyecto(), realizan.getComentario(), realizan.getId(), realizan.getComentario(), realizan.getId());
+        return jdbcTemplate.update("UPDATE realizan SET calificacion = ?, alumno = ?, proyecto = ?, comentario = ? WHERE id = ?",realizan.getCalificacion(), realizan.getAlumno().getIdAlumno(), realizan.getProyecto().getIdproyecto(), realizan.getComentario(), realizan.getId(), realizan.getComentario(), realizan.getId());
     }
 
     @Override
