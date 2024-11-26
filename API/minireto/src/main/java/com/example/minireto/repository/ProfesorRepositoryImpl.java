@@ -39,7 +39,7 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
     @Override
     public int save(Profesor profesor) {
         String sql = "INSERT INTO profesores (nombre, apellidos, dni, email, password_encr, telefono, genero, fechaNac, especialidad, activo, admin) "+
-                "Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "Values (?, ?, ?, ?, md5(?), ?, ?, ?, ?, ?, ?)";
 
         return jdbcTemplate.update(sql, profesor.getNombre(), profesor.getApellidos(), profesor.getDni(), profesor.getEmail(), profesor.getPassword_encr(), profesor.getTelefono(), profesor.getGenero(), profesor.getFechaNac(), profesor.getEspecialidad(), profesor.isActivo(), profesor.isAdmin());
     }
@@ -48,7 +48,7 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
     public int update(Profesor profesor) {
         try{
             return jdbcTemplate.update(
-                    "UPDATE profesores SET nombre = ?, apellidos = ?, dni = ?, email = ?, password_encr = ?, telefono = ?, genero = ?, fechaNac = ?, especialidad = ?, activo = ?, admin = ? " +
+                    "UPDATE profesores SET nombre = ?, apellidos = ?, dni = ?, email = ?, password_encr = md5(?), telefono = ?, genero = ?, fechaNac = ?, especialidad = ?, activo = ?, admin = ? " +
                             " WHERE idProfesor = ?",
                     profesor.getNombre(), profesor.getApellidos(), profesor.getDni(), profesor.getEmail(), profesor.getPassword_encr(), profesor.getTelefono(), profesor.getGenero(), profesor.getFechaNac(), profesor.getEspecialidad(), profesor.isActivo(), profesor.isAdmin(), profesor.getIdprofesor()
 
