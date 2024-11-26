@@ -34,10 +34,10 @@ public class CicloRepositoryImpl implements CicloRepository {
             Ciclo ciclo = new Ciclo();
             ciclo.setCodCiclo(rs.getString("codciclo"));
             ciclo.setNombre(rs.getString("nombre"));
-            ciclo.setEtapa(ETAPA.valueOf(rs.getString("etapa")));
+            ciclo.setEtapa(ETAPA.valueOf(rs.getString("etapa").toUpperCase()));
             ciclo.setTitulo(rs.getString("titulo"));
             ciclo.setCurriculo(rs.getString("curriculo"));
-            ciclo.setFamilia(FAMILIA.valueOf(rs.getString("familia")));
+            ciclo.setFamilia(FAMILIA.valueOf(rs.getString("familia").toUpperCase()));
             return ciclo;
 
         }
