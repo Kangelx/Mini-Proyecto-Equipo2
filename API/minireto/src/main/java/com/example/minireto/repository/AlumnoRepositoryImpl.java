@@ -7,6 +7,7 @@ import com.example.minireto.ENUMS.GENERO;
 import com.example.minireto.model.Alumno;
 import com.example.minireto.model.Ciclo;
 import com.example.minireto.repository.Interfaces.AlumnoRepository;
+import jakarta.websocket.Encoder;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
@@ -53,13 +54,11 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
 
     }
 
-
-
     @Override
     public int save(Alumno alumno) {
         alumno.setIdAlumno(UUID.randomUUID().toString());
         String sql = "INSERT INTO alumnos (idalumno,nombre, apellidos, dni, email, password_encr, telefono, genero, fechaNac, activo, ciclo_actual) VALUES (?,?, ?, ?,?,md5(?),?,?,?,?,?)";
-        return jdbcTemplate.update(sql, alumno.getIdAlumno(),alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),alumno.getPassword(), alumno.getTelefono(), alumno.getGenero(),
+        return jdbcTemplate.update(sql, alumno.getIdAlumno(),alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),alumno.getPassword(), alumno.getTelefono(), alumno.getGenero().toString(),
                 alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo());
     }
 
@@ -67,7 +66,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
     public int update(Alumno alumno) {
         return jdbcTemplate.update("UPDATE alumnos SET idalumno = ?,nombre  = ?, apellidos = ?, dni = ?, email = ? , password_encr = md5(?), telefono = ?, genero = ?, fechaNac = ?, activo = ?, ciclo_actual = ? " +
                 "WHERE idalumno = ?", alumno.getIdAlumno(), alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),
-                alumno.getPassword(), alumno.getTelefono(),alumno.getGenero(), alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo(), alumno.getIdAlumno());
+                alumno.getPassword(), alumno.getTelefono(),alumno.getGenero().toString(), alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo(), alumno.getIdAlumno());
     }
 
     @Override
@@ -79,6 +78,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
         public Alumno mapRow(ResultSet rs, int rowNum) throws SQLException {
             Alumno alumno = new Alumno();
             Ciclo ciclo = new Ciclo();
+
             alumno.setIdAlumno(rs.getString("idalumno"));
             alumno.setNombre(rs.getString("alnombre"));
             alumno.setApellido(rs.getString("apellidos"));

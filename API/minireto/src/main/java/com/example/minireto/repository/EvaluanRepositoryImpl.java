@@ -49,13 +49,13 @@ public class EvaluanRepositoryImpl implements EvaluanRepository {
     @Override
     public int save(Evaluan evaluan) {
         evaluan.setId(UUID.randomUUID().variant());
-        String sql = "INSERT INTO realizan (id, calificacion_pers, comentario, proyecto, profesor) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO evaluan (id, calificacion_pers, comentario, proyecto, profesor) VALUES (?,?,?,?,?)";
         return jdbcTemplate.update(sql, evaluan.getId(), evaluan.getCalificacion_pers(), evaluan.getComentario(), evaluan.getProyecto().getIdproyecto(), evaluan.getProfesor().getIdprofesor());
     }
 
     @Override
     public int update(Evaluan evaluan) {
-        return jdbcTemplate.update("UPDATE realizan SET calificacion_pers = ?, comentario = ?, proyecto = ?, profesor = ? WHERE id = ?",
+        return jdbcTemplate.update("UPDATE evaluan SET calificacion_pers = ?, comentario = ?, proyecto = ?, profesor = ? WHERE id = ?",
                 evaluan.getCalificacion_pers(), evaluan.getComentario(), evaluan.getProyecto().getIdproyecto(), evaluan.getProfesor().getIdprofesor(), evaluan.getId());
     }
 
@@ -63,6 +63,7 @@ public class EvaluanRepositoryImpl implements EvaluanRepository {
     public int deleteById(int id) {
         return jdbcTemplate.update("DELETE FROM evaluan WHERE id = ?", id);
     }
+
     private  static  class  EvaluanRowMapper implements  RowMapper<Evaluan>{
          @Override
         public  Evaluan mapRow(ResultSet rs, int rowNum) throws SQLException {

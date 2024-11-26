@@ -24,7 +24,7 @@ public class CicloRepositoryImpl implements CicloRepository {
 
     @Override
     public Ciclo findById(String id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM ciclo where codciclo = ?", new CicloRepositoryImpl.CicloRowMapper(), id);
+        return jdbcTemplate.queryForObject("SELECT * FROM ciclos where codciclo = ?", new CicloRepositoryImpl.CicloRowMapper(), id);
     }
 
     private static class CicloRowMapper implements RowMapper<Ciclo> {
