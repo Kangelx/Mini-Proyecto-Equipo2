@@ -86,7 +86,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
             alumno.setEmail(rs.getString("email"));
             alumno.setPassword(rs.getString("password_encr"));
             alumno.setTelefono(rs.getString("telefono"));
-            alumno.setGenero(GENERO.valueOf(rs.getString("genero")));
+            alumno.setGenero(GENERO.valueOf(rs.getString("genero").toUpperCase()));
             LocalDate fechaNacimiento = rs.getDate("fechaNac").toLocalDate();
             alumno.setFechaNacimiento(fechaNacimiento);
             alumno.setActivo(rs.getBoolean("activo"));
@@ -95,7 +95,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
             ciclo.setEtapa(ETAPA.valueOf(rs.getString("etapa")));
             ciclo.setTitulo(rs.getString("titulo"));
             ciclo.setCurriculo(rs.getString("curriculo"));
-            ciclo.setFamilia(FAMILIA.valueOf(rs.getString("familia")));
+            ciclo.setFamilia(FAMILIA.valueOf(rs.getString("familia").toUpperCase()));
             alumno.setCiclo(ciclo);
 
             return alumno;

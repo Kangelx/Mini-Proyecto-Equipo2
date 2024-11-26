@@ -77,7 +77,7 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
             profesor.setEmail(rs.getString("email"));
             profesor.setPassword_encr(rs.getString("password_encr"));
             profesor.setTelefono(rs.getString("telefono"));
-            profesor.setGenero(GENERO.valueOf(rs.getString("genero")));
+            profesor.setGenero(GENERO.valueOf(rs.getString("genero").toUpperCase()));
             profesor.setFechaNac(rs.getDate("fechaNac"));
             profesor.setEspecialidad(rs.getString("especialidad"));
             profesor.setActivo(rs.getBoolean("activo"));
