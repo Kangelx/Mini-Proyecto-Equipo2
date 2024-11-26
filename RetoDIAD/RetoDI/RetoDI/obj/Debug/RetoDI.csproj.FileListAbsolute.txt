@@ -167,4 +167,4 @@ E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileIn
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.exe
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectos.resources
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectoo.resources

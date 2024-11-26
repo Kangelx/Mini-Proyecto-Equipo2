@@ -50,11 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controles\ControlAlumnos.cs" />
+    <Compile Include="Controles\ControlCiclos.cs" />
+    <Compile Include="Controles\ControlEvaluan.cs" />
     <Compile Include="Controles\ControlProfesores.cs" />
     <Compile Include="Controles\ControlProyectos.cs" />
     <Compile Include="Controles\ControlRealizan.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Alumnos.cs" />
+    <Compile Include="Models\ciclo.cs" />
+    <Compile Include="Models\ciclos.cs" />
+    <Compile Include="Models\evaluada.cs" />
+    <Compile Include="Models\evaluadas.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Profesores.cs" />
     <Compile Include="Models\Proyecto.cs" />
@@ -105,11 +111,11 @@
     <Compile Include="Views\profesores\ComentarProyectos.Designer.cs">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\profesores\Proyectos.cs">
+    <Compile Include="Views\profesores\Proyectoo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\profesores\Proyectos.Designer.cs">
-      <DependentUpon>Proyectos.cs</DependentUpon>
+    <Compile Include="Views\profesores\Proyectoo.Designer.cs">
+      <DependentUpon>Proyectoo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\profesores\SubirArchivos.cs">
       <SubType>Form</SubType>
@@ -148,8 +154,8 @@
     <EmbeddedResource Include="Views\profesores\ComentarProyectos.resx">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\profesores\Proyectos.resx">
-      <DependentUpon>Proyectos.cs</DependentUpon>
+    <EmbeddedResource Include="Views\profesores\Proyectoo.resx">
+      <DependentUpon>Proyectoo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\profesores\SubirArchivos.resx">
       <DependentUpon>SubirArchivos.cs</DependentUpon>

@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace RetoDI.Views.profesores
 {
-    public partial class Proyectos : Form
-    {
-        
+    public partial class Proyectoo : Form
+    {       
 
-        public Proyectos()
+        public Proyectoo()
         {
             InitializeComponent();
-        }
-
-       
+        }      
         
 
         private void btnVolver_Click(object sender, EventArgs e)

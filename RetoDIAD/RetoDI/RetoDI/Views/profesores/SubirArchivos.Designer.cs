@@ -40,6 +40,7 @@ namespace WinFormsApp1
             this.Apellidos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSeleccionearchivo
@@ -65,7 +66,7 @@ namespace WinFormsApp1
             // lblAlumno
             // 
             this.lblAlumno.AutoSize = true;
-            this.lblAlumno.Location = new System.Drawing.Point(204, 24);
+            this.lblAlumno.Location = new System.Drawing.Point(190, 24);
             this.lblAlumno.Name = "lblAlumno";
             this.lblAlumno.Size = new System.Drawing.Size(223, 13);
             this.lblAlumno.TabIndex = 4;
@@ -77,10 +78,10 @@ namespace WinFormsApp1
             this.Nombre,
             this.Apellidos});
             this.lvArchivos.HideSelection = false;
-            this.lvArchivos.Location = new System.Drawing.Point(207, 57);
+            this.lvArchivos.Location = new System.Drawing.Point(193, 57);
             this.lvArchivos.Margin = new System.Windows.Forms.Padding(2);
             this.lvArchivos.Name = "lvArchivos";
-            this.lvArchivos.Size = new System.Drawing.Size(271, 288);
+            this.lvArchivos.Size = new System.Drawing.Size(285, 288);
             this.lvArchivos.TabIndex = 6;
             this.lvArchivos.UseCompatibleStateImageBehavior = false;
             this.lvArchivos.View = System.Windows.Forms.View.Details;
@@ -105,12 +106,24 @@ namespace WinFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 7;
+          
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(65, 283);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(106, 33);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Guardar Cambios";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // SubirArchivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 370);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lvArchivos);
             this.Controls.Add(this.lblAlumno);
@@ -137,5 +150,6 @@ namespace WinFormsApp1
         private ColumnHeader Apellidos;
         private OpenFileDialog openFileDialog1;
         private TextBox textBox1;
+        private Button btnGuardar;
     }
 }
