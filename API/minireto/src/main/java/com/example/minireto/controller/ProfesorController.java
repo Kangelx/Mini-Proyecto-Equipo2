@@ -1,5 +1,6 @@
 package com.example.minireto.controller;
 
+import com.example.minireto.model.Alumno;
 import com.example.minireto.model.Profesor;
 import com.example.minireto.repository.interfaces.ProfesorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ProfesorController {
     private ProfesorRepository profesorRepository;
 
     @GetMapping()
-    public ResponseEntity<?> getAllProfesores(){
+    public ResponseEntity<List<Profesor>> getAllProfesores(){
         List<Profesor> profesores = profesorRepository.findAll();
         if (profesores.isEmpty())
             return ResponseEntity.notFound().build();
@@ -27,7 +28,7 @@ public class ProfesorController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createProfesor(@RequestBody Profesor profesor) {
+    public ResponseEntity<?> saveProfesor(@RequestBody Profesor profesor) {
         if (profesorRepository.save(profesor) ==1)
             return ResponseEntity.status(HttpStatus.CREATED).body(profesor);
         else
@@ -35,7 +36,7 @@ public class ProfesorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getProfesorById(@PathVariable String id){
+    public ResponseEntity<Profesor> getProfesorById(@PathVariable String id){
         Profesor profesor = profesorRepository.findById(id);
         if (profesor != null){
             return ResponseEntity.ok(profesor);
@@ -45,7 +46,7 @@ public class ProfesorController {
     }
 
     @GetMapping("/{dni}")
-    public ResponseEntity<?> getProfesorByDni(@PathVariable String dni){
+    public ResponseEntity<Profesor> getProfesorByDni(@PathVariable String dni){
         Profesor profesor = profesorRepository.findById(dni);
         if (profesor != null){
             return ResponseEntity.ok(profesor);
@@ -55,7 +56,7 @@ public class ProfesorController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Profesor> updateCancion(@PathVariable String id, @RequestBody Profesor profesor) {
+    public ResponseEntity<Profesor> updateProfesor(@PathVariable String id, @RequestBody Profesor profesor) {
         Profesor existingProfesor = profesorRepository.findById(id);
         if (existingProfesor != null) {
             profesor.setIdprofesor(id);
@@ -64,6 +65,17 @@ public class ProfesorController {
 
         }else{
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteAlumno(@PathVariable String id) {
+        Profesor profesor = profesorRepository.findById(id);
+        if(profesor == null){
+            return ResponseEntity.notFound().build();
+        }else{
+            profesorRepository.deleteById(id);
+            return ResponseEntity.ok().build();
         }
     }
 
