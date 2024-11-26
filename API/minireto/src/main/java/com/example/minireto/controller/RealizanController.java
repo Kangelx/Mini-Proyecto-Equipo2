@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/realizan")
 public class RealizanController {
@@ -18,6 +20,16 @@ public class RealizanController {
     private RealizanRepository realizanRepository;
     private AlumnoRepositoryImpl alumnoRepositoryImpl;
 
+
+    @GetMapping
+    public ResponseEntity<?> getAllRealizan() {
+        List<Realizan> realizan = realizanRepository.findAll();
+        if(realizan.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok(realizan);
+        }
+    }
 
     @PostMapping
     public ResponseEntity<?> createRealizan(@RequestBody Realizan realizan) {
@@ -28,7 +40,7 @@ public class RealizanController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getRealizanById(@PathVariable("id") int id) {
+    public ResponseEntity<?> getRealizanById(@PathVariable int id) {
         Realizan realizan = realizanRepository.findById(id);
         if(realizan == null){
             return ResponseEntity.notFound().build();
@@ -37,7 +49,7 @@ public class RealizanController {
         }
     }
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateRealizan(@PathVariable("id") int id, @RequestBody Realizan realizan) {
+    public ResponseEntity<?> updateRealizan(@PathVariable int id, @RequestBody Realizan realizan) {
         Realizan realizanExiste = realizanRepository.findById(id);
         if(realizanExiste == null){
             return ResponseEntity.notFound().build();
@@ -49,7 +61,7 @@ public class RealizanController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteRealizan(@PathVariable("id") int id) {
+    public ResponseEntity<?> deleteRealizan(@PathVariable int id) {
         Realizan realizan = realizanRepository.findById(id);
         if (realizan == null) {
             return ResponseEntity.notFound().build();

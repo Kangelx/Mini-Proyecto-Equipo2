@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Repository
@@ -29,8 +30,13 @@ public class RealizanRepositoryImpl implements RealizanRepository {
     }
 
     @Override
+    public List<Realizan> findAll() {
+        return jdbcTemplate.query("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM realizan", new RealizanRowMapper());
+    }
+
+    @Override
     public Realizan findById(int id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM realizan where id = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
+        return jdbcTemplate.queryForObject("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM realizan where id = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
     }
 
     @Override

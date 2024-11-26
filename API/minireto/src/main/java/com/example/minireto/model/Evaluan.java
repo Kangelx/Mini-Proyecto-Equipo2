@@ -5,10 +5,10 @@ public class Evaluan {
     private int id;
     private float calificacion_pers;
     private String comentario;
-    private int proyecto;
-    private String profesor;
+    private Proyecto proyecto;
+    private Profesor profesor;
 
-    public Evaluan(int id, float calificacion_pers, String comentario, int proyecto, String profesor) {
+    public Evaluan(int id, float calificacion_pers, String comentario, Proyecto proyecto, Profesor profesor) {
         this.id = id;
         this.calificacion_pers = calificacion_pers;
         this.comentario = comentario;
@@ -44,19 +44,19 @@ public class Evaluan {
         this.comentario = comentario;
     }
 
-    public int getProyecto() {
+    public Proyecto getProyecto() {
         return proyecto;
     }
 
-    public void setProyecto(int proyecto) {
+    public void setProyecto(Proyecto proyecto) {
         this.proyecto = proyecto;
     }
 
-    public String getProfesor() {
+    public Profesor getProfesor() {
         return profesor;
     }
 
-    public void setProfesor(String profesor) {
+    public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
     }
 }
