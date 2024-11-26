@@ -1,7 +1,9 @@
 ﻿using RetoDI.Controles;
 using RetoDI.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
@@ -54,20 +56,7 @@ namespace WinFormsApp1
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnSubir_Click(object sender, EventArgs e)
-        {
-
-            
-
-        }
-
-       
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+               
 
 
         private void btnSubir_Click_1(object sender, EventArgs e)
@@ -79,16 +68,76 @@ namespace WinFormsApp1
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName; // Ruta del archivo seleccionado
-                string fileName = Path.GetFileName(filePath); // Nombre del archivo
-
-                // Llamar al método para subir el archivo a la API
-                // SubirArchivoAAPI(filePath, fileName);
+                string fileName = Path.GetFileName(filePath); // Nombre del archivo                
             }
         }
 
         private void btnSubir_Click_2(object sender, EventArgs e)
         {
+            // Configuración del OpenFileDialog
+            openFileDialog1.InitialDirectory = @"C:\"; // Establece la carpeta inicial para la búsqueda
+            openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"; // Filtro para archivos .txt y todos los archivos
+            openFileDialog1.FilterIndex = 2; // Establece el filtro predeterminado
+            openFileDialog1.RestoreDirectory = true; // Restaura la última carpeta abierta
 
+            // Muestra el diálogo para seleccionar el archivo
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Si el usuario selecciona un archivo, actualiza el TextBox con la ruta del archivo
+                textBox1.Text = openFileDialog1.FileName;
+            }
+        }
+
+       
+
+        private async void btnGuardar_Click(object sender, EventArgs e)
+        {
+            // Obtener la información que deseas guardar desde el TextBox (en este caso, la ruta de un archivo)
+            string filePath = textBox1.Text;
+
+            // Comprobar si el TextBox no está vacío
+            if (string.IsNullOrEmpty(filePath))
+            {
+                MessageBox.Show("Por favor, seleccione un archivo primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // URL de la API donde enviarás los datos
+            string apiUrl = "URL API A GUARDAR ARCHIVO";  
+
+            try
+            {
+                // Crear un objeto HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Crear un objeto con los datos que se quiere enviar 
+                    var content = new FormUrlEncodedContent(new[]
+                    {
+                new KeyValuePair<string, string>("filePath", filePath)
+            });
+
+                    // Enviar la solicitud POST a la API
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                    // Verificar si la solicitud fue exitosa
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Si la respuesta fue exitosa, muestra un mensaje al usuario
+                        MessageBox.Show("Los cambios se guardaron correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Si la solicitud no fue exitosa, muestra un mensaje de error
+                        MessageBox.Show("Error al guardar los cambios. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Si ocurre una excepción, muestra el mensaje de error
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
+

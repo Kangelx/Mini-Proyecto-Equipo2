@@ -1068,12 +1068,12 @@
             this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
-            this.listView4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listView4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView4.GridLines = true;
             this.listView4.HideSelection = false;
             this.listView4.Location = new System.Drawing.Point(0, 0);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(217, 46);
+            this.listView4.Size = new System.Drawing.Size(357, 46);
             this.listView4.TabIndex = 10;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;

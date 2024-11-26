@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RetoDI.Administrador;
 using WinFormsApp1;
+using RetoDI.Models;
+using RetoDI.Views;
+using RetoDI.Views.profesores;
+
 
 
 
@@ -32,23 +36,23 @@ namespace RetoDI
 
         private void btProyectos_Click(object sender, EventArgs e)
         {
-            SubirArchivos subir = new SubirArchivos();
-            subir.ShowDialog();
-            this.Hide();
+            Proyectoo proyecto = new Proyectoo();     
+            proyecto.ShowDialog();
+            this.Close();
         }
 
         private void btnGestion_Click(object sender, EventArgs e)
         {
             GestiiónInterna gestioninterna = new GestiiónInterna();
             gestioninterna.ShowDialog();
-            this.Hide();
+            this.Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             frmLogin form = new frmLogin();
             form.ShowDialog();
-            this.Hide();
+            this.Close();
         }
     }
 }
