@@ -45,7 +45,7 @@ public class ProfesorController {
         }
     }
 
-    @GetMapping("/{dni}")
+    @GetMapping("/dni/{dni}")
     public ResponseEntity<Profesor> getProfesorByDni(@PathVariable String dni){
         Profesor profesor = profesorRepository.findById(dni);
         if (profesor != null){
