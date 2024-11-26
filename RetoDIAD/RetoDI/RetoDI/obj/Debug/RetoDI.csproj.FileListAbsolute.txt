@@ -92,7 +92,6 @@ D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\o
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.CalificarAlumnos.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.ComentarProyectos.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Profesor.Profesor.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.SubirArchivos.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.GenerateResource.cache
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache
@@ -169,24 +168,3 @@ E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.exe
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectos.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe.config
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.pdb
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\Newtonsoft.Json.dll
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\Newtonsoft.Json.xml
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.AssemblyReference.cache
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Properties.Resources.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.Administracion.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Botones.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.GestiiónInterna.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Alumno.Alumno.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.CalificarAlumnos.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.ComentarProyectos.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectos.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.SubirArchivos.resources
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.GenerateResource.cache
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.exe
-D:\Usuarios\DAM2\OneDrive - Educantabria\Escritorio\Reto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
