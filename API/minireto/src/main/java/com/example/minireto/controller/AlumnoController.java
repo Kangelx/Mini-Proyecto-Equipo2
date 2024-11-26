@@ -38,7 +38,7 @@ public class AlumnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getAlumnoById(@RequestParam("id") String id) {
+    public ResponseEntity<?> getAlumnoById(@PathVariable String id) {
         Alumno alumno = alumnoRepository.findById(id);
         if(alumno == null){
             return ResponseEntity.notFound().build();
@@ -48,7 +48,7 @@ public class AlumnoController {
     }
 
     @GetMapping("/{dni}")
-    public ResponseEntity<?> getAlumnoByDni(@PathVariable("dni") String dni) {
+    public ResponseEntity<?> getAlumnoByDni(@PathVariable String dni) {
         Alumno alumno = alumnoRepository.findByDni(dni);
         if(alumno == null){
             return ResponseEntity.notFound().build();
@@ -57,7 +57,7 @@ public class AlumnoController {
         }
     }
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateAlumno(@PathVariable("id") String id, @RequestBody Alumno alumno) {
+    public ResponseEntity<?> updateAlumno(@PathVariable String id, @RequestBody Alumno alumno) {
         Alumno alumnoExiste = alumnoRepository.findById(id);
         if(alumnoExiste == null){
             return ResponseEntity.notFound().build();
@@ -69,7 +69,7 @@ public class AlumnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteAlumno(@PathVariable("id") String id) {
+    public ResponseEntity<?> deleteAlumno(@PathVariable String id) {
         Alumno alumno = alumnoRepository.findById(id);
         if(alumno == null){
             return ResponseEntity.notFound().build();
