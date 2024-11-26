@@ -9,9 +9,9 @@ namespace RetoDI.Models
     public class Realizada
     {
         public int id {  get; set; }
-        public string calificacion { get; set; }
-        public string alumno { get; set; }
-        public string proyecto { get; set; }
+        public int calificacion { get; set; }
+        public Alumno alumno { get; set; }
+        public Proyecto proyecto { get; set; }
         public string comentario { get; set; }
     }
 }

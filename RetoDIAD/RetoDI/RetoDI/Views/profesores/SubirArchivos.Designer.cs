@@ -66,7 +66,7 @@ namespace WinFormsApp1
             // lblAlumno
             // 
             this.lblAlumno.AutoSize = true;
-            this.lblAlumno.Location = new System.Drawing.Point(190, 24);
+            this.lblAlumno.Location = new System.Drawing.Point(265, 38);
             this.lblAlumno.Name = "lblAlumno";
             this.lblAlumno.Size = new System.Drawing.Size(223, 13);
             this.lblAlumno.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace WinFormsApp1
             this.Nombre,
             this.Apellidos});
             this.lvArchivos.HideSelection = false;
-            this.lvArchivos.Location = new System.Drawing.Point(193, 57);
+            this.lvArchivos.Location = new System.Drawing.Point(268, 71);
             this.lvArchivos.Margin = new System.Windows.Forms.Padding(2);
             this.lvArchivos.Name = "lvArchivos";
             this.lvArchivos.Size = new System.Drawing.Size(285, 288);
@@ -106,7 +106,6 @@ namespace WinFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 7;
-          
             // 
             // btnGuardar
             // 
@@ -122,7 +121,7 @@ namespace WinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 370);
+            this.ClientSize = new System.Drawing.Size(564, 370);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lvArchivos);

@@ -46,7 +46,7 @@ namespace WinFormsApp1
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(449, 326);
+            this.btnGuardar.Location = new System.Drawing.Point(402, 308);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(151, 41);
             this.btnGuardar.TabIndex = 0;
@@ -56,30 +56,30 @@ namespace WinFormsApp1
             // lblCalificacion
             // 
             this.lblCalificacion.AutoSize = true;
-            this.lblCalificacion.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacion.Location = new System.Drawing.Point(382, 248);
+            this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.Location = new System.Drawing.Point(337, 241);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(86, 22);
+            this.lblCalificacion.Size = new System.Drawing.Size(79, 17);
             this.lblCalificacion.TabIndex = 1;
             this.lblCalificacion.Text = "Calificación";
             // 
             // txtCalificacion
             // 
-            this.txtCalificacion.Location = new System.Drawing.Point(387, 288);
+            this.txtCalificacion.Location = new System.Drawing.Point(340, 282);
             this.txtCalificacion.Name = "txtCalificacion";
             this.txtCalificacion.Size = new System.Drawing.Size(213, 20);
             this.txtCalificacion.TabIndex = 2;
             // 
             // txtBuscarAlumno
             // 
-            this.txtBuscarAlumno.Location = new System.Drawing.Point(12, 288);
+            this.txtBuscarAlumno.Location = new System.Drawing.Point(15, 282);
             this.txtBuscarAlumno.Name = "txtBuscarAlumno";
             this.txtBuscarAlumno.Size = new System.Drawing.Size(253, 20);
             this.txtBuscarAlumno.TabIndex = 10;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(170, 326);
+            this.btnBuscar.Location = new System.Drawing.Point(173, 308);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(95, 41);
             this.btnBuscar.TabIndex = 9;
@@ -89,7 +89,7 @@ namespace WinFormsApp1
             // lblNombreproyecto
             // 
             this.lblNombreproyecto.AutoSize = true;
-            this.lblNombreproyecto.Location = new System.Drawing.Point(12, 248);
+            this.lblNombreproyecto.Location = new System.Drawing.Point(12, 243);
             this.lblNombreproyecto.Name = "lblNombreproyecto";
             this.lblNombreproyecto.Size = new System.Drawing.Size(82, 13);
             this.lblNombreproyecto.TabIndex = 8;
@@ -104,7 +104,7 @@ namespace WinFormsApp1
             this.lvAlumnos.HideSelection = false;
             this.lvAlumnos.Location = new System.Drawing.Point(15, 23);
             this.lvAlumnos.Name = "lvAlumnos";
-            this.lvAlumnos.Size = new System.Drawing.Size(585, 205);
+            this.lvAlumnos.Size = new System.Drawing.Size(538, 205);
             this.lvAlumnos.TabIndex = 11;
             this.lvAlumnos.UseCompatibleStateImageBehavior = false;
             this.lvAlumnos.View = System.Windows.Forms.View.Details;
@@ -126,7 +126,7 @@ namespace WinFormsApp1
             // 
             // CalificarAlumnos
             // 
-            this.ClientSize = new System.Drawing.Size(615, 416);
+            this.ClientSize = new System.Drawing.Size(564, 361);
             this.Controls.Add(this.lvAlumnos);
             this.Controls.Add(this.txtBuscarAlumno);
             this.Controls.Add(this.btnBuscar);

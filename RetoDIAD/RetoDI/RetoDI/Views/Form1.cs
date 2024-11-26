@@ -35,7 +35,7 @@ namespace RetoDI
             {
 
                 SessionData.TipoUsuario = "Administrador";
-                Botones adminVentana = new Botones();
+                Botones adminVentana = new Botones(this);
                 adminVentana.Show();
                 this.Hide();
             }
@@ -43,13 +43,13 @@ namespace RetoDI
             {
 
                 SessionData.TipoUsuario = "Profesor";
-                Botones profVentana = new Botones();
+                Botones profVentana = new Botones(this);
                 profVentana.Show();
                 this.Hide();
             }
             else if (usuario == "Alumno" && contrasenia == "12345")
             {
-                Alumno.Alumno alumnoVentana = new Alumno.Alumno();
+                Alumno.Alumno alumnoVentana = new Alumno.Alumno(this);
                 alumnoVentana.Show();
                 this.Hide();
             }
@@ -57,7 +57,7 @@ namespace RetoDI
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            txtContrasenia.Text = "";
         }
 
         

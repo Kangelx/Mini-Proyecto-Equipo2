@@ -38,7 +38,7 @@
             // 
             // btnGestion
             // 
-            this.btnGestion.Font = new System.Drawing.Font("Noto Sans", 8.25F);
+            this.btnGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGestion.Location = new System.Drawing.Point(548, 323);
             this.btnGestion.Name = "btnGestion";
             this.btnGestion.Size = new System.Drawing.Size(112, 56);
@@ -49,7 +49,7 @@
             // 
             // btProyectos
             // 
-            this.btProyectos.Font = new System.Drawing.Font("Noto Sans", 8.25F);
+            this.btProyectos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btProyectos.Location = new System.Drawing.Point(346, 323);
             this.btProyectos.Name = "btProyectos";
             this.btProyectos.Size = new System.Drawing.Size(112, 56);
@@ -60,7 +60,7 @@
             // 
             // btnAministracion
             // 
-            this.btnAministracion.Font = new System.Drawing.Font("Noto Sans", 8.25F);
+            this.btnAministracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAministracion.Location = new System.Drawing.Point(134, 323);
             this.btnAministracion.Name = "btnAministracion";
             this.btnAministracion.Size = new System.Drawing.Size(112, 56);
@@ -71,6 +71,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo_png;
             this.pictureBox1.Location = new System.Drawing.Point(249, 70);
             this.pictureBox1.Name = "pictureBox1";
@@ -105,6 +106,7 @@
             this.Name = "Botones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Botones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Botones_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

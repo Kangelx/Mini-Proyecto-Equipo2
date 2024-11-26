@@ -43,9 +43,7 @@ namespace RetoDI.Administrador
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Botones botones = new Botones();
-            botones.ShowDialog();
-            this.Hide();
+            this.Close();
         }
 
         private void Administracion_Load(object sender, EventArgs e)
@@ -105,9 +103,8 @@ namespace RetoDI.Administrador
             if (result == DialogResult.Yes)
             {
                 
-                frmLogin login = new frmLogin();
-                login.Show();
-                this.Hide(); 
+                
+                this.Close(); 
             }
         }
 
@@ -153,6 +150,11 @@ namespace RetoDI.Administrador
         }
 
         private void btnCancelarProyecto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Administracion_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

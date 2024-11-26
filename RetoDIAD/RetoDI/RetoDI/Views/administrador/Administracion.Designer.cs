@@ -185,7 +185,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(43, 223);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(122, 19);
+            this.btnConsultar.Size = new System.Drawing.Size(120, 25);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar Datos";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             this.btnDatoProyecto.Location = new System.Drawing.Point(43, 164);
             this.btnDatoProyecto.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatoProyecto.Name = "btnDatoProyecto";
-            this.btnDatoProyecto.Size = new System.Drawing.Size(122, 19);
+            this.btnDatoProyecto.Size = new System.Drawing.Size(120, 25);
             this.btnDatoProyecto.TabIndex = 2;
             this.btnDatoProyecto.Text = "Datos de Proyecto";
             this.btnDatoProyecto.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             this.btnDatoProfesores.Location = new System.Drawing.Point(43, 110);
             this.btnDatoProfesores.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatoProfesores.Name = "btnDatoProfesores";
-            this.btnDatoProfesores.Size = new System.Drawing.Size(122, 19);
+            this.btnDatoProfesores.Size = new System.Drawing.Size(120, 25);
             this.btnDatoProfesores.TabIndex = 1;
             this.btnDatoProfesores.Text = "Datos de Profesores";
             this.btnDatoProfesores.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.btnDatosAlumnos.Location = new System.Drawing.Point(43, 50);
             this.btnDatosAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatosAlumnos.Name = "btnDatosAlumnos";
-            this.btnDatosAlumnos.Size = new System.Drawing.Size(122, 19);
+            this.btnDatosAlumnos.Size = new System.Drawing.Size(120, 25);
             this.btnDatosAlumnos.TabIndex = 0;
             this.btnDatosAlumnos.Text = "Datos de alumnos";
             this.btnDatosAlumnos.UseVisualStyleBackColor = true;
@@ -1192,10 +1192,10 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(9, 7);
+            this.btnRegresar.Location = new System.Drawing.Point(11, 11);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(67, 19);
+            this.btnRegresar.Size = new System.Drawing.Size(60, 30);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
@@ -1203,10 +1203,10 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(698, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(662, 11);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(56, 19);
+            this.btnCerrar.Size = new System.Drawing.Size(90, 30);
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -1226,6 +1226,7 @@
             this.Name = "Administracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Administracion_FormClosing);
             this.Load += new System.EventHandler(this.Administracion_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

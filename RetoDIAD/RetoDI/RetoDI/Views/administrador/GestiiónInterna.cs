@@ -104,9 +104,7 @@ namespace RetoDI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Botones botones = new Botones();
-            botones.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

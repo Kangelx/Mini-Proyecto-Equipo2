@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RetoDI.Models
 {
-    public class ciclos
+    public class Ciclos
     {
-        public List<ciclo> results { get; set; }
+        public List<Ciclo> results { get; set; }
     }
 }

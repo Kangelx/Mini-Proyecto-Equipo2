@@ -57,10 +57,10 @@
     <Compile Include="Controles\ControlRealizan.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Alumnos.cs" />
-    <Compile Include="Models\ciclo.cs" />
-    <Compile Include="Models\ciclos.cs" />
-    <Compile Include="Models\evaluada.cs" />
-    <Compile Include="Models\evaluadas.cs" />
+    <Compile Include="Models\Ciclo.cs" />
+    <Compile Include="Models\Ciclos.cs" />
+    <Compile Include="Models\Evaluada.cs" />
+    <Compile Include="Models\Evaluadas.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Profesores.cs" />
     <Compile Include="Models\Proyecto.cs" />

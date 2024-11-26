@@ -47,7 +47,7 @@ namespace WinFormsApp1
             // lblNombreproyecto
             // 
             this.lblNombreproyecto.AutoSize = true;
-            this.lblNombreproyecto.Location = new System.Drawing.Point(10, 189);
+            this.lblNombreproyecto.Location = new System.Drawing.Point(23, 226);
             this.lblNombreproyecto.Name = "lblNombreproyecto";
             this.lblNombreproyecto.Size = new System.Drawing.Size(86, 13);
             this.lblNombreproyecto.TabIndex = 5;
@@ -55,7 +55,7 @@ namespace WinFormsApp1
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(110, 238);
+            this.btnBuscar.Location = new System.Drawing.Point(123, 275);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(70, 19);
@@ -65,7 +65,7 @@ namespace WinFormsApp1
             // 
             // txtBuscarProyecto
             // 
-            this.txtBuscarProyecto.Location = new System.Drawing.Point(9, 204);
+            this.txtBuscarProyecto.Location = new System.Drawing.Point(22, 241);
             this.txtBuscarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarProyecto.Name = "txtBuscarProyecto";
             this.txtBuscarProyecto.Size = new System.Drawing.Size(172, 20);
@@ -73,7 +73,7 @@ namespace WinFormsApp1
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(204, 204);
+            this.txtComentario.Location = new System.Drawing.Point(242, 194);
             this.txtComentario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
@@ -83,7 +83,7 @@ namespace WinFormsApp1
             // lblComentario
             // 
             this.lblComentario.AutoSize = true;
-            this.lblComentario.Location = new System.Drawing.Point(201, 189);
+            this.lblComentario.Location = new System.Drawing.Point(239, 169);
             this.lblComentario.Name = "lblComentario";
             this.lblComentario.Size = new System.Drawing.Size(60, 13);
             this.lblComentario.TabIndex = 9;
@@ -91,7 +91,7 @@ namespace WinFormsApp1
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(397, 348);
+            this.btnAñadir.Location = new System.Drawing.Point(435, 322);
             this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(117, 28);
@@ -110,7 +110,7 @@ namespace WinFormsApp1
             this.lblcomentar.Location = new System.Drawing.Point(9, 22);
             this.lblcomentar.Margin = new System.Windows.Forms.Padding(2);
             this.lblcomentar.Name = "lblcomentar";
-            this.lblcomentar.Size = new System.Drawing.Size(513, 151);
+            this.lblcomentar.Size = new System.Drawing.Size(543, 136);
             this.lblcomentar.TabIndex = 11;
             this.lblcomentar.UseCompatibleStateImageBehavior = false;
             this.lblcomentar.View = System.Windows.Forms.View.Details;
@@ -139,7 +139,7 @@ namespace WinFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 387);
+            this.ClientSize = new System.Drawing.Size(564, 361);
             this.Controls.Add(this.lblcomentar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.lblComentario);

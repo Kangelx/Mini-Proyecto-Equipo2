@@ -21,9 +21,8 @@ namespace RetoDI.Views.profesores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Botones botones = new Botones();
-            botones.Show();
-            this.Hide();
+
+            this.Close();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
