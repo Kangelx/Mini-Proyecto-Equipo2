@@ -1,6 +1,6 @@
 ﻿namespace RetoDI.Views.profesores
 {
-    partial class Proyectoo
+    partial class frmProyectoo
     {
         /// <summary>
         /// Required designer variable.

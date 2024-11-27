@@ -34,7 +34,7 @@ namespace RetoDI.Controles
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
                 //que se quiere consultar
-                HttpResponseMessage response = await client.GetAsync("URL API a proyectos");
+                HttpResponseMessage response = await client.GetAsync("http://localhost:4000/proyecto");
 
                 //Verifica que la respuesta tenga un estado de éxito
                 //Si no es exitosa, lanza una excepción
@@ -48,7 +48,7 @@ namespace RetoDI.Controles
                 //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
                 //el JSON recibido en un objeto de tipo "Personajes" utilizando la
                 //biblioteca Newtonsoft.Json
-                proyectos = JsonConvert.DeserializeObject<Proyectos>(responseJson);
+                proyectos.results = JsonConvert.DeserializeObject<List<Proyecto>>(responseJson);
 
                 //Devuelve el objeto "personajes" con los datos obtenidos de la API
                 return proyectos;

@@ -1,4 +1,4 @@
-﻿using RetoDI.Alumno;
+﻿using RetoDI.frmAlumno;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +35,7 @@ namespace RetoDI
             {
 
                 SessionData.TipoUsuario = "Administrador";
-                Botones adminVentana = new Botones(this);
+                frmBotones adminVentana = new frmBotones(this);
                 adminVentana.Show();
                 this.Hide();
             }
@@ -43,13 +43,13 @@ namespace RetoDI
             {
 
                 SessionData.TipoUsuario = "Profesor";
-                Botones profVentana = new Botones(this);
+                frmBotones profVentana = new frmBotones(this);
                 profVentana.Show();
                 this.Hide();
             }
             else if (usuario == "Alumno" && contrasenia == "12345")
             {
-                Alumno.Alumno alumnoVentana = new Alumno.Alumno(this);
+                frmAlumno.frmAlumno alumnoVentana = new frmAlumno.frmAlumno(this);
                 alumnoVentana.Show();
                 this.Hide();
             }

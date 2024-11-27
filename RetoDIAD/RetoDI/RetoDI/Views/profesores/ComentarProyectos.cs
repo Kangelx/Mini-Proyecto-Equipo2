@@ -1,4 +1,4 @@
-﻿using RetoDI.Alumno;
+﻿using RetoDI.frmAlumno;
 using RetoDI.Controles;
 using RetoDI.Models;
 using System;
@@ -12,7 +12,7 @@ namespace WinFormsApp1
     {
         //Declaramos el controlador, un objeto que controla la lógica
         //para obtener los personajes de la API
-        private ControlRealizan ControlRealizan;
+        private ControlRealizan controlRealizan;
         //Inicializamos el modelo, es un objeto que almacena los datos
         //deserializados de la API
         private Realizadas realizan;
@@ -20,15 +20,17 @@ namespace WinFormsApp1
         public ComentarProyectos()
         {
             InitializeComponent();
-            ControlRealizan = new ControlRealizan();
+            controlRealizan = new ControlRealizan();
             realizan = new Realizadas();
+            GetRealizan();
         }
 
         //Método asíncrono para obtener los personajes de la API
         private async void GetRealizan()
         {
+
             //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
-            realizan = await ControlRealizan.GetAllRealizas();
+            realizan = await controlRealizan.GetAllRealizas();
 
             //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
 
@@ -38,12 +40,12 @@ namespace WinFormsApp1
                 foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
                 {
                     // Crear un nuevo item 
-                    ListViewItem item = new ListViewItem(realiza.alumno); // Primera columna
+                    ListViewItem item = new ListViewItem(realiza.alumno.Nombre); // Primera columna
 
                     // Agregar los subítems (equivalentes a las celdas de las otras columnas)
 
-                    item.SubItems.Add(realiza.proyecto); // Segunda columna
-                    item.SubItems.Add(realiza.calificacion); // tercera columna
+                    item.SubItems.Add(realiza.proyecto.Nombre); // Segunda columna
+                    item.SubItems.Add(realiza.calificacion.ToString()); // tercera columna
                     item.SubItems.Add(realiza.comentario); // cuarta columna
 
 

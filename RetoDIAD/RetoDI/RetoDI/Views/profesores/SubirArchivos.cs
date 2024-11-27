@@ -37,11 +37,11 @@ namespace WinFormsApp1
                 foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
                 {
                     // Crear un nuevo item 
-                    ListViewItem item = new ListViewItem(realiza.alumno); // Primera columna
+                    ListViewItem item = new ListViewItem(realiza.alumno.Nombre); // Primera columna
 
                     // Agregar los subítems (equivalentes a las celdas de las otras columnas)
 
-                    item.SubItems.Add(realiza.proyecto); // Segunda columna
+                    item.SubItems.Add(realiza.proyecto.Nombre); // Segunda columna
                    
 
 
