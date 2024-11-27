@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RetoDI.Alumno
+namespace RetoDI.frmAlumno
 {
-    public partial class Alumno : Form
+    public partial class frmAlumno : Form
     {
-        public Alumno(frmLogin frmLogin)
+        public frmAlumno(frmLogin frmLogin)
         {
             InitializeComponent();
         }

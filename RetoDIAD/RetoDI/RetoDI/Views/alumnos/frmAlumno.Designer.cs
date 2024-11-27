@@ -1,6 +1,6 @@
-﻿namespace RetoDI.Alumno
+﻿namespace RetoDI.frmAlumno
 {
-    partial class Alumno
+    partial class frmAlumno
     {
         /// <summary>
         /// Required designer variable.

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RetoDI.Controles
 {
@@ -34,7 +35,8 @@ namespace RetoDI.Controles
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
                 //que se quiere consultar
-                HttpResponseMessage response = await client.GetAsync("URL API a ciclos");
+                MessageBox.Show("no implementado");
+                HttpResponseMessage response = await client.GetAsync("http://localhost:4000/ciclos");
 
                 //Verifica que la respuesta tenga un estado de éxito
                 //Si no es exitosa, lanza una excepción
@@ -48,7 +50,7 @@ namespace RetoDI.Controles
                 //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
                 //el JSON recibido en un objeto de tipo "Personajes" utilizando la
                 //biblioteca Newtonsoft.Json
-                ciclos = JsonConvert.DeserializeObject<Ciclos>(responseJson);
+                ciclos.results = JsonConvert.DeserializeObject<List<Ciclo>>(responseJson);
 
                 //Devuelve el objeto "personajes" con los datos obtenidos de la API
                 return ciclos;

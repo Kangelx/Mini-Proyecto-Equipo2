@@ -12,7 +12,7 @@ namespace RetoDI.Models
         public string Nombre { get; set; }
         public string tipo { get; set; }
         public string resumen { get; set; }
-        public int añoacademico { get; set; }
+        public int anno_acad { get; set; }
         public DateTime fecha { get; set; }
         public string logo { get; set; }
         public string memoria { get; set; }

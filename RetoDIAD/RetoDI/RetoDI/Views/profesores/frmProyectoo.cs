@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace RetoDI.Views.profesores
 {
-    public partial class Proyectoo : Form
+    public partial class frmProyectoo : Form
     {       
 
-        public Proyectoo()
+        public frmProyectoo()
         {
             InitializeComponent();
         }      

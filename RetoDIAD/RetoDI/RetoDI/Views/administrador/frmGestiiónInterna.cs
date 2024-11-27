@@ -12,9 +12,9 @@ using WinFormsApp1;
 
 namespace RetoDI
 {
-    public partial class GestiiónInterna : Form
+    public partial class frmGestiiónInterna : Form
     {
-        public GestiiónInterna()
+        public frmGestiiónInterna()
         {
             InitializeComponent();
         }

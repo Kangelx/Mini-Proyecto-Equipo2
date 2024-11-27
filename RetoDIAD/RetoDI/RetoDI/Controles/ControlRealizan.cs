@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RetoDI.Controles
 {
@@ -45,21 +46,24 @@ namespace RetoDI.Controles
             string responseJson = await response.Content.ReadAsStringAsync();
 
 
-            //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
-            //el JSON recibido en un objeto de tipo "Personajes" utilizando la
-            //biblioteca Newtonsoft.Json
-            realizan = JsonConvert.DeserializeObject<Realizadas>(responseJson);
+                //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
+                //el JSON recibido en un objeto de tipo "Personajes" utilizando la
+                //biblioteca Newtonsoft.Json
+
+            realizan.results = JsonConvert.DeserializeObject<List<Realizada>>(responseJson);
 
             //Devuelve el objeto "personajes" con los datos obtenidos de la API
             return realizan;
 
         }
 
-        catch (Exception)
+        catch (Exception e)
         {
 
             //Si ocurre algún error (como problemos de conexión o un JSON no válido),
             //captura la excepción y devuelve "null" como valor de error
+
+                MessageBox.Show(e.Message);
             return null;
 
         }

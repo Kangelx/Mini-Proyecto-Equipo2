@@ -1,6 +1,6 @@
 ﻿namespace RetoDI
 {
-    partial class GestiiónInterna
+    partial class frmGestiiónInterna
     {
         /// <summary>
         /// Required designer variable.

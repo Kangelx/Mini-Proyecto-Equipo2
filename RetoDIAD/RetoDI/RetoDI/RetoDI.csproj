@@ -69,29 +69,29 @@
     <Compile Include="Models\Realizadas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\administrador\Administracion.cs">
+    <Compile Include="Views\administrador\frmAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\administrador\Administracion.Designer.cs">
-      <DependentUpon>Administracion.cs</DependentUpon>
+    <Compile Include="Views\administrador\frmAdministracion.Designer.cs">
+      <DependentUpon>frmAdministracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\administrador\Botones.cs">
+    <Compile Include="Views\administrador\frmBotones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\administrador\Botones.Designer.cs">
-      <DependentUpon>Botones.cs</DependentUpon>
+    <Compile Include="Views\administrador\frmBotones.Designer.cs">
+      <DependentUpon>frmBotones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\administrador\GestiiónInterna.cs">
+    <Compile Include="Views\administrador\frmGestiiónInterna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\administrador\GestiiónInterna.Designer.cs">
-      <DependentUpon>GestiiónInterna.cs</DependentUpon>
+    <Compile Include="Views\administrador\frmGestiiónInterna.Designer.cs">
+      <DependentUpon>frmGestiiónInterna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\alumnos\Alumno.cs">
+    <Compile Include="Views\alumnos\frmAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\alumnos\Alumno.Designer.cs">
-      <DependentUpon>Alumno.cs</DependentUpon>
+    <Compile Include="Views\alumnos\frmAlumno.Designer.cs">
+      <DependentUpon>frmAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <Compile Include="Views\profesores\ComentarProyectos.Designer.cs">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\profesores\Proyectoo.cs">
+    <Compile Include="Views\profesores\frmProyectoo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\profesores\Proyectoo.Designer.cs">
-      <DependentUpon>Proyectoo.cs</DependentUpon>
+    <Compile Include="Views\profesores\frmProyectoo.Designer.cs">
+      <DependentUpon>frmProyectoo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\profesores\SubirArchivos.cs">
       <SubType>Form</SubType>
@@ -133,17 +133,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\administrador\Administracion.resx">
-      <DependentUpon>Administracion.cs</DependentUpon>
+    <EmbeddedResource Include="Views\administrador\frmAdministracion.resx">
+      <DependentUpon>frmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\administrador\Botones.resx">
-      <DependentUpon>Botones.cs</DependentUpon>
+    <EmbeddedResource Include="Views\administrador\frmBotones.resx">
+      <DependentUpon>frmBotones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\administrador\GestiiónInterna.resx">
-      <DependentUpon>GestiiónInterna.cs</DependentUpon>
+    <EmbeddedResource Include="Views\administrador\frmGestiiónInterna.resx">
+      <DependentUpon>frmGestiiónInterna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\alumnos\Alumno.resx">
-      <DependentUpon>Alumno.cs</DependentUpon>
+    <EmbeddedResource Include="Views\alumnos\frmAlumno.resx">
+      <DependentUpon>frmAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Views\profesores\ComentarProyectos.resx">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\profesores\Proyectoo.resx">
-      <DependentUpon>Proyectoo.cs</DependentUpon>
+    <EmbeddedResource Include="Views\profesores\frmProyectoo.resx">
+      <DependentUpon>frmProyectoo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\profesores\SubirArchivos.resx">
       <DependentUpon>SubirArchivos.cs</DependentUpon>

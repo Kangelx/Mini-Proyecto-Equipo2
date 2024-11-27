@@ -20,10 +20,10 @@ using RetoDI.Views.profesores;
 
 namespace RetoDI
 {
-    public partial class Botones : Form
+    public partial class frmBotones : Form
     {
         frmLogin inicio;
-        public Botones(frmLogin frmLogin)
+        public frmBotones(frmLogin frmLogin)
         {
             InitializeComponent();
             inicio = frmLogin;
@@ -35,21 +35,21 @@ namespace RetoDI
 
         private void btnAministracion_Click(object sender, EventArgs e)
         {
-            Administracion administracion = new Administracion();
+            frmAdministracion administracion = new frmAdministracion();
             administracion.ShowDialog(); 
             
         }
 
         private void btProyectos_Click(object sender, EventArgs e)
         {
-            Proyectoo proyecto = new Proyectoo();     
+            frmProyectoo proyecto = new frmProyectoo();     
             proyecto.ShowDialog();
            
         }
 
         private void btnGestion_Click(object sender, EventArgs e)
         {
-            GestiiónInterna gestioninterna = new GestiiónInterna();
+            frmGestiiónInterna gestioninterna = new frmGestiiónInterna();
             gestioninterna.ShowDialog();
         }
 
