@@ -11,7 +11,7 @@ namespace RetoDI.Models
 {
     public class Alumno
     {
-
+        public int id { get; set; }
         public string DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
@@ -21,7 +21,7 @@ namespace RetoDI.Models
         public string Genero { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public bool EsAlumnoActual { get; set; }
-        public string CicloFormativo { get; set; }
+        public Ciclo CicloFormativo { get; set; }
        
     }
    

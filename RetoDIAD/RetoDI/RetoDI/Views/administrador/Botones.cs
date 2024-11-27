@@ -22,37 +22,45 @@ namespace RetoDI
 {
     public partial class Botones : Form
     {
-        public Botones()
+        frmLogin inicio;
+        public Botones(frmLogin frmLogin)
         {
             InitializeComponent();
+            inicio = frmLogin;
+            if (SessionData.TipoUsuario != "Administrador")
+            {
+                btnAministracion.Hide();
+            }
         }
 
         private void btnAministracion_Click(object sender, EventArgs e)
         {
             Administracion administracion = new Administracion();
             administracion.ShowDialog(); 
-            this.Close();
+            
         }
 
         private void btProyectos_Click(object sender, EventArgs e)
         {
             Proyectoo proyecto = new Proyectoo();     
             proyecto.ShowDialog();
-            this.Close();
+           
         }
 
         private void btnGestion_Click(object sender, EventArgs e)
         {
             GestiiónInterna gestioninterna = new GestiiónInterna();
             gestioninterna.ShowDialog();
-            this.Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmLogin form = new frmLogin();
-            form.ShowDialog();
             this.Close();
+        }
+
+        private void Botones_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            inicio.Show();
         }
     }
 }

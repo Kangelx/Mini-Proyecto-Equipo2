@@ -24,13 +24,13 @@ namespace RetoDI.Controles
 
 
         //Creamos nuestra petición,
-        public async Task<evaluadas> GetAllProfesores()
+        public async Task<Evaluadas> GetAllProfesores()
 
         {
             try
             {
                 //Hacemos una instancia de Personajes
-                evaluadas evaluadas = new evaluadas();
+                Evaluadas evaluadas = new Evaluadas();
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
                 //que se quiere consultar
@@ -48,7 +48,7 @@ namespace RetoDI.Controles
                 //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
                 //el JSON recibido en un objeto de tipo "Personajes" utilizando la
                 //biblioteca Newtonsoft.Json
-                evaluadas = JsonConvert.DeserializeObject<evaluadas>(responseJson);
+                evaluadas = JsonConvert.DeserializeObject<Evaluadas>(responseJson);
 
                 //Devuelve el objeto "personajes" con los datos obtenidos de la API
                 return evaluadas;

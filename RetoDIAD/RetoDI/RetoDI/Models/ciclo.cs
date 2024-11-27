@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace RetoDI.Models
 {
-    public class ciclo
+    public class Ciclo
     {
-        private String codCiclo;
-        private String nombre;
-        private String etapa;
-        private String titulo;
-        private String curriculo;
-        private String familia;
+        public String codCiclo;
+        public String nombre;
+        public String etapa;
+        public String titulo;
+        public String curriculo;
+        public String familia;
 
     }
 }

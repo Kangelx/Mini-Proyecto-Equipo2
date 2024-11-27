@@ -8,6 +8,7 @@ namespace RetoDI.Models
 {
     public class Proyecto
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string tipo { get; set; }
         public string resumen { get; set; }
@@ -16,8 +17,9 @@ namespace RetoDI.Models
         public string logo { get; set; }
         public string memoria { get; set; }
         public string archivos { get; set; }
-        public string ciclo { get; set; }
-        public string tutor { get; set; }
         public string Comentario { get; set; }
+        public Ciclo ciclo { get; set; }
+        public Profesor tutor { get; set; }
+
     }
 }

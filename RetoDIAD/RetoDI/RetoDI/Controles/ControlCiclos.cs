@@ -24,13 +24,13 @@ namespace RetoDI.Controles
 
 
         //Creamos nuestra petición,
-        public async Task<ciclos> GetAllAlumnos()
+        public async Task<Ciclos> GetAllAlumnos()
 
         {
             try
             {
                 //Hacemos una instancia de Personajes
-                ciclos ciclos = new ciclos();
+                Ciclos ciclos = new Ciclos();
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
                 //que se quiere consultar
@@ -48,7 +48,7 @@ namespace RetoDI.Controles
                 //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
                 //el JSON recibido en un objeto de tipo "Personajes" utilizando la
                 //biblioteca Newtonsoft.Json
-                ciclos = JsonConvert.DeserializeObject<ciclos>(responseJson);
+                ciclos = JsonConvert.DeserializeObject<Ciclos>(responseJson);
 
                 //Devuelve el objeto "personajes" con los datos obtenidos de la API
                 return ciclos;

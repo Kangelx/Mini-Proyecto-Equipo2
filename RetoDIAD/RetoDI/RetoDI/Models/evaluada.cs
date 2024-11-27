@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RetoDI.Models
 {
-    public class evaluada
+    public class Evaluada
     {
-        private int id;
-        private float calificacion_pers;
-        private String comentario;
-        private int proyecto;
-        private String profesor;
+        public int id;
+        public float calificacion_pers;
+        public String comentario;
+        public Proyecto proyecto;
+        public Profesor profesor;
     }
 }

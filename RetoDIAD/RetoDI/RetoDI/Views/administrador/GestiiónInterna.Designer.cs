@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.btnCalificar = new System.Windows.Forms.Button();
             this.btnAñadircomentarios = new System.Windows.Forms.Button();
             this.btnSubirarchivos = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btn_Cerrarsesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,6 +64,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(797, 368);
             this.splitContainer1.SplitterDistance = 212;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(124, 333);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 3;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnCalificar
             // 
@@ -98,16 +108,6 @@
             this.btnSubirarchivos.UseVisualStyleBackColor = false;
             this.btnSubirarchivos.Click += new System.EventHandler(this.btnSubirarchivos_Click);
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(124, 333);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 3;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // btn_Cerrarsesion
             // 
             this.btn_Cerrarsesion.BackColor = System.Drawing.Color.Transparent;
@@ -123,9 +123,11 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(706, 24);
+            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(693, 25);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(79, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(93, 13);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "nombre usuario";
             this.lblUsuario.Click += new System.EventHandler(this.label1_Click);

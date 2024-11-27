@@ -12,7 +12,7 @@ namespace RetoDI.Alumno
 {
     public partial class Alumno : Form
     {
-        public Alumno()
+        public Alumno(frmLogin frmLogin)
         {
             InitializeComponent();
         }
