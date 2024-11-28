@@ -78,9 +78,9 @@ namespace RetoDI.Controles
 
                 // Crear el contenido de la solicitud (POST)
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-
+                int id = realizada.id;
                 // Realizar la solicitud POST a la API
-                HttpResponseMessage response = await client.PostAsync("http://localhost:4000/realizan", content);
+                HttpResponseMessage response = await client.PostAsync($"http://localhost:4000/realizan/{id}", content);
 
                 // Verificar si la respuesta fue exitosa
                 if (response.IsSuccessStatusCode)
@@ -89,7 +89,7 @@ namespace RetoDI.Controles
                 }
                 else
                 {
-                    MessageBox.Show("Error al guardar la calificación. Intente nuevamente.");
+                    MessageBox.Show(response.RequestMessage.ToString());
                     return false; // Hubo un error
                 }
             }

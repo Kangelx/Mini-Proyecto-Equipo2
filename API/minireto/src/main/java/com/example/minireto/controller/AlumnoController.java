@@ -19,9 +19,9 @@ public class AlumnoController {
     @GetMapping
     public ResponseEntity<?> getAllAlumnos() {
         List<Alumno> alumnos = alumnoRepository.findAll();
-        if(alumnos.isEmpty()){
+        if (alumnos.isEmpty()) {
             return ResponseEntity.notFound().build();
-        }else{
+        } else {
             return ResponseEntity.ok(alumnos);
         }
     }
@@ -29,10 +29,10 @@ public class AlumnoController {
     @PostMapping
     public String createAlumno(@RequestBody Alumno alumno) {
         int n = alumnoRepository.save(alumno);
-        if(n == 1){
+        if (n == 1) {
             return "Alumno agregado correctamente";
 
-        }else {
+        } else {
             return "Alumno no agregado";
         }
     }
@@ -40,9 +40,9 @@ public class AlumnoController {
     @GetMapping("/{id}")
     public ResponseEntity<Alumno> getAlumnoById(@PathVariable String id) {
         Alumno alumno = alumnoRepository.findById(id);
-        if(alumno == null){
+        if (alumno == null) {
             return ResponseEntity.notFound().build();
-        }else {
+        } else {
             return ResponseEntity.ok(alumno);
         }
     }
@@ -50,18 +50,19 @@ public class AlumnoController {
     @GetMapping("/dni/{dni}")
     public ResponseEntity<Alumno> getAlumnoByDni(@PathVariable String dni) {
         Alumno alumno = alumnoRepository.findByDni(dni);
-        if(alumno == null){
+        if (alumno == null) {
             return ResponseEntity.notFound().build();
-        }else {
+        } else {
             return ResponseEntity.ok(alumno);
         }
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> updateAlumno(@PathVariable String id, @RequestBody Alumno alumno) {
-        Alumno alumnoExiste = alumnoRepository.findById(id);
-        if(alumnoExiste == null){
+        Alumno alumnoExiste = alumnoRepository.findById(alumno.getIdAlumno());
+        if (alumnoExiste == null) {
             return ResponseEntity.notFound().build();
-        }else{
+        } else {
             alumno.setIdAlumno(id);
             alumnoRepository.update(alumno);
             return ResponseEntity.ok(alumno);
@@ -71,9 +72,9 @@ public class AlumnoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteAlumno(@PathVariable String id) {
         Alumno alumno = alumnoRepository.findById(id);
-        if(alumno == null){
+        if (alumno == null) {
             return ResponseEntity.notFound().build();
-        }else{
+        } else {
             alumnoRepository.delete(id);
             return ResponseEntity.ok().build();
         }

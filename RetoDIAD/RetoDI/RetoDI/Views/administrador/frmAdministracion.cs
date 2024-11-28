@@ -182,7 +182,7 @@ namespace RetoDI.Administrador
             ListViewItem item;
             foreach (Alumno alumno in alumnos.results)
             {
-                item = new ListViewItem(new[] { alumno.Nombre, alumno.Apellido });
+                item = new ListViewItem(new[] { alumno.nombre, alumno.apellido });
                 item.Tag = alumno;
                 lvwAlumnos.Items.Add(item);
             }
@@ -192,16 +192,16 @@ namespace RetoDI.Administrador
             if (lvwAlumnos.SelectedItems.Count > 0)
             {
                 Alumno alumno = (Alumno)lvwAlumnos.SelectedItems[0].Tag;
-                txtNombreAlumno.Text = alumno.Nombre == null ? null : alumno.Nombre.ToString();
-                txtApellidosAlumno.Text = alumno.Apellido == null ? null : alumno.Apellido.ToString();
-                txtDNIAlumno.Text = alumno.DNI == null ? null : alumno.DNI.ToString();
-                txtEmailAlumno.Text = alumno.CorreoElectronico == null ? null : alumno.CorreoElectronico.ToString();
-                txtPasswordAlumno.Text = alumno.ContraseñaEncriptada== null ? null : alumno.ContraseñaEncriptada.ToString();
-                txtTelefonoAlumno.Text = alumno.Telefono == null ? null : alumno.Telefono.ToString();
-                txtGeneroAlumno.Text = alumno.Genero == null ? null : alumno.Genero.ToString();
-                txtFechaNacAlumno.Text = alumno.FechaNacimiento == null ? null : alumno.FechaNacimiento.ToString();
-                txtActivoAlumno.Text = alumno.EsAlumnoActual.ToString();
-                txtCicloAlumno.Text = alumno.CicloFormativo == null ? null : alumno.CicloFormativo.nombre.ToString(); 
+                txtNombreAlumno.Text = alumno.nombre == null ? null : alumno.nombre.ToString();
+                txtApellidosAlumno.Text = alumno.apellido == null ? null : alumno.apellido.ToString();
+                txtDNIAlumno.Text = alumno.dni == null ? null : alumno.dni.ToString();
+                txtEmailAlumno.Text = alumno.email == null ? null : alumno.email.ToString();
+                txtPasswordAlumno.Text = alumno.password== null ? null : alumno.password.ToString();
+                txtTelefonoAlumno.Text = alumno.telefono == null ? null : alumno.telefono.ToString();
+                txtGeneroAlumno.Text = alumno.genero == null ? null : alumno.genero.ToString();
+                txtFechaNacAlumno.Text = alumno.fechaNacimiento == null ? null : alumno.fechaNacimiento.ToString();
+                txtActivoAlumno.Text = alumno.activo.ToString();
+                txtCicloAlumno.Text = alumno.ciclo == null ? null : alumno.ciclo.nombre.ToString(); 
             }
 
 
@@ -220,14 +220,16 @@ namespace RetoDI.Administrador
             }
         }
 
-        private void btnAceptarAlumnos_Click(object sender, EventArgs e)
+        private async void btnAceptarAlumnos_Click(object sender, EventArgs e)
         {
             if (lvwAlumnos.SelectedItems.Count > 0)
             {
                 Alumno alumno = (Alumno)lvwAlumnos.SelectedItems[0].Tag;
-                alumno.Nombre = txtNombreAlumno.Text;
-                lvwAlumnos.SelectedItems[0].SubItems[0].Text = alumno.Nombre;
-                lvwAlumnos.SelectedItems[0].Tag = alumno.Nombre;
+                alumno.nombre = txtNombreAlumno.Text;
+                lvwAlumnos.SelectedItems[0].SubItems[0].Text = alumno.nombre;
+                lvwAlumnos.SelectedItems[0].Tag = alumno.nombre;
+
+                bool resultado = await controlAlumnos.GuardarAlumno(alumno);
             }
         }
 
