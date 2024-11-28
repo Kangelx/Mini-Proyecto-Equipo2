@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using RetoDI.Models;
+using System.Windows.Forms;
 
 namespace RetoDI.Controles
 {
@@ -55,11 +56,12 @@ namespace RetoDI.Controles
 
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
 
                 //Si ocurre algún error (como problemos de conexión o un JSON no válido),
                 //captura la excepción y devuelve "null" como valor de error
+                MessageBox.Show(e.Message);
                 return null;
 
             }

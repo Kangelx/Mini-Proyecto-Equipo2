@@ -8,7 +8,7 @@ public class Proyecto {
 
     private int idproyecto;
     private String nombre;
-    private TIPO tipo;
+    private String tipo;
     private String resumen;
     private int anno_acad;
     private Date fecha_pres;
@@ -23,7 +23,7 @@ public class Proyecto {
 
     }
 
-    public Proyecto(int idproyecto, Profesor tutor, Ciclo ciclo, String archivos, String memoria, String comentarios, String logo, int anno_acad, Date fecha_pres, String resumen, TIPO tipo, String nombre) {
+    public Proyecto(int idproyecto, Profesor tutor, Ciclo ciclo, String archivos, String memoria, String comentarios, String logo, int anno_acad, Date fecha_pres, String resumen, String tipo, String nombre) {
         this.idproyecto = idproyecto;
         this.tutor = tutor;
         this.ciclo = ciclo;
@@ -110,11 +110,11 @@ public class Proyecto {
         this.resumen = resumen;
     }
 
-    public TIPO getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(TIPO tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
