@@ -162,7 +162,7 @@ namespace WinFormsApp1
         private TextBox txtComentario;
         private Label lblComentario;
         private Button btnAñadir;
-        private ListView lblcomentar;
+        public ListView lblcomentar;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;

@@ -1,62 +1,20 @@
 ﻿using RetoDI.Controles;
 using RetoDI.Models;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
 using System.Windows.Forms;
+using System;
+
 
 namespace WinFormsApp1
 {
     public partial class SubirArchivos : Form
     {
-        //Declaramos el controlador, un objeto que controla la lógica
-        //para obtener los personajes de la API
-        private ControlRealizan ControlRealizan;
-        //Inicializamos el modelo, es un objeto que almacena los datos
-        //deserializados de la API
-        private Realizadas realizan;
+
         public SubirArchivos()
         {
             InitializeComponent();
-            ControlRealizan = new ControlRealizan();
-            realizan = new Realizadas();
+
         }
-
-        //Método asíncrono para obtener los personajes de la API
-        private async void GetRealizan()
-        {
-            //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
-            realizan = await ControlRealizan.GetAllRealizas();
-
-            //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
-
-            if (realizan != null)
-            {
-                //Recorre la lista de resultados (alumnos) obtenidos desde la API
-                foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
-                {
-                    // Crear un nuevo item 
-                    ListViewItem item = new ListViewItem(realiza.alumno.Nombre); // Primera columna
-
-                    // Agregar los subítems (equivalentes a las celdas de las otras columnas)
-
-                    item.SubItems.Add(realiza.proyecto.Nombre); // Segunda columna
-                   
-
-
-                    // Agregar el item al ListView
-                    lvArchivos.Items.Add(item);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("No se pudo obtener la petición", "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-               
 
 
         private void btnSubir_Click_1(object sender, EventArgs e)
@@ -68,7 +26,8 @@ namespace WinFormsApp1
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName; // Ruta del archivo seleccionado
-                string fileName = Path.GetFileName(filePath); // Nombre del archivo                
+                string fileName = Path.GetFileName(filePath); // Nombre del archivo
+                textBox1.Text = fileName; // Mostrar nombre en el TextBox                                             
             }
         }
 
@@ -83,12 +42,12 @@ namespace WinFormsApp1
             // Muestra el diálogo para seleccionar el archivo
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // Si el usuario selecciona un archivo, actualiza el TextBox con la ruta del archivo
-                textBox1.Text = openFileDialog1.FileName;
+                string filePath = openFileDialog1.FileName; // Ruta del archivo seleccionado
+                textBox1.Text = filePath; // Mostrar la ruta en el TextBox
             }
         }
 
-       
+
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -102,41 +61,53 @@ namespace WinFormsApp1
                 return;
             }
 
-            // URL de la API donde enviarás los datos
-            string apiUrl = "URL API A GUARDAR ARCHIVO";  
-
-            try
+            // Verificar si un proyecto ha sido seleccionado en el ListView
+            if (lvArchivos.SelectedItems.Count == 0)
             {
-                // Crear un objeto HttpClient
-                using (HttpClient client = new HttpClient())
-                {
-                    // Crear un objeto con los datos que se quiere enviar 
-                    var content = new FormUrlEncodedContent(new[]
-                    {
-                new KeyValuePair<string, string>("filePath", filePath)
-            });
-
-                    // Enviar la solicitud POST a la API
-                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
-
-                    // Verificar si la solicitud fue exitosa
-                    if (response.IsSuccessStatusCode)
-                    {
-                        // Si la respuesta fue exitosa, muestra un mensaje al usuario
-                        MessageBox.Show("Los cambios se guardaron correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        // Si la solicitud no fue exitosa, muestra un mensaje de error
-                        MessageBox.Show("Error al guardar los cambios. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                MessageBox.Show("Por favor, seleccione un proyecto.");
+                return;
             }
-            catch (Exception ex)
+
+            // Obtener la fila seleccionada del ListView
+            ListViewItem selectedItem = lvArchivos.SelectedItems[0];
+
+            // Obtener los datos del proyecto desde la fila seleccionada
+            string nombreProyecto = selectedItem.Text; // El nombre del proyecto está en la primera columna
+            string cicloProyecto = selectedItem.SubItems[1].Text; // El nombre del ciclo está en la segunda columna
+            string archivosProyecto = selectedItem.SubItems[2].Text; // Los archivos del proyecto están en la tercera columna
+
+            // Verificar que el nombre del proyecto, ciclo y archivos estén disponibles
+            if (string.IsNullOrEmpty(nombreProyecto) || string.IsNullOrEmpty(cicloProyecto))
             {
-                // Si ocurre una excepción, muestra el mensaje de error
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Faltan datos importantes (nombre del proyecto o ciclo).");
+                return;
             }
+
+            // Crear un objeto Proyecto con los datos del formulario
+            Proyecto proyectoNuevo = new Proyecto
+            {
+                Nombre = nombreProyecto,
+                ciclo = new Ciclo { nombre = cicloProyecto },
+                archivos = archivosProyecto
+            };
+
+            // Crear una instancia del ControlProyectos para guardar el proyecto
+            ControlProyectos controlProyectos = new ControlProyectos();
+
+            // Llamar al método GuardarProyecto y esperar su resultado
+            bool exito = await controlProyectos.GuardarProyecto(proyectoNuevo);
+
+            // Realizar cualquier acción adicional si es necesario
+            if (exito)
+            {
+                // Limpiar los campos después de guardar (opcional)               
+            }
+        }
+
+        private void lvArchivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

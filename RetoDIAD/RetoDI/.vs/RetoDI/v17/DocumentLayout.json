@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\",
+  "WorkspaceRootPath": "D:\\Usuarios\\dam2\\Desktop\\minireto\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|c:\\users\\luis\\documents\\github\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\administrador\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\administrador\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|c:\\users\\luis\\documents\\github\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\administrador\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\administrador\\frmadministracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|c:\\users\\luis\\documents\\github\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\controles\\controlalumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\controles\\controlalumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|c:\\users\\luis\\documents\\github\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\models\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\models\\alumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|d:\\usuarios\\dam2\\desktop\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\comentarproyectos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\comentarproyectos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 288,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Alumno.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Models\\Alumno.cs",
-              "RelativeDocumentMoniker": "RetoDI\\Models\\Alumno.cs",
-              "ToolTip": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Models\\Alumno.cs",
-              "RelativeToolTip": "RetoDI\\Models\\Alumno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T01:37:56.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ControlAlumnos.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlAlumnos.cs",
-              "RelativeDocumentMoniker": "RetoDI\\Controles\\ControlAlumnos.cs",
-              "ToolTip": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlAlumnos.cs",
-              "RelativeToolTip": "RetoDI\\Controles\\ControlAlumnos.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowDYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T01:19:45.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAdministracion.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "RelativeDocumentMoniker": "RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "ToolTip": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "RelativeToolTip": "RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwN0AAAAAAAAAAAAAAA==",
+              "Title": "ComentarProyectos.Designer.cs",
+              "DocumentMoniker": "D:\\Usuarios\\dam2\\Desktop\\minireto\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\ComentarProyectos.Designer.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\ComentarProyectos.Designer.cs",
+              "ToolTip": "D:\\Usuarios\\dam2\\Desktop\\minireto\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\ComentarProyectos.Designer.cs",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\ComentarProyectos.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwKoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:55:16.919Z",
+              "WhenOpened": "2024-11-28T17:47:23.936Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAdministracion.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "RelativeDocumentMoniker": "RetoDI\\Views\\administrador\\frmAdministracion.cs",
-              "ToolTip": "C:\\Users\\Luis\\Documents\\GitHub\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmAdministracion.cs [Design]",
-              "RelativeToolTip": "RetoDI\\Views\\administrador\\frmAdministracion.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:55:05.936Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -149,7 +149,7 @@ namespace WinFormsApp1
         private TextBox txtBuscarAlumno;
         private Button btnBuscar;
         private Label lblNombreproyecto;
-        private ListView lvAlumnos;
+        public ListView lvAlumnos;
         private ColumnHeader Alumno;
         private ColumnHeader Proyecto;
         private ColumnHeader Calificacion;

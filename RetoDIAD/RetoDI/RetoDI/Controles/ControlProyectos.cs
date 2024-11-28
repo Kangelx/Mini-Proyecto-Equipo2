@@ -66,5 +66,48 @@ namespace RetoDI.Controles
 
             }
         }
+    
+    public async Task<bool> GuardarProyecto(Proyecto proyecto)
+    {
+        try
+        {
+            // Creamos la URL para la API donde se guardarán los proyectos
+            string apiUrl = "http://localhost:4000/proyecto";  // Cambia esta URL según tu servidor y API
+
+            // Creamos un objeto HttpClient
+            using (HttpClient client = new HttpClient())
+            {
+                // Creamos un objeto con los datos que queremos enviar en el cuerpo de la solicitud
+                var content = new StringContent(
+                    JsonConvert.SerializeObject(proyecto),
+                    Encoding.UTF8,
+                    "application/json"
+                );
+
+                // Enviamos la solicitud POST a la API
+                HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                // Verificamos si la solicitud fue exitosa
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Proyecto guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el proyecto. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Si ocurre una excepción, mostramos un mensaje de error
+            MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
     }
+
+}
+
 }

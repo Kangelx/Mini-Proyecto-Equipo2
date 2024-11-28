@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RetoDI.Controles;
+using RetoDI.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,39 +16,58 @@ namespace RetoDI
 {
     public partial class frmGestiiónInterna : Form
     {
+        // private readonly ApiService _apiService;
+        private ControlAlumnos controlAlumnos;
+        private ControlProyectos controlProyectos;
+        private ControlProfesores controlProfesores;
+        private ControlRealizan controlRealizan;
+        private Alumnos alumnos;
+        private Proyectos proyectos;
+        private Profesores profesores;
+        private Realizadas realizadas;
         public frmGestiiónInterna()
         {
             InitializeComponent();
+            controlAlumnos = new ControlAlumnos();
+            controlProfesores = new ControlProfesores();
+            controlProyectos = new ControlProyectos();
+            controlRealizan = new ControlRealizan();
         }
 
 
-        private void btnSubirarchivos_Click(object sender, EventArgs e)
+        private async void btnSubirarchivos_Click(object sender, EventArgs e)
         {
             {
+                proyectos = await controlProyectos.GetAllProyectos();
                 // Crear una instancia del formulario Botones
                 SubirArchivos subirArchivos = new SubirArchivos();
-
                 // Configurar el formulario para que no sea independiente
                 subirArchivos.TopLevel = false;
                 subirArchivos.FormBorderStyle = FormBorderStyle.None;
 
                 subirArchivos.Dock = DockStyle.Fill; // Ajustar al tamaño del panel
-
                 // Limpiar cualquier control previo en el Panel2
                 splitContainer1.Panel2.Controls.Clear();
-
                 // Agregar el formulario al Panel2
                 splitContainer1.Panel2.Controls.Add(subirArchivos);
 
-                // Mostrar el formulario
+                ListViewItem item;
+                foreach (Proyecto proyecto in proyectos.results)
+                {
+                    item = new ListViewItem(new[] { proyecto.Nombre, proyecto.ciclo.nombre, proyecto.archivos });
+                    subirArchivos.lvArchivos.Items.Add(item);
+                }
+                // Mostrar el formulari.
                 subirArchivos.Show();
+
             }
         }
 
-        private void btnAñadircomentarios_Click(object sender, EventArgs e)
+        private async void btnAñadircomentarios_Click(object sender, EventArgs e)
         {
 
             {
+                realizadas = await controlRealizan.GetAllRealizas();
                 // Crear una instancia del formulario Botones
                 ComentarProyectos comentarios = new ComentarProyectos();
 
@@ -61,15 +82,23 @@ namespace RetoDI
 
                 // Agregar el formulario al Panel2
                 splitContainer1.Panel2.Controls.Add(comentarios);
+                ListViewItem item;
+
+                foreach (Realizada realizada in realizadas.results)
+                {
+                    item = new ListViewItem(new[] { realizada.alumno.Nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString(), realizada.comentario });
+                    comentarios.lblcomentar.Items.Add(item);
+                }
 
                 // Mostrar el formulario
                 comentarios.Show();
             }
         }
 
-        private void btnCalificar_Click(object sender, EventArgs e)
+        private async void btnCalificar_Click(object sender, EventArgs e)
         {
             {
+                realizadas = await controlRealizan.GetAllRealizas();
                 // Crear una instancia del formulario Botones
                 CalificarAlumnos calificar = new CalificarAlumnos();
 
@@ -84,6 +113,12 @@ namespace RetoDI
 
                 // Agregar el formulario al Panel2
                 splitContainer1.Panel2.Controls.Add(calificar);
+                ListViewItem item;
+                foreach (Realizada realizada in realizadas.results)
+                {
+                    item = new ListViewItem(new[] { realizada.alumno.Nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString() });
+                    calificar.lvAlumnos.Items.Add(item);
+                }
 
                 // Mostrar el formulario
                 calificar.Show();
@@ -99,7 +134,7 @@ namespace RetoDI
         {
             frmLogin form = new frmLogin();
             form.ShowDialog();
-            this.Hide();
+            this.Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
