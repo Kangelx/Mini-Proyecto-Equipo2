@@ -9,62 +9,16 @@ namespace WinFormsApp1
 {
     public partial class CalificarAlumnos : Form
     {
-        //Declaramos el controlador, un objeto que controla la lógica
-        //para obtener los personajes de la API
-        private ControlRealizan ControlRealizan;
-        //Inicializamos el modelo, es un objeto que almacena los datos
-        //deserializados de la API
-        private Realizadas realizan;
+
 
         public CalificarAlumnos()
         {
             InitializeComponent();
-            ControlRealizan = new ControlRealizan();
-            realizan = new Realizadas();
         }
 
-        //Método asíncrono para obtener los personajes de la API
-        private async void GetRealizan()
-        {
-            //Llama al método GetAllAlumnos para obtener los personajes de la API de manera asíncrona
-            realizan = await ControlRealizan.GetAllRealizas();
-
-            //Verifica si el objeto personajes no es nulo, es decir, si la llamada a la API fue exitosa
-
-            if (realizan != null)
-            {
-                //Recorre la lista de resultados (alumnos) obtenidos desde la API
-                foreach (Realizada realiza in realizan?.results)// ? e ! para permitir nulos y evitar errores
-                {
-                    // Crear un nuevo item 
-                    ListViewItem item = new ListViewItem(realiza.alumno.Nombre); // Primera columna
-
-                    // Agregar los subítems (equivalentes a las celdas de las otras columnas)
-
-                    item.SubItems.Add(realiza.proyecto.Nombre); // Segunda columna
-                    item.SubItems.Add(realiza.comentario); // tercera columna
 
 
-                    // Agregar el item al ListView
-                    lvAlumnos.Items.Add(item);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("No se pudo obtener la petición", "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-    
-
-
-    private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string nombreAlumno = txtBuscarAlumno.Text.Trim(); // Obtener el nombre ingresado
 
@@ -106,12 +60,53 @@ namespace WinFormsApp1
                 return;
             }
 
-            // Verificar y guardar la calificación
-         
+            // Obtener el nombre del alumno seleccionado
+            ListViewItem selectedItem = lvAlumnos.SelectedItems[0];
+
+            // Obtener el nombre del alumno y proyecto desde la fila seleccionada
+            string nombreAlumno = selectedItem.Text; // Suponemos que el nombre está en la primera columna
+            string nombreProyecto = selectedItem.SubItems[1].Text;
+
+            // Verificar que el nombre del alumno y el proyecto estén disponibles
+            if (string.IsNullOrEmpty(nombreAlumno) || string.IsNullOrEmpty(nombreProyecto))
+            {
+                MessageBox.Show("Faltan datos importantes (nombre del alumno o proyecto).");
+                return;
+            }
+
+            // Obtener la calificación ingresada por el usuario
+            string calificacion = txtCalificacion.Text.Trim();
+            if (string.IsNullOrEmpty(calificacion))
+            {
+                MessageBox.Show("Por favor, ingrese una calificación.");
+                return;
+            }
+
+
+            // Crear una nueva instancia de Realizada
+            Realizada realizada = new Realizada
+            {
+                alumno = new Alumno { Nombre = nombreAlumno }, // Suponemos que solo necesitas el nombre del alumno
+                proyecto = new Proyecto { Nombre = nombreProyecto }, // Asumimos que solo necesitas el nombre del proyecto
+                calificacion = int.Parse(calificacion), // Convertir la calificación a int
+
+            };
+
+            // Instanciar el controlador para la API
+            ControlRealizan controlRealizan = new ControlRealizan();
+
+            // Llamar al método para guardar los datos
+            bool resultado = await controlRealizan.GuardarRealizada(realizada);
+
+            // Verificar si la calificación fue guardada correctamente
+            if (resultado)
+            {
+                MessageBox.Show("Calificación guardada correctamente.");
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar la calificación.");
+            }
         }
-        
-        
-        
-        
     }
 }

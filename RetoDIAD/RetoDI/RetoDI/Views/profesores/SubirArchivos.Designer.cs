@@ -144,7 +144,7 @@ namespace WinFormsApp1
         private Button btnSubir;
         private Label lblAlumno;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ListView lvArchivos;
+        public ListView lvArchivos;
         private ColumnHeader Nombre;
         private ColumnHeader Apellidos;
         private OpenFileDialog openFileDialog1;
