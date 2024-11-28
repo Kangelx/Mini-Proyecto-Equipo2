@@ -95,7 +95,7 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
 
             proyecto.setIdproyecto(rs.getInt("idproyecto"));
             proyecto.setNombre(rs.getString("nombre"));
-            proyecto.setTipo(TIPO.valueOf(rs.getString("tipo").toUpperCase()));
+            proyecto.setTipo((rs.getString("tipo")));
             proyecto.setResumen(rs.getString("resumen"));
             proyecto.setAnno_acad(rs.getInt("anno_acad"));
             proyecto.setFecha_pres(rs.getDate("fecha_pres"));

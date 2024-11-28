@@ -173,14 +173,9 @@ C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.AssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Properties.Resources.resources
-C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.Administracion.resources
-C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Botones.resources
-C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.GestiiónInterna.resources
-C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Alumno.Alumno.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.CalificarAlumnos.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.ComentarProyectos.resources
-C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectoo.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.SubirArchivos.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.GenerateResource.cache
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileInputs.cache
@@ -198,3 +193,8 @@ D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\o
 D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmAlumno.frmAlumno.resources
 D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.frmAdministracion.resources
 D:\Usuarios\dam2\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.frmProyectoo.resources
+C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.frmAdministracion.resources
+C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmBotones.resources
+C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmGestiiónInterna.resources
+C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmAlumno.frmAlumno.resources
+C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.frmProyectoo.resources
