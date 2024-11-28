@@ -86,7 +86,7 @@ namespace WinFormsApp1
             // Crear una nueva instancia de Realizada
             Realizada realizada = new Realizada
             {
-                alumno = new Alumno { Nombre = nombreAlumno }, // Suponemos que solo necesitas el nombre del alumno
+                alumno = new Alumno { nombre = nombreAlumno }, // Suponemos que solo necesitas el nombre del alumno
                 proyecto = new Proyecto { Nombre = nombreProyecto }, // Asumimos que solo necesitas el nombre del proyecto
                 calificacion = int.Parse(calificacion), // Convertir la calificación a int
 

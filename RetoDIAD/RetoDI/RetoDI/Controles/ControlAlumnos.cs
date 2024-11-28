@@ -66,5 +66,38 @@ namespace RetoDI.Controles
 
             }
         }
+
+        public async Task<bool> GuardarAlumno(Alumno alumno)
+        {
+            try
+            {
+                // Convertir el objeto Realizada a JSON
+                string json = JsonConvert.SerializeObject(alumno);
+
+                // Crear el contenido de la solicitud (POST)
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                string id = alumno.idAlumno;
+                // Realizar la solicitud POST a la API
+                HttpResponseMessage response = await client.PutAsync($"http://localhost:4000/alumnos/{id}", content);
+
+                // Verificar si la respuesta fue exitosa
+                if (response.IsSuccessStatusCode)
+                {
+                    return true; // La calificación fue guardada con éxito
+                }
+                else
+                {
+                    MessageBox.Show(response.RequestMessage.ToString());
+                    return false; // Hubo un error
+                }
+            }
+            catch (Exception e)
+            {
+                // Captura cualquier excepción y muestra un mensaje de error
+                MessageBox.Show($"Error: {e.Message}");
+                return false;
+            }
+        }
     }
+
 }

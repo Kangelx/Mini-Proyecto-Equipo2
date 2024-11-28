@@ -11,17 +11,17 @@ namespace RetoDI.Models
 {
     public class Alumno
     {
-        public int id { get; set; }
-        public string DNI { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string ContraseñaEncriptada { get; set; }
-        public string Telefono { get; set; }
-        public string Genero { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public bool EsAlumnoActual { get; set; }
-        public Ciclo CicloFormativo { get; set; }
+        public string idAlumno { get; set; }
+        public string dni { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string telefono { get; set; }
+        public string genero { get; set; }
+        public DateTime fechaNacimiento { get; set; }
+        public bool activo { get; set; }
+        public Ciclo ciclo { get; set; }
        
     }
    

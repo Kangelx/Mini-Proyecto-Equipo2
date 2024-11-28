@@ -86,7 +86,7 @@ namespace RetoDI
 
                 foreach (Realizada realizada in realizadas.results)
                 {
-                    item = new ListViewItem(new[] { realizada.alumno.Nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString(), realizada.comentario });
+                    item = new ListViewItem(new[] { realizada.alumno.nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString(), realizada.comentario });
                     comentarios.lblcomentar.Items.Add(item);
                 }
 
@@ -116,7 +116,7 @@ namespace RetoDI
                 ListViewItem item;
                 foreach (Realizada realizada in realizadas.results)
                 {
-                    item = new ListViewItem(new[] { realizada.alumno.Nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString() });
+                    item = new ListViewItem(new[] { realizada.alumno.nombre, realizada.proyecto.Nombre, realizada.calificacion.ToString() });
                     calificar.lvAlumnos.Items.Add(item);
                 }
 
