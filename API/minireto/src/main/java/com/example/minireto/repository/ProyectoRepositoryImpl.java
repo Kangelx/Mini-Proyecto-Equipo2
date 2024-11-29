@@ -60,7 +60,6 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
 
     @Override
     public int deleteById(int id) {
-
         return jdbcTemplate.update("DELETE FROM proyectos WHERE idproyecto = ?", id);
     }
 

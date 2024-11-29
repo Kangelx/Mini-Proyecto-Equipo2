@@ -48,7 +48,8 @@ public class RealizanRepositoryImpl implements RealizanRepository {
 
     @Override
     public int update(Realizan realizan) {
-        return jdbcTemplate.update("UPDATE realizan SET calificacion = ?, alumno = ?, proyecto = ?, comentario = ? WHERE id = ?",realizan.getCalificacion(), realizan.getAlumno().getIdAlumno(), realizan.getProyecto().getIdproyecto(), realizan.getComentario(), realizan.getId(), realizan.getComentario(), realizan.getId());
+        return jdbcTemplate.update("UPDATE realizan SET calificacion = ?, alumno = ?, proyecto = ?, comentario = ? WHERE id = ?",
+                realizan.getCalificacion(), realizan.getAlumno().getIdAlumno(), realizan.getProyecto().getIdproyecto(), realizan.getComentario(), realizan.getId());
     }
 
     @Override
