@@ -13,11 +13,11 @@ using WinFormsApp1;
 
 namespace RetoDI.Views.profesores
 {
-    public partial class frmProyectoo : Form
+    public partial class frmProyecto : Form
     {
         private ControlProyectos controlProyectos;
         private Proyectos proyectos;
-        public frmProyectoo()
+        public frmProyecto()
         {
             InitializeComponent();
             controlProyectos = new ControlProyectos();

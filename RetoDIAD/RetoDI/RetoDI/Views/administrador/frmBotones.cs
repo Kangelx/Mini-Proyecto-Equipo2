@@ -42,7 +42,7 @@ namespace RetoDI
 
         private void btProyectos_Click(object sender, EventArgs e)
         {
-            frmProyectoo proyecto = new frmProyectoo();     
+            frmProyecto proyecto = new frmProyecto();     
             proyecto.ShowDialog();
            
         }
