@@ -33,10 +33,10 @@ namespace RetoDI.Views.profesores
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Verificar si hay un proyecto seleccionado
-            if (listView2.SelectedItems.Count > 0)
+            if (listViewmisproyectos.SelectedItems.Count > 0)
             {
                 // Obtener el proyecto desde el Tag del ListViewItem seleccionado
-                Proyecto proyecto = (Proyecto)listView2.SelectedItems[0].Tag;
+                Proyecto proyecto = (Proyecto)listViewmisproyectos.SelectedItems[0].Tag;
             }
         }
 
@@ -63,7 +63,7 @@ namespace RetoDI.Views.profesores
         private async void button2_Click(object sender, EventArgs e)
         {
             proyectos = await controlProyectos.GetAllProyectos();
-            listView2.Items.Clear();
+            listViewmisproyectos.Items.Clear();
 
             ListViewItem item;
 
@@ -71,20 +71,20 @@ namespace RetoDI.Views.profesores
             {
                 item = new ListViewItem(new[]
 {
-    proyecto.nombre,                                // Nombre del proyecto
-    proyecto.tipo,                                  // Tipo del proyecto
-    proyecto.anno_acad.ToString(),                  // Año académico (convertido a cadena)
-    proyecto.ciclo?.nombre ?? "Sin ciclo",          // Nombre del ciclo (si existe), si no "Sin ciclo"
-    proyecto.tutor?.nombre ?? "Sin tutor",          // Nombre del tutor (si existe), si no "Sin tutor"
-    proyecto.resumen,                               // Resumen del proyecto
-    proyecto.fecha_pres?.ToString("yyyy-MM-dd") ?? "Sin fecha",  // Fecha de presentación (formateada a yyyy-MM-dd), si no tiene fecha, "Sin fecha"
-    proyecto.logo,                                  // Logo del proyecto
-    proyecto.memoria,                               // Memoria del proyecto
-    proyecto.archivos,                              // Archivos asociados al proyecto
-    proyecto.comentarios                            // Comentarios sobre el proyecto
-});
+                    proyecto.nombre,                                // Nombre del proyecto
+                    proyecto.tipo,                                  // Tipo del proyecto
+                    proyecto.anno_acad.ToString(),                  // Año académico (convertido a cadena)
+                    proyecto.ciclo?.nombre ?? "Sin ciclo",          // Nombre del ciclo (si existe), si no "Sin ciclo"
+                    proyecto.tutor?.nombre ?? "Sin tutor",          // Nombre del tutor (si existe), si no "Sin tutor"
+                    proyecto.resumen,                               // Resumen del proyecto
+                    proyecto.fecha_pres?.ToString("yyyy-MM-dd") ?? "Sin fecha",  // Fecha de presentación (formateada a yyyy-MM-dd), si no tiene fecha, "Sin fecha"
+                    proyecto.logo,                                  // Logo del proyecto
+                    proyecto.memoria,                               // Memoria del proyecto
+                    proyecto.archivos,                              // Archivos asociados al proyecto
+                    proyecto.comentarios                            // Comentarios sobre el proyecto
+                   });
                 item.Tag = proyecto;
-                listView2.Items.Add(item);
+                listViewmisproyectos.Items.Add(item);
             }
 
          
@@ -92,10 +92,42 @@ namespace RetoDI.Views.profesores
 
         private async void button1_Click(object sender, EventArgs e)
         {
-           
+            proyectos = await controlProyectos.GetallbyidProyecto();
+            listViewmisproyectos.Items.Clear();
+
+            ListViewItem item;
+            if (proyectos != null)
+            {
+                foreach (Proyecto proyecto in proyectos.results)
+                {
+                    item = new ListViewItem(new[]
+                    {
+                    proyecto.nombre,                                // Nombre del proyecto
+                    proyecto.tipo,                                  // Tipo del proyecto
+                    proyecto.anno_acad.ToString(),                  // Año académico (convertido a cadena)
+                    proyecto.ciclo?.nombre ?? "Sin ciclo",          // Nombre del ciclo (si existe), si no "Sin ciclo"
+                    proyecto.tutor?.nombre ?? "Sin tutor",          // Nombre del tutor (si existe), si no "Sin tutor"
+                    proyecto.resumen,                               // Resumen del proyecto
+                    proyecto.fecha_pres?.ToString("yyyy-MM-dd") ?? "Sin fecha",  // Fecha de presentación (formateada a yyyy-MM-dd), si no tiene fecha, "Sin fecha"
+                    proyecto.logo,                                  // Logo del proyecto
+                    proyecto.memoria,                               // Memoria del proyecto
+                    proyecto.archivos,                              // Archivos asociados al proyecto
+                    proyecto.comentarios                            // Comentarios sobre el proyecto
+                });
+                    item.Tag = proyecto;
+                    listViewmisproyectos.Items.Add(item);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No tienes proyectos asignados");
+            }
         }
+
     }
     }
+    
     
     
 

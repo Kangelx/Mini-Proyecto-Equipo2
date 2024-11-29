@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewmisproyectos = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,10 +62,9 @@
             // 
             this.btn_Cerrarsesion.BackColor = System.Drawing.Color.Transparent;
             this.btn_Cerrarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btn_Cerrarsesion.Location = new System.Drawing.Point(780, 25);
-            this.btn_Cerrarsesion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cerrarsesion.Location = new System.Drawing.Point(585, 20);
             this.btn_Cerrarsesion.Name = "btn_Cerrarsesion";
-            this.btn_Cerrarsesion.Size = new System.Drawing.Size(129, 47);
+            this.btn_Cerrarsesion.Size = new System.Drawing.Size(97, 38);
             this.btn_Cerrarsesion.TabIndex = 6;
             this.btn_Cerrarsesion.Text = "Cerrar Sesión";
             this.btn_Cerrarsesion.UseVisualStyleBackColor = false;
@@ -74,10 +73,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RetoDI.Properties.Resources.logo_png;
-            this.pictureBox1.Location = new System.Drawing.Point(385, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(289, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 89);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -85,8 +83,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 106);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 86);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -102,17 +99,15 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.splitContainer1.Size = new System.Drawing.Size(925, 454);
-            this.splitContainer1.SplitterDistance = 243;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(694, 369);
+            this.splitContainer1.SplitterDistance = 182;
             this.splitContainer1.TabIndex = 7;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(16, 62);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(12, 50);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 28);
+            this.button2.Size = new System.Drawing.Size(145, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Todos los proyectos";
             this.button2.UseVisualStyleBackColor = true;
@@ -120,10 +115,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(12, 108);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 28);
+            this.button1.Size = new System.Drawing.Size(145, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Mis proyectos";
             this.button1.UseVisualStyleBackColor = true;
@@ -131,26 +125,24 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(129, 412);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Location = new System.Drawing.Point(97, 335);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.listView2);
+            this.panel2.Controls.Add(this.listViewmisproyectos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(677, 454);
+            this.panel2.Size = new System.Drawing.Size(508, 369);
             this.panel2.TabIndex = 1;
             // 
-            // listView2
+            // listViewmisproyectos
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewmisproyectos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nombre,
             this.columnHeader2,
             this.columnHeader3,
@@ -162,15 +154,14 @@
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(4, 4);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(671, 445);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewmisproyectos.HideSelection = false;
+            this.listViewmisproyectos.Location = new System.Drawing.Point(3, 3);
+            this.listViewmisproyectos.Name = "listViewmisproyectos";
+            this.listViewmisproyectos.Size = new System.Drawing.Size(504, 362);
+            this.listViewmisproyectos.TabIndex = 0;
+            this.listViewmisproyectos.UseCompatibleStateImageBehavior = false;
+            this.listViewmisproyectos.View = System.Windows.Forms.View.Details;
+            this.listViewmisproyectos.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Nombre
             // 
@@ -219,33 +210,31 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.listView1);
-            this.panel1.Location = new System.Drawing.Point(55, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(41, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 123);
+            this.panel1.Size = new System.Drawing.Size(441, 100);
             this.panel1.TabIndex = 0;
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(115, 4);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Location = new System.Drawing.Point(86, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(160, 118);
+            this.listView1.Size = new System.Drawing.Size(121, 97);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // frmProyectoo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RetoDI.Properties.Resources.fondo2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(925, 560);
+            this.ClientSize = new System.Drawing.Size(694, 455);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btn_Cerrarsesion);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmProyectoo";
             this.Text = "Proyectos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -267,7 +256,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listViewmisproyectos;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
