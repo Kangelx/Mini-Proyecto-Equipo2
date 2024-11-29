@@ -118,7 +118,7 @@ namespace RetoDI.Administrador
                 txtTipoProyecto.Text = proyecto.tipo == null ? null : proyecto.tipo.ToString();
                 txtResumenProyecto.Text = proyecto.resumen == null ? null : proyecto.resumen.ToString();
                 txtAnnoProyecto.Text = proyecto.anno_acad == null ? null : proyecto.anno_acad.ToString();
-                txtFechaProyecto.Text = proyecto.fecha_pres == null ? null : proyecto.fecha_pres.ToString();
+                txtFechaProyecto.Text = proyecto.fecha_pres == null ? null : proyecto.fecha_pres.Value.ToShortDateString().ToString();
                 txtLogoProyectos.Text = proyecto.logo == null ? null : proyecto.logo.ToString();
                 txtMemoriaProyecto.Text = proyecto.memoria == null ? null : proyecto.memoria.ToString();
                 txtArchivosProyecto.Text = proyecto.archivos == null ? null : proyecto.archivos.ToString();
@@ -173,7 +173,7 @@ namespace RetoDI.Administrador
                 txtPasswordProfesor.Text = profesor.password_encr == null ? null : profesor.password_encr.ToString();
                 txtTelefonoProfesor.Text = profesor.telefono == null ? null : profesor.telefono.ToString();
 
-                txtFechaNacProfesor.Text = profesor.fechaNac == null ? null : profesor.fechaNac.ToString();
+                txtFechaNacProfesor.Text = profesor.fechaNac.ToShortDateString().ToString();
                 txtEspecialidadProfesor.Text = profesor.especialidad == null ? null : profesor.especialidad.ToString();
                 cmbGeneroProfesor.SelectedItem = profesor.genero.ToString();
                 cmbActivoProfesor.SelectedItem = profesor.activo ? "Si" : "No";
@@ -230,7 +230,7 @@ namespace RetoDI.Administrador
                 txtPasswordAlumno.Text = alumno.password == null ? null : alumno.password.ToString();
                 txtTelefonoAlumno.Text = alumno.telefono == null ? null : alumno.telefono.ToString();
                 cmbGeneroAlumno.SelectedItem = alumno.genero;
-                txtFechaNacAlumno.Text = alumno.fechaNacimiento == null ? null : alumno.fechaNacimiento.ToString();
+                txtFechaNacAlumno.Text = alumno.fechaNacimiento.ToShortDateString().ToString();
                 cmbActivoAlumno.Text = alumno.activo ? "Si" : "No";
                 cmbCicloAlumno.SelectedItem = alumno.ciclo == null ? null : alumno.ciclo.codCiclo.ToString();
             }
@@ -275,7 +275,9 @@ namespace RetoDI.Administrador
 
                 bool resultado = await controlAlumnos.GuardarAlumno(alumno);
             }
+            btnDatosAlumnos_Click(sender, e);
         }
+
 
         private void btnCancelarAlumnos_Click(object sender, EventArgs e)
         {
@@ -305,7 +307,7 @@ namespace RetoDI.Administrador
                 bool resultado = await controlProfesores.GuardarProfesor(profesor);
             }
 
-
+            btnDatoProfesores_Click(sender, e);
         }
 
         private void btnCancelarProfesor_Click(object sender, EventArgs e)
@@ -321,7 +323,7 @@ namespace RetoDI.Administrador
 
 
                 proyecto.nombre = txtNombreProyecto.Text;
-                proyecto.nombre = txtTipoProyecto.Text;
+                proyecto.tipo = txtTipoProyecto.Text;
                 proyecto.resumen = txtResumenProyecto.Text;
                 proyecto.anno_acad = int.Parse(txtAnnoProyecto.Text);
                 if (txtFechaProyecto.Text.Length>1)
@@ -353,7 +355,7 @@ namespace RetoDI.Administrador
 
                 bool resultado = await controlProyectos.GuardarProyecto(proyecto);
             }
-
+            btnDatoProyecto_Click(sender, e);
         }
 
         private void btnCancelarProyecto_Click(object sender, EventArgs e)

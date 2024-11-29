@@ -75,7 +75,7 @@ namespace RetoDI.Controles
             {
                 int id = realizada.id;
                 // Creamos la URL para la API donde se guardarán los proyectos
-                string apiUrl = $"http://localhost:4000/realizada/{id}";  // Cambia esta URL según tu servidor y API
+                string apiUrl = $"http://localhost:4000/realizan/{id}";  // Cambia esta URL según tu servidor y API
 
                 // Creamos un objeto HttpClient
                 using (HttpClient client = new HttpClient())
