@@ -9,11 +9,12 @@ namespace WinFormsApp1
 {
     public partial class SubirArchivos : Form
     {
-
+        private ControlProyectos controlProyectos;
+        private Proyectos proyectos;
         public SubirArchivos()
         {
             InitializeComponent();
-
+            controlProyectos = new ControlProyectos();
         }
 
 
@@ -27,7 +28,7 @@ namespace WinFormsApp1
             {
                 string filePath = openFileDialog.FileName; // Ruta del archivo seleccionado
                 string fileName = Path.GetFileName(filePath); // Nombre del archivo
-                textBox1.Text = fileName; // Mostrar nombre en el TextBox                                             
+                txtarchivo.Text = fileName; // Mostrar nombre en el TextBox                                             
             }
         }
 
@@ -43,7 +44,7 @@ namespace WinFormsApp1
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog1.FileName; // Ruta del archivo seleccionado
-                textBox1.Text = filePath; // Mostrar la ruta en el TextBox
+                txtarchivo.Text = filePath; // Mostrar la ruta en el TextBox
             }
         }
 
@@ -51,63 +52,70 @@ namespace WinFormsApp1
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Obtener la información que deseas guardar desde el TextBox (en este caso, la ruta de un archivo)
-            string filePath = textBox1.Text;
-
-            // Comprobar si el TextBox no está vacío
-            if (string.IsNullOrEmpty(filePath))
-            {
-                MessageBox.Show("Por favor, seleccione un archivo primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Verificar si un proyecto ha sido seleccionado en el ListView
+            // Verificar si un proyecto ha sido seleccionado
             if (lvArchivos.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Por favor, seleccione un proyecto.");
                 return;
             }
-
-            // Obtener la fila seleccionada del ListView
-            ListViewItem selectedItem = lvArchivos.SelectedItems[0];
-
-            // Obtener los datos del proyecto desde la fila seleccionada
-            string nombreProyecto = selectedItem.Text; // El nombre del proyecto está en la primera columna
-            string cicloProyecto = selectedItem.SubItems[1].Text; // El nombre del ciclo está en la segunda columna
-            string archivosProyecto = selectedItem.SubItems[2].Text; // Los archivos del proyecto están en la tercera columna
-
-            // Verificar que el nombre del proyecto, ciclo y archivos estén disponibles
-            if (string.IsNullOrEmpty(nombreProyecto) || string.IsNullOrEmpty(cicloProyecto))
+            if (lvArchivos.SelectedItems.Count > 0)
             {
-                MessageBox.Show("Faltan datos importantes (nombre del proyecto o ciclo).");
-                return;
-            }
+                Proyecto proyecto = (Proyecto)lvArchivos.SelectedItems[0].Tag;
+                
+                if (string.IsNullOrEmpty(txtarchivo.Text.Trim()))
+                {
+                    MessageBox.Show("Por favor, suba un archivo.");
+                    return;
+                }
 
-            // Crear un objeto Proyecto con los datos del formulario
-            Proyecto proyectoNuevo = new Proyecto
-            {
-                nombre = nombreProyecto,
-                ciclo = new Ciclo { nombre = cicloProyecto },
-                archivos = archivosProyecto
-            };
+                
+                proyecto.archivos = txtarchivo.Text.Trim();
 
-            // Crear una instancia del ControlProyectos para guardar el proyecto
-            ControlProyectos controlProyectos = new ControlProyectos();
+                // Llamar al método GuardarProyecto del controlador para guardar el comentario en la API
+                bool resultado = await controlProyectos.GuardarProyecto(proyecto);
 
-            // Llamar al método GuardarProyecto y esperar su resultado
-            bool exito = await controlProyectos.GuardarProyecto(proyectoNuevo);
-
-            // Realizar cualquier acción adicional si es necesario
-            if (exito)
-            {
-                // Limpiar los campos después de guardar (opcional)               
+               
+                if (resultado)
+                {
+                    foreach (ListViewItem item in lvArchivos.Items)
+                    {
+                        // Verificamos si el Tag coincide con el proyecto
+                        if (item.Tag == proyecto)
+                        {                            
+                            item.SubItems[1].Text = proyecto.archivos; 
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el archivo.");
+                }
             }
         }
+
+
+
+
+    
 
         private void lvArchivos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
+        }
+
+        private void lvArchivos_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            // Verificar si hay un proyecto seleccionado
+            if (lvArchivos.SelectedItems.Count > 0)
+            {
+                // Obtener el proyecto desde el Tag del ListViewItem seleccionado
+                Proyecto proyecto = (Proyecto)lvArchivos.SelectedItems[0].Tag;
+
+                // Cargar el comentario en el TextBox 
+                
+            }
         }
     }
 }

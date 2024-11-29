@@ -9,13 +9,14 @@ namespace WinFormsApp1
 {
     public partial class CalificarAlumnos : Form
     {
-
+        private ControlRealizan controlRealizan;
+        private Realizada realizada;
 
         public CalificarAlumnos()
         {
             InitializeComponent();
+            controlRealizan = new ControlRealizan();
         }
-
 
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -53,60 +54,58 @@ namespace WinFormsApp1
         // Evento del botón de Guardar calificación
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Verificar si un alumno ha sido seleccionado
+            // Verificar si un proyecto ha sido seleccionado
             if (lvAlumnos.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Por favor, seleccione un alumno.");
                 return;
             }
-
-            // Obtener el nombre del alumno seleccionado
-            ListViewItem selectedItem = lvAlumnos.SelectedItems[0];
-
-            // Obtener el nombre del alumno y proyecto desde la fila seleccionada
-            string nombreAlumno = selectedItem.Text; // Suponemos que el nombre está en la primera columna
-            string nombreProyecto = selectedItem.SubItems[1].Text;
-
-            // Verificar que el nombre del alumno y el proyecto estén disponibles
-            if (string.IsNullOrEmpty(nombreAlumno) || string.IsNullOrEmpty(nombreProyecto))
+            if (lvAlumnos.SelectedItems.Count > 0)
             {
-                MessageBox.Show("Faltan datos importantes (nombre del alumno o proyecto).");
-                return;
+                Realizada realizada = (Realizada)lvAlumnos.SelectedItems[0].Tag;
+                
+                if (string.IsNullOrEmpty(txtCalificacion.Text.Trim()))
+                {
+                    MessageBox.Show("Por favor, ingrese una calificacion.");
+                    return;
+                }
+
+                // Asignar el comentario ingresado en el TextBox al proyecto
+                realizada.calificacion = int.Parse(txtCalificacion.Text.Trim());
+
+                // Llamar al método GuardarProyecto del controlador para guardar el comentario en la API
+                bool resultado = await controlRealizan.GuardarRealizada(realizada);
+
+                // Verificar si el comentario fue guardado correctamente
+                if (resultado)
+                {
+                    foreach (ListViewItem item in lvAlumnos.Items)
+                    {
+                        // Verificamos si el Tag coincide con el proyecto
+                        if (item.Tag == realizada)
+                        {
+                            // Actualizamos el comentario en el ListViewItem
+                            item.SubItems[2].Text = realizada.calificacion.ToString(); // Suponiendo que la segunda columna contiene los comentarios
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar la calificacion.");
+                }
             }
-
-            // Obtener la calificación ingresada por el usuario
-            string calificacion = txtCalificacion.Text.Trim();
-            if (string.IsNullOrEmpty(calificacion))
-            {
-                MessageBox.Show("Por favor, ingrese una calificación.");
-                return;
-            }
+        }
 
 
-            // Crear una nueva instancia de Realizada
-            Realizada realizada = new Realizada
-            {
-                alumno = new Alumno { nombre = nombreAlumno }, // Suponemos que solo necesitas el nombre del alumno
-                proyecto = new Proyecto { nombre = nombreProyecto }, // Asumimos que solo necesitas el nombre del proyecto
-                calificacion = int.Parse(calificacion), // Convertir la calificación a int
-
-            };
-
-            // Instanciar el controlador para la API
-            ControlRealizan controlRealizan = new ControlRealizan();
-
-            // Llamar al método para guardar los datos
-            bool resultado = await controlRealizan.GuardarRealizada(realizada);
-
-            // Verificar si la calificación fue guardada correctamente
-            if (resultado)
-            {
-                MessageBox.Show("Calificación guardada correctamente.");
-            }
-            else
-            {
-                MessageBox.Show("Error al guardar la calificación.");
+        private void lvAlumnos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            if (lvAlumnos.SelectedItems.Count > 0)
+            {              
+                Realizada realizada = (Realizada)lvAlumnos.SelectedItems[0].Tag;               
+                txtCalificacion.Text = realizada.calificacion.ToString();
             }
         }
     }
-}
+    }

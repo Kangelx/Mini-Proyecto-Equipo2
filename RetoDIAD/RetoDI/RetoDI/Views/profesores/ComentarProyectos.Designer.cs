@@ -31,123 +31,101 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombreproyecto = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscarProyecto = new System.Windows.Forms.TextBox();
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.lblComentario = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.lblcomentar = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblNombreproyecto
-            // 
-            this.lblNombreproyecto.AutoSize = true;
-            this.lblNombreproyecto.Location = new System.Drawing.Point(23, 226);
-            this.lblNombreproyecto.Name = "lblNombreproyecto";
-            this.lblNombreproyecto.Size = new System.Drawing.Size(86, 13);
-            this.lblNombreproyecto.TabIndex = 5;
-            this.lblNombreproyecto.Text = "NombreProyecto";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(123, 275);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(70, 19);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscarProyecto
-            // 
-            this.txtBuscarProyecto.Location = new System.Drawing.Point(22, 241);
-            this.txtBuscarProyecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBuscarProyecto.Name = "txtBuscarProyecto";
-            this.txtBuscarProyecto.Size = new System.Drawing.Size(172, 20);
-            this.txtBuscarProyecto.TabIndex = 7;
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(242, 194);
-            this.txtComentario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtComentario.Location = new System.Drawing.Point(12, 270);
+            this.txtComentario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(310, 124);
+            this.txtComentario.Size = new System.Drawing.Size(412, 152);
             this.txtComentario.TabIndex = 8;
             // 
             // lblComentario
             // 
             this.lblComentario.AutoSize = true;
-            this.lblComentario.Location = new System.Drawing.Point(239, 169);
+            this.lblComentario.Location = new System.Drawing.Point(9, 233);
+            this.lblComentario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComentario.Name = "lblComentario";
-            this.lblComentario.Size = new System.Drawing.Size(60, 13);
+            this.lblComentario.Size = new System.Drawing.Size(76, 16);
             this.lblComentario.TabIndex = 9;
             this.lblComentario.Text = "Comentario";
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(435, 322);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAñadir.Location = new System.Drawing.Point(464, 264);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(117, 28);
+            this.btnAñadir.Size = new System.Drawing.Size(156, 34);
             this.btnAñadir.TabIndex = 10;
-            this.btnAñadir.Text = "Añadir Comentario";
+            this.btnAñadir.Text = "Guardar Comentario";
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // lblcomentar
             // 
             this.lblcomentar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader1});
+            this.lblcomentar.GridLines = true;
             this.lblcomentar.HideSelection = false;
-            this.lblcomentar.Location = new System.Drawing.Point(9, 22);
-            this.lblcomentar.Margin = new System.Windows.Forms.Padding(2);
+            this.lblcomentar.Location = new System.Drawing.Point(12, 38);
+            this.lblcomentar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblcomentar.MultiSelect = false;
             this.lblcomentar.Name = "lblcomentar";
-            this.lblcomentar.Size = new System.Drawing.Size(543, 136);
-            this.lblcomentar.TabIndex = 11;
+            this.lblcomentar.Size = new System.Drawing.Size(710, 191);
+            this.lblcomentar.TabIndex = 24;
             this.lblcomentar.UseCompatibleStateImageBehavior = false;
             this.lblcomentar.View = System.Windows.Forms.View.Details;
+            this.lblcomentar.SelectedIndexChanged += new System.EventHandler(this.lblcomentar_SelectedIndexChanged);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Proyecto";
+            this.columnHeader7.Width = 150;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Resumen";
+            this.columnHeader8.Width = 169;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Alumno";
-            this.columnHeader1.Width = 128;
+            this.columnHeader1.Text = "Comentario";
+            this.columnHeader1.Width = 364;
             // 
-            // columnHeader2
+            // label1
             // 
-            this.columnHeader2.Text = "Proyecto";
-            this.columnHeader2.Width = 117;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Calificación";
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Comentario";
-            this.columnHeader4.Width = 143;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 16);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Seleccione un proyecto para modificar el comentario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ComentarProyectos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 361);
+            this.ClientSize = new System.Drawing.Size(752, 444);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcomentar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.lblComentario);
             this.Controls.Add(this.txtComentario);
-            this.Controls.Add(this.txtBuscarProyecto);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.lblNombreproyecto);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "ComentarProyectos";
             this.Text = "ComentarProyectos";
             this.ResumeLayout(false);
@@ -156,16 +134,13 @@ namespace WinFormsApp1
         }
 
         #endregion
-        private Label lblNombreproyecto;
-        private Button btnBuscar;
-        private TextBox txtBuscarProyecto;
         private TextBox txtComentario;
-        private Label lblComentario;
+        public Label lblComentario;
         private Button btnAñadir;
         public ListView lblcomentar;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
+        public Label label1;
     }
 }

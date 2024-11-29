@@ -54,7 +54,8 @@ namespace RetoDI
                 ListViewItem item;
                 foreach (Proyecto proyecto in proyectos.results)
                 {
-                    item = new ListViewItem(new[] { proyecto.nombre, proyecto.ciclo.nombre, proyecto.archivos });
+                    item = new ListViewItem(new[] { proyecto.nombre, proyecto.archivos });
+                    item.Tag = proyecto;
                     subirArchivos.lvArchivos.Items.Add(item);
                 }
                 // Mostrar el formulari.
@@ -67,7 +68,7 @@ namespace RetoDI
         {
 
             {
-                realizadas = await controlRealizan.GetAllRealizas();
+                proyectos =  await controlProyectos.GetAllProyectos();
                 // Crear una instancia del formulario Botones
                 ComentarProyectos comentarios = new ComentarProyectos();
 
@@ -84,9 +85,10 @@ namespace RetoDI
                 splitContainer1.Panel2.Controls.Add(comentarios);
                 ListViewItem item;
 
-                foreach (Realizada realizada in realizadas.results)
+                foreach (Proyecto proyecto in proyectos.results)
                 {
-                    item = new ListViewItem(new[] { realizada.alumno.nombre, realizada.proyecto.nombre, realizada.calificacion.ToString(), realizada.comentario });
+                    item = new ListViewItem(new[] { proyecto.nombre, proyecto.resumen, proyecto.comentarios });
+                    item.Tag = proyecto;
                     comentarios.lblcomentar.Items.Add(item);
                 }
 
@@ -117,6 +119,7 @@ namespace RetoDI
                 foreach (Realizada realizada in realizadas.results)
                 {
                     item = new ListViewItem(new[] { realizada.alumno.nombre, realizada.proyecto.nombre, realizada.calificacion.ToString() });
+                    item.Tag = realizada;
                     calificar.lvAlumnos.Items.Add(item);
                 }
 

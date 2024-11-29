@@ -60,7 +60,7 @@ namespace WinFormsApp1
             this.lblCalificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.Location = new System.Drawing.Point(337, 241);
             this.lblCalificacion.Name = "lblCalificacion";
-            this.lblCalificacion.Size = new System.Drawing.Size(79, 17);
+            this.lblCalificacion.Size = new System.Drawing.Size(96, 20);
             this.lblCalificacion.TabIndex = 1;
             this.lblCalificacion.Text = "Calificación";
             // 
@@ -68,14 +68,14 @@ namespace WinFormsApp1
             // 
             this.txtCalificacion.Location = new System.Drawing.Point(340, 282);
             this.txtCalificacion.Name = "txtCalificacion";
-            this.txtCalificacion.Size = new System.Drawing.Size(213, 20);
+            this.txtCalificacion.Size = new System.Drawing.Size(213, 22);
             this.txtCalificacion.TabIndex = 2;
             // 
             // txtBuscarAlumno
             // 
             this.txtBuscarAlumno.Location = new System.Drawing.Point(15, 282);
             this.txtBuscarAlumno.Name = "txtBuscarAlumno";
-            this.txtBuscarAlumno.Size = new System.Drawing.Size(253, 20);
+            this.txtBuscarAlumno.Size = new System.Drawing.Size(253, 22);
             this.txtBuscarAlumno.TabIndex = 10;
             // 
             // btnBuscar
@@ -86,13 +86,14 @@ namespace WinFormsApp1
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblNombreproyecto
             // 
             this.lblNombreproyecto.AutoSize = true;
             this.lblNombreproyecto.Location = new System.Drawing.Point(12, 243);
             this.lblNombreproyecto.Name = "lblNombreproyecto";
-            this.lblNombreproyecto.Size = new System.Drawing.Size(82, 13);
+            this.lblNombreproyecto.Size = new System.Drawing.Size(104, 16);
             this.lblNombreproyecto.TabIndex = 8;
             this.lblNombreproyecto.Text = "Nombre Alumno";
             // 
@@ -109,6 +110,7 @@ namespace WinFormsApp1
             this.lvAlumnos.TabIndex = 11;
             this.lvAlumnos.UseCompatibleStateImageBehavior = false;
             this.lvAlumnos.View = System.Windows.Forms.View.Details;
+            this.lvAlumnos.SelectedIndexChanged += new System.EventHandler(this.lvAlumnos_SelectedIndexChanged);
             // 
             // Alumno
             // 

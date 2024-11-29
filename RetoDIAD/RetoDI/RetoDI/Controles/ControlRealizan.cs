@@ -73,6 +73,51 @@ namespace RetoDI.Controles
         {
             try
             {
+                int id = realizada.id;
+                // Creamos la URL para la API donde se guardarán los proyectos
+                string apiUrl = $"http://localhost:4000/realizada/{id}";  // Cambia esta URL según tu servidor y API
+
+                // Creamos un objeto HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Creamos un objeto con los datos que queremos enviar en el cuerpo de la solicitud
+                    var content = new StringContent(
+                        JsonConvert.SerializeObject(realizada),
+                        Encoding.UTF8,
+                        "application/json"
+                    );
+
+                    // Enviamos la solicitud POST a la API
+                    HttpResponseMessage response = await client.PutAsync(apiUrl, content);
+
+                    // Verificamos si la solicitud fue exitosa
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("calificacion guardada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    else
+                    {
+                        string errorDetails = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show("Error al guardar la calificacion. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Si ocurre una excepción, mostramos un mensaje de error
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+    }
+
+}
+/*
+try
+            {
                 // Convertir el objeto Realizada a JSON
                 string json = JsonConvert.SerializeObject(realizada);
 
@@ -80,7 +125,7 @@ namespace RetoDI.Controles
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 int id = realizada.id;
                 // Realizar la solicitud POST a la API
-                HttpResponseMessage response = await client.PostAsync($"http://localhost:4000/realizan/{id}", content);
+                HttpResponseMessage response = await client.PutAsync($"http://localhost:4000/realizan/{id}", content);
 
                 // Verificar si la respuesta fue exitosa
                 if (response.IsSuccessStatusCode)
@@ -105,3 +150,4 @@ namespace RetoDI.Controles
 
     }
 }
+*/
