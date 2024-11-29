@@ -30,7 +30,15 @@ public class RealizanController {
             return ResponseEntity.ok(realizan);
         }
     }
-
+    @GetMapping("/alumno/{id}")
+    public ResponseEntity<?> getAllRealizan(@PathVariable String id) {
+        List<Realizan> realizan = realizanRepository.findAll(id);
+        if(realizan.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok(realizan);
+        }
+    }
     @PostMapping
     public ResponseEntity<?> createRealizan(@RequestBody Realizan realizan) {
         if (realizanRepository.save(realizan) ==1)

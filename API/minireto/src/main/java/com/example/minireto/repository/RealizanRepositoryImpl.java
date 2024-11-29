@@ -35,6 +35,11 @@ public class RealizanRepositoryImpl implements RealizanRepository {
     }
 
     @Override
+    public List<Realizan>  findAll(String id) {
+        return jdbcTemplate.query("SELECT id , calificacion, alumno, proyecto, comentario FROM realizan where alumno = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
+    }
+
+    @Override
     public Realizan findById(int id) {
         return jdbcTemplate.queryForObject("SELECT id , calificacion, alumno, proyecto, comentario FROM realizan where id = ?", new RealizanRepositoryImpl.RealizanRowMapper(), id);
     }

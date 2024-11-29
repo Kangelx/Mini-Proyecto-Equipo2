@@ -8,6 +8,8 @@ import java.util.List;
 public interface RealizanRepository {
     //Método para obtener todas las evaluaciones
     List<Realizan> findAll();
+    //Metodo para obtener todas las evaluaciones por id alumno
+    List<Realizan> findAll(String id);
     //Metodo para obtener quien realiza el proyecto
     Realizan findById(int id);
     //Metodo para guardar realizan
