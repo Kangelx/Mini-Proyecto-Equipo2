@@ -28,6 +28,15 @@ import java.util.List;
                 return ResponseEntity.ok(profesores);
 
         }
+        @GetMapping("/tutor/{id}")
+        public ResponseEntity<?> getAllProyectosTutor(@PathVariable String id){
+            List<Proyecto> profesores = proyectoRepository.findAll(id);
+            if (profesores.isEmpty())
+                return ResponseEntity.notFound().build();
+            else
+                return ResponseEntity.ok(profesores);
+
+        }
 
         @PostMapping
         public ResponseEntity<?> createProyecto(@RequestBody Proyecto proyecto) {

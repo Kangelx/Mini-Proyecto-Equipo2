@@ -32,7 +32,10 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
 
         return jdbcTemplate.query(" SELECT * FROM proyectos inner join ciclos on codciclo = ciclo inner join profesores on idprofesor = tutor", new ProyectoRowMapper());
     }
-
+    @Override
+    public List<Proyecto> findAll(String id) {
+        return jdbcTemplate.query("SELECT * FROM proyectos inner join ciclos on codciclo = ciclo inner join profesores on idprofesor = tutor where idprofesor = ?", new ProyectoRowMapper(), id);
+    }
     @Override
     public Proyecto findById(int id) {
         return jdbcTemplate.queryForObject("SELECT * FROM proyectos inner join ciclos on codciclo = ciclo inner join profesores on idprofesor = tutor where idproyecto = ?", new ProyectoRowMapper(), id);

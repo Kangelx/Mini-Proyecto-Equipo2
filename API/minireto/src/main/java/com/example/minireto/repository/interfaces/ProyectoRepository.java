@@ -8,6 +8,7 @@ import java.util.List;
 public interface ProyectoRepository {
     //Método para obtener todos los proyectos
     List<Proyecto> findAll();
+    List<Proyecto> findAll(String id);
     //Método para obtener un proyecto por su id
     Proyecto findById(int id);
     //Método para guardar un nuevo proyecto
