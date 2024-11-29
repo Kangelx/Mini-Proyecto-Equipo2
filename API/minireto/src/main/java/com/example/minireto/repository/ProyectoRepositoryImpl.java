@@ -48,16 +48,14 @@ public class ProyectoRepositoryImpl implements ProyectoRepository {
 
     @Override
     public int update(Proyecto proyecto) {
-        try{
+
             return jdbcTemplate.update(
                     "UPDATE proyectos SET nombre = ?, tipo = ?, resumen = ?, anno_acad = ?, fecha_pres = ?, logo = ?, memoria = ?, archivos = ?, comentarios = ?, ciclo = ?, tutor = ? " +
-                            " WHERE idProfesor = ?",
-                    proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(), proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(), proyecto.getComentarios(), proyecto.getCiclo().getCodCiclo(), proyecto.getTutor().getIdprofesor()
+                            " WHERE idProyecto = ?",
+                    proyecto.getNombre(), proyecto.getTipo(), proyecto.getResumen(), proyecto.getAnno_acad(),proyecto.getFecha_pres(), proyecto.getLogo(), proyecto.getMemoria(),proyecto.getArchivos() , proyecto.getComentarios(), proyecto.getCiclo().getCodCiclo(),proyecto.getTutor().getIdprofesor(), proyecto.getIdproyecto()
 
             );
-        }catch (Exception e){
-            return -1;
-        }
+
     }
 
     @Override

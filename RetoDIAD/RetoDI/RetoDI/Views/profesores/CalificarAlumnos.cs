@@ -87,7 +87,7 @@ namespace WinFormsApp1
             Realizada realizada = new Realizada
             {
                 alumno = new Alumno { nombre = nombreAlumno }, // Suponemos que solo necesitas el nombre del alumno
-                proyecto = new Proyecto { Nombre = nombreProyecto }, // Asumimos que solo necesitas el nombre del proyecto
+                proyecto = new Proyecto { nombre = nombreProyecto }, // Asumimos que solo necesitas el nombre del proyecto
                 calificacion = int.Parse(calificacion), // Convertir la calificación a int
 
             };

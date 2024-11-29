@@ -13,7 +13,7 @@ public class Alumno {
     private String email;
     private String password;
     private String telefono;
-    private String genero;
+    private GENERO genero;
     private LocalDate fechaNacimiento;
     private boolean activo;
     private Ciclo ciclo;
@@ -78,11 +78,11 @@ public class Alumno {
         this.telefono = telefono;
     }
 
-    public String getGenero() {
+    public GENERO getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(GENERO genero) {
         this.genero = genero;
     }
 

@@ -19,12 +19,14 @@ namespace RetoDI.Administrador
         private ControlAlumnos controlAlumnos;
         private ControlProyectos controlProyectos;
         private ControlProfesores controlProfesores;
+        private ControlCiclos controlCiclos;
         private Alumnos alumnos;
         private Proyectos proyectos;
         private Profesores profesores;
+        private Ciclos ciclos;
         public frmAdministracion()
         {
-           // _apiService = new ApiService();
+            // _apiService = new ApiService();
             InitializeComponent();
             //nos aseguramos de que todo este en dock fill
 
@@ -40,16 +42,19 @@ namespace RetoDI.Administrador
             controlAlumnos = new ControlAlumnos();
             controlProfesores = new ControlProfesores();
             controlProyectos = new ControlProyectos();
+            controlCiclos = new ControlCiclos();
+
+
             try
             {
                 Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
                 this.BackgroundImage = img;
                 this.BackgroundImageLayout = ImageLayout.Zoom;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-            
-            }     
+
+            }
 
         }
 
@@ -62,6 +67,9 @@ namespace RetoDI.Administrador
         private async void btnDatoProyecto_Click(object sender, EventArgs e)
         {
             proyectos = await controlProyectos.GetAllProyectos();
+            profesores = await controlProfesores.GetAllProfesores();
+            ciclos = await controlCiclos.GetAllCiclos();
+
             pnlDatosAlumnos.Visible = false;
             pnlDatosProfesores.Visible = false;
             pnlDatosProyecto.Visible = true;
@@ -76,16 +84,25 @@ namespace RetoDI.Administrador
             txtMemoriaProyecto.Text = null;
             txtArchivosProyecto.Text = null;
             txtComentariosProyecto.Text = null;
-            txtCicloProyecto.Text = null;
-            txtTutorProyecto.Text = null;
 
+            cmbCicloProyecto.Items.Clear();
+            cmbTutorProyecto.Items.Clear();
 
+            foreach (Ciclo ciclo in ciclos.results)
+            {
+                cmbCicloProyecto.Items.Add(ciclo.codCiclo);
+            }
+
+            foreach (Profesor profesor in profesores.results)
+            {
+                cmbTutorProyecto.Items.Add(profesor.apellidos);
+            }
 
             lvwProyectos.Items.Clear();
             ListViewItem item;
-            foreach(Proyecto proyecto in proyectos.results)
+            foreach (Proyecto proyecto in proyectos.results)
             {
-                item = new ListViewItem(new[] { proyecto.Nombre, proyecto.anno_acad.ToString() });
+                item = new ListViewItem(new[] { proyecto.nombre, proyecto.anno_acad.ToString() });
                 item.Tag = proyecto;
                 lvwProyectos.Items.Add(item);
             }
@@ -96,17 +113,20 @@ namespace RetoDI.Administrador
             {
                 Proyecto proyecto = (Proyecto)lvwProyectos.SelectedItems[0].Tag;
 
-                txtNombreProyecto.Text = proyecto.Nombre == null ? null : proyecto.Nombre.ToString();
+
+                txtNombreProyecto.Text = proyecto.nombre == null ? null : proyecto.nombre.ToString();
                 txtTipoProyecto.Text = proyecto.tipo == null ? null : proyecto.tipo.ToString();
                 txtResumenProyecto.Text = proyecto.resumen == null ? null : proyecto.resumen.ToString();
                 txtAnnoProyecto.Text = proyecto.anno_acad == null ? null : proyecto.anno_acad.ToString();
-                txtFechaProyecto.Text = proyecto.fecha == null ? null : proyecto.fecha.ToString();
+                txtFechaProyecto.Text = proyecto.fecha_pres == null ? null : proyecto.fecha_pres.ToString();
                 txtLogoProyectos.Text = proyecto.logo == null ? null : proyecto.logo.ToString();
-                txtMemoriaProyecto.Text= proyecto.memoria == null ? null : proyecto.memoria.ToString();
+                txtMemoriaProyecto.Text = proyecto.memoria == null ? null : proyecto.memoria.ToString();
                 txtArchivosProyecto.Text = proyecto.archivos == null ? null : proyecto.archivos.ToString();
-                txtComentariosProyecto.Text = proyecto.Comentario == null ? null : proyecto.Comentario.ToString();
-                txtCicloProyecto.Text = proyecto.ciclo == null ? null : proyecto.ciclo.nombre.ToString();
-                txtTutorProyecto.Text = proyecto.tutor == null ? null : proyecto.tutor.Nombre.ToString();
+                txtComentariosProyecto.Text = proyecto.comentarios == null ? null : proyecto.comentarios.ToString();
+                cmbCicloProyecto.SelectedItem = proyecto.ciclo.codCiclo;
+                cmbTutorProyecto.SelectedItem = proyecto.tutor.apellidos;
+
+
             }
         }
         private async void btnDatoProfesores_Click(object sender, EventArgs e)
@@ -123,17 +143,19 @@ namespace RetoDI.Administrador
             txtEmailProfesor.Text = null;
             txtPasswordProfesor.Text = null;
             txtTelefonoProfesor.Text = null;
-            txtGeneroProfesor.Text = null;
+
             txtFechaNacProfesor.Text = null;
             txtEspecialidadProfesor.Text = null;
-            txtActivoProfesor.Text = null;
-            txtAdminProfesor.Text = null;
+
+            cmbGeneroProfesor.SelectedItem = null;
+            cmbGeneroProfesor.SelectedItem = null;
+            cmbAdminProfesor.SelectedItem = null;
 
             lvwProfesores.Items.Clear();
             ListViewItem item;
             foreach (Profesor profesor in profesores.results)
             {
-                item = new ListViewItem(new[] { profesor.Nombre, profesor.Apellidos });
+                item = new ListViewItem(new[] { profesor.nombre, profesor.apellidos });
                 item.Tag = profesor;
                 lvwProfesores.Items.Add(item);
             }
@@ -144,17 +166,18 @@ namespace RetoDI.Administrador
             {
                 Profesor profesor = (Profesor)lvwProfesores.SelectedItems[0].Tag;
 
-                txtNombreProfesor.Text = profesor.Nombre == null ? null : profesor.Nombre.ToString();
-                txtApellidosProfesor.Text= profesor.Apellidos == null ? null : profesor.Apellidos.ToString();
-                txtDNIProfesor.Text= profesor.DNI == null ? null : profesor.DNI.ToString();
-                txtEmailProfesor.Text = profesor.CorreoElectronico == null ? null : profesor.CorreoElectronico.ToString();
-                txtPasswordProfesor.Text = profesor.ContraseñaEncriptada == null ? null : profesor.ContraseñaEncriptada.ToString();
-                txtTelefonoProfesor.Text = profesor.Telefono == null ? null : profesor.Telefono.ToString();
-                txtGeneroProfesor.Text = profesor.Genero == null ? null : profesor.Genero.ToString();
-                txtFechaNacProfesor.Text = profesor.FechaNacimiento == null ? null : profesor.FechaNacimiento.ToString();
-                txtEspecialidadProfesor.Text = profesor.Especialidad == null ? null : profesor.Especialidad.ToString();
-                txtActivoProfesor.Text = profesor.ActivoActualmente.ToString();
-                txtAdminProfesor.Text = profesor.EsAdministrador.ToString();
+                txtNombreProfesor.Text = profesor.nombre == null ? null : profesor.nombre.ToString();
+                txtApellidosProfesor.Text = profesor.apellidos == null ? null : profesor.apellidos.ToString();
+                txtDNIProfesor.Text = profesor.dni == null ? null : profesor.dni.ToString();
+                txtEmailProfesor.Text = profesor.email == null ? null : profesor.email.ToString();
+                txtPasswordProfesor.Text = profesor.password_encr == null ? null : profesor.password_encr.ToString();
+                txtTelefonoProfesor.Text = profesor.telefono == null ? null : profesor.telefono.ToString();
+
+                txtFechaNacProfesor.Text = profesor.fechaNac == null ? null : profesor.fechaNac.ToString();
+                txtEspecialidadProfesor.Text = profesor.especialidad == null ? null : profesor.especialidad.ToString();
+                cmbGeneroProfesor.SelectedItem = profesor.genero.ToString();
+                cmbActivoProfesor.SelectedItem = profesor.activo ? "Si" : "No";
+                cmbAdminProfesor.SelectedItem = profesor.admin ? "Si" : "No";
 
             }
         }
@@ -172,10 +195,18 @@ namespace RetoDI.Administrador
             txtEmailAlumno.Text = null;
             txtPasswordAlumno.Text = null;
             txtTelefonoAlumno.Text = null;
-            txtGeneroAlumno.Text = null;
             txtFechaNacAlumno.Text = null;
-            txtActivoAlumno.Text = null;
-            txtCicloAlumno.Text = null;
+            cmbActivoAlumno.SelectedItem = null;
+            cmbGeneroAlumno.SelectedItem = null;
+            cmbCicloAlumno.SelectedItem = null;
+
+
+            cmbCicloAlumno.Items.Clear();
+            ciclos = await controlCiclos.GetAllCiclos();
+            foreach (Ciclo ciclo in ciclos.results)
+            {
+                cmbCicloAlumno.Items.Add(ciclo.codCiclo);
+            }
 
 
             lvwAlumnos.Items.Clear();
@@ -196,12 +227,12 @@ namespace RetoDI.Administrador
                 txtApellidosAlumno.Text = alumno.apellido == null ? null : alumno.apellido.ToString();
                 txtDNIAlumno.Text = alumno.dni == null ? null : alumno.dni.ToString();
                 txtEmailAlumno.Text = alumno.email == null ? null : alumno.email.ToString();
-                txtPasswordAlumno.Text = alumno.password== null ? null : alumno.password.ToString();
+                txtPasswordAlumno.Text = alumno.password == null ? null : alumno.password.ToString();
                 txtTelefonoAlumno.Text = alumno.telefono == null ? null : alumno.telefono.ToString();
-                txtGeneroAlumno.Text = alumno.genero == null ? null : alumno.genero.ToString();
+                cmbGeneroAlumno.SelectedItem = alumno.genero;
                 txtFechaNacAlumno.Text = alumno.fechaNacimiento == null ? null : alumno.fechaNacimiento.ToString();
-                txtActivoAlumno.Text = alumno.activo.ToString();
-                txtCicloAlumno.Text = alumno.ciclo == null ? null : alumno.ciclo.nombre.ToString(); 
+                cmbActivoAlumno.Text = alumno.activo ? "Si" : "No";
+                cmbCicloAlumno.SelectedItem = alumno.ciclo == null ? null : alumno.ciclo.codCiclo.ToString();
             }
 
 
@@ -226,8 +257,21 @@ namespace RetoDI.Administrador
             {
                 Alumno alumno = (Alumno)lvwAlumnos.SelectedItems[0].Tag;
                 alumno.nombre = txtNombreAlumno.Text;
-                lvwAlumnos.SelectedItems[0].SubItems[0].Text = alumno.nombre;
-                lvwAlumnos.SelectedItems[0].Tag = alumno.nombre;
+                alumno.apellido = txtApellidosAlumno.Text;
+                alumno.dni = txtDNIAlumno.Text;
+                alumno.email = txtEmailAlumno.Text;
+                alumno.telefono = txtTelefonoAlumno.Text;
+                alumno.genero = cmbGeneroAlumno.SelectedItem.ToString();
+                alumno.activo = cmbActivoAlumno.Text == "Si";
+
+                foreach (Ciclo ciclo in ciclos.results)
+                {
+                    if (ciclo.codCiclo == cmbCicloAlumno.Text)
+                    {
+                        alumno.ciclo = ciclo;
+                    }
+                }
+
 
                 bool resultado = await controlAlumnos.GuardarAlumno(alumno);
             }
@@ -238,12 +282,30 @@ namespace RetoDI.Administrador
             btnDatosAlumnos_Click(sender, e);
         }
 
-        private void btnAceptarProfesor_Click(object sender, EventArgs e)
+        private async void btnAceptarProfesor_Click(object sender, EventArgs e)
         {
             if (lvwProfesores.SelectedItems.Count > 0)
             {
                 Profesor profesor = (Profesor)lvwProfesores.SelectedItems[0].Tag;
+
+                profesor.nombre = txtNombreProfesor.Text;
+                profesor.apellidos = txtApellidosProfesor.Text;
+                profesor.dni = txtDNIProfesor.Text;
+                profesor.email = txtEmailProfesor.Text;
+
+                profesor.telefono = txtTelefonoProfesor.Text;
+
+
+                profesor.especialidad = txtEspecialidadProfesor.Text;
+
+                profesor.genero = cmbGeneroProfesor.SelectedItem.ToString();
+                profesor.genero = cmbGeneroProfesor.SelectedItem.ToString();
+                profesor.admin = cmbAdminProfesor.SelectedItem.ToString() == "Si";
+
+                bool resultado = await controlProfesores.GuardarProfesor(profesor);
             }
+
+
         }
 
         private void btnCancelarProfesor_Click(object sender, EventArgs e)
@@ -251,12 +313,47 @@ namespace RetoDI.Administrador
             btnDatoProfesores_Click(sender, e);
         }
 
-        private void btnAceptarProyecto_Click(object sender, EventArgs e)
+        private async void btnAceptarProyecto_Click(object sender, EventArgs e)
         {
             if (lvwProyectos.SelectedItems.Count > 0)
             {
                 Proyecto proyecto = (Proyecto)lvwProyectos.SelectedItems[0].Tag;
+
+
+                proyecto.nombre = txtNombreProyecto.Text;
+                proyecto.nombre = txtTipoProyecto.Text;
+                proyecto.resumen = txtResumenProyecto.Text;
+                proyecto.anno_acad = int.Parse(txtAnnoProyecto.Text);
+                if (txtFechaProyecto.Text.Length>1)
+                {
+                    proyecto.fecha_pres = DateTime.Parse(txtFechaProyecto.Text);
+                }
+
+                proyecto.logo = txtLogoProyectos.Text;
+                proyecto.memoria = txtMemoriaProyecto.Text;
+                proyecto.archivos = txtArchivosProyecto.Text;
+                proyecto.comentarios = txtComentariosProyecto.Text;
+
+
+
+                foreach (Profesor profesor in profesores.results)
+                {
+                    if (profesor.apellidos == cmbTutorProyecto.SelectedItem)
+                    {
+                        proyecto.tutor = profesor;
+                    }
+                }
+                foreach (Ciclo ciclo in ciclos.results)
+                {
+                    if (ciclo.codCiclo == cmbCicloProyecto.SelectedItem)
+                    {
+                        proyecto.ciclo = ciclo;
+                    }
+                }
+
+                bool resultado = await controlProyectos.GuardarProyecto(proyecto);
             }
+
         }
 
         private void btnCancelarProyecto_Click(object sender, EventArgs e)

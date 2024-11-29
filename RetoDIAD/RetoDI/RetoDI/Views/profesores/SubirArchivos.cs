@@ -86,7 +86,7 @@ namespace WinFormsApp1
             // Crear un objeto Proyecto con los datos del formulario
             Proyecto proyectoNuevo = new Proyecto
             {
-                Nombre = nombreProyecto,
+                nombre = nombreProyecto,
                 ciclo = new Ciclo { nombre = cicloProyecto },
                 archivos = archivosProyecto
             };

@@ -24,29 +24,29 @@ public class CicloRepositoryImpl implements CicloRepository {
 
     @Override
     public List<Ciclo> findAll() {
-        return jdbcTemplate.query("SELECT cdciclo, nombre, etapa, titulo, curriculo, familia FROM ciclos", new CicloRepositoryImpl.CicloRowMapper());
+        return jdbcTemplate.query("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM ciclos", new CicloRepositoryImpl.CicloRowMapper());
     }
 
     @Override
     public Ciclo findById(String id) {
-        return jdbcTemplate.queryForObject("SELECT cdciclo, nombre, etapa, titulo, curriculo, familia FROM ciclos where codciclo = ?", new CicloRepositoryImpl.CicloRowMapper(), id);
+        return jdbcTemplate.queryForObject("SELECT codciclo, nombre, etapa, titulo, curriculo, familia FROM ciclos where codciclo = ?", new CicloRepositoryImpl.CicloRowMapper(), id);
     }
 
     @Override
     public int save(Ciclo ciclo) {
-        String sql = "INSERT INTO ciclo (cdciclo, nombre, etapa, titulo, curriculo, familia) VALUES (?,?,?,?,?, ?)";
+        String sql = "INSERT INTO ciclo (codciclo, nombre, etapa, titulo, curriculo, familia) VALUES (?,?,?,?,?, ?)";
         return jdbcTemplate.update(sql, ciclo.getCodCiclo(), ciclo.getNombre(), ciclo.getEtapa(), ciclo.getTitulo(), ciclo.getFamilia());
     }
 
     @Override
     public int update(Ciclo ciclo) {
-        return jdbcTemplate.update("UPDATE ciclo SET cdciclo = ?, nombre = ?, etapa = ?, titulo = ?, curriculo = ?, familia = ? WHERE cdciclo = ?",
+        return jdbcTemplate.update("UPDATE ciclo SET codciclo = ?, nombre = ?, etapa = ?, titulo = ?, curriculo = ?, familia = ? WHERE cdciclo = ?",
                 ciclo.getCodCiclo(), ciclo.getNombre(), ciclo.getEtapa(), ciclo.getTitulo(), ciclo.getFamilia(), ciclo.getCodCiclo());
     }
 
     @Override
     public int deleteById(String id) {
-        return jdbcTemplate.update("DELETE FROM ciclo WHERE cdciclo = ?", id);
+        return jdbcTemplate.update("DELETE FROM ciclo WHERE codciclo = ?", id);
     }
 
     private static class CicloRowMapper implements RowMapper<Ciclo> {

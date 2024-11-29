@@ -66,7 +66,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
     public int update(Alumno alumno) {
         return jdbcTemplate.update("UPDATE alumnos SET idalumno = ?,nombre  = ?, apellidos = ?, dni = ?, email = ? , password_encr = md5(?), telefono = ?, genero = ?, fechaNac = ?, activo = ?, ciclo_actual = ? " +
                 "WHERE idalumno = ?", alumno.getIdAlumno(), alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),
-                alumno.getPassword(), alumno.getTelefono(),alumno.getGenero(), alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo(), alumno.getIdAlumno());
+                alumno.getPassword(), alumno.getTelefono(),alumno.getGenero().toString(), alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo(), alumno.getIdAlumno());
     }
 
     @Override
@@ -86,7 +86,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
             alumno.setEmail(rs.getString("email"));
             alumno.setPassword(rs.getString("password_encr"));
             alumno.setTelefono(rs.getString("telefono"));
-            alumno.setGenero((rs.getString("genero")));
+            alumno.setGenero(GENERO.valueOf(rs.getString("genero").toUpperCase()));
             LocalDate fechaNacimiento = rs.getDate("fechaNac").toLocalDate();
             alumno.setFechaNacimiento(fechaNacimiento);
             alumno.setActivo(rs.getBoolean("activo"));

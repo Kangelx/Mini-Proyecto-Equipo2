@@ -71,7 +71,7 @@ namespace RetoDI.Controles
     {
         try
         {
-            int id = proyecto.Id;
+            int id = proyecto.idproyecto;
             // Creamos la URL para la API donde se guardarán los proyectos
             string apiUrl = $"http://localhost:4000/proyecto/{id}";  // Cambia esta URL según tu servidor y API
 
@@ -86,7 +86,7 @@ namespace RetoDI.Controles
                 );
 
                 // Enviamos la solicitud POST a la API
-                HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+                HttpResponseMessage response = await client.PutAsync(apiUrl, content);
 
                 // Verificamos si la solicitud fue exitosa
                 if (response.IsSuccessStatusCode)
