@@ -33,7 +33,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listViewmisproyectos = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,6 +67,7 @@
             this.btn_Cerrarsesion.TabIndex = 6;
             this.btn_Cerrarsesion.Text = "Cerrar Sesión";
             this.btn_Cerrarsesion.UseVisualStyleBackColor = false;
+            this.btn_Cerrarsesion.Click += new System.EventHandler(this.btn_Cerrarsesion_Click);
             // 
             // pictureBox1
             // 
@@ -91,7 +91,6 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnVolver);
             // 
             // splitContainer1.Panel2
             // 
@@ -122,14 +121,6 @@
             this.button1.Text = "Mis proyectos";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(97, 335);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 3;
-            this.btnVolver.Text = "Volver";
             // 
             // panel2
             // 
@@ -234,7 +225,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btn_Cerrarsesion);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProyectoo";
             this.Text = "Proyectos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -252,7 +243,6 @@
         private System.Windows.Forms.Button btn_Cerrarsesion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;

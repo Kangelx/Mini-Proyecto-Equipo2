@@ -125,6 +125,12 @@ namespace RetoDI.Views.profesores
             }
         }
 
+        private void btn_Cerrarsesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
     }
     
