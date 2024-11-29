@@ -64,7 +64,7 @@ public class AlumnoRepositoryImpl implements AlumnoRepository {
 
     @Override
     public int update(Alumno alumno) {
-        return jdbcTemplate.update("UPDATE alumnos SET idalumno = ?,nombre  = ?, apellidos = ?, dni = ?, email = ? , password_encr = md5(?), telefono = ?, genero = ?, fechaNac = ?, activo = ?, ciclo_actual = ? " +
+        return jdbcTemplate.update("UPDATE alumnos SET idalumno = ?,nombre  = ?, apellidos = ?, dni = ?, email = ? , password_encr = ?, telefono = ?, genero = ?, fechaNac = ?, activo = ?, ciclo_actual = ? " +
                 "WHERE idalumno = ?", alumno.getIdAlumno(), alumno.getNombre(), alumno.getApellido(), alumno.getDni(), alumno.getEmail(),
                 alumno.getPassword(), alumno.getTelefono(),alumno.getGenero().toString(), alumno.getFechaNacimiento(), alumno.isActivo(), alumno.getCiclo().getCodCiclo(), alumno.getIdAlumno());
     }

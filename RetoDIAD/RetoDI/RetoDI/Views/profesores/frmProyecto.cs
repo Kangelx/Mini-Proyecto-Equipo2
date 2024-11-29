@@ -92,7 +92,7 @@ namespace RetoDI.Views.profesores
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            proyectos = await controlProyectos.GetallbyidProyecto();
+            proyectos = await controlProyectos.GetallbyidProyecto(SessionData.IdProfesor);
             listViewmisproyectos.Items.Clear();
 
             ListViewItem item;

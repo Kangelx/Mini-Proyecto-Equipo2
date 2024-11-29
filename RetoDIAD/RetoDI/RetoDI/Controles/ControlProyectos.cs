@@ -108,17 +108,18 @@ namespace RetoDI.Controles
             return false;
         }
     }
-        public async Task<Proyectos> GetallbyidProyecto()
+        public async Task<Proyectos> GetallbyidProyecto(string id)
         {        
-            
+          
                try
                 {
                     //Hacemos una instancia de Personajes
                     Proyectos proyectos = new Proyectos();
 
-                    //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
-                    //que se quiere consultar
-                    HttpResponseMessage response = await client.GetAsync("http://localhost:4000/proyecto/tutor/e070e169-a5a8-11ef-b23d-b00cd1e6ac21");
+                //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
+                //que se quiere consultar
+
+                    HttpResponseMessage response = await client.GetAsync($"http://localhost:4000/proyecto/tutor/{id}");
 
                     //Verifica que la respuesta tenga un estado de éxito
                     //Si no es exitosa, lanza una excepción
