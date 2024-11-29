@@ -30,7 +30,7 @@ namespace RetoDI.Controles
         {
             try
             {
-                //Hacemos una instancia de Personajes
+                //Hacemos una instancia 
                 Proyectos proyectos = new Proyectos();
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
@@ -108,7 +108,48 @@ namespace RetoDI.Controles
             return false;
         }
     }
+        public async Task<Proyectos> GetallbyidProyecto()
+        {        
+            
+               try
+                {
+                    //Hacemos una instancia de Personajes
+                    Proyectos proyectos = new Proyectos();
 
-}
+                    //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
+                    //que se quiere consultar
+                    HttpResponseMessage response = await client.GetAsync("http://localhost:4000/proyecto/tutor/e070e169-a5a8-11ef-b23d-b00cd1e6ac21");
 
-}
+                    //Verifica que la respuesta tenga un estado de éxito
+                    //Si no es exitosa, lanza una excepción
+                    response.EnsureSuccessStatusCode();
+
+                    //String con las respuesta que es el JSON con toda la información
+                    //que habíamos visto previamente
+                    string responseJson = await response.Content.ReadAsStringAsync();
+
+
+                    //Enviamos esta respuesta a nuestra modelo, convierte (deserializa)
+                    //el JSON recibido en un objeto de tipo "Personajes" utilizando la
+                    //biblioteca Newtonsoft.Json
+                    proyectos.results = JsonConvert.DeserializeObject<List<Proyecto>>(responseJson);
+
+                    //Devuelve el objeto "personajes" con los datos obtenidos de la API
+                    return proyectos;
+
+                }
+
+                catch (Exception e)
+                {
+
+                    //Si ocurre algún error (como problemos de conexión o un JSON no válido),
+                    //captura la excepción y devuelve "null" como valor de error
+                    return null;
+
+                }
+            }
+
+
+        }
+
+    }

@@ -83,10 +83,6 @@ D:\Usuarios\dam2\Desktop\Mini-Proyecto-Equipo2-EndVersion\RetoDIAD\RetoDI\RetoDI
 D:\Usuarios\dam2\Desktop\Mini-Proyecto-Equipo2-EndVersion\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.AssemblyReference.cache
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Properties.Resources.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.Administracion.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Botones.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.GestiiónInterna.resources
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Alumno.Alumno.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmLogin.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.CalificarAlumnos.resources
 D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\WinFormsApp1.ComentarProyectos.resources
@@ -165,7 +161,6 @@ E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.CoreCompileIn
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.exe
 E:\fpcarmen\MINIRETO\domingo\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
-D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.Proyectoo.resources
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe.config
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.exe
 C:\Users\Luis\Documents\GitHub\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\bin\Debug\RetoDI.pdb
@@ -219,3 +214,8 @@ I:\fpcarmen\MINIRETO\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\Reto
 I:\fpcarmen\MINIRETO\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.csproj.Up2Date
 I:\fpcarmen\MINIRETO\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.exe
 I:\fpcarmen\MINIRETO\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.pdb
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Administrador.frmAdministracion.resources
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmBotones.resources
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmGestiiónInterna.resources
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.frmAlumno.frmAlumno.resources
+D:\Usuarios\dam2\Desktop\minireto\Mini-Proyecto-Equipo2\RetoDIAD\RetoDI\RetoDI\obj\Debug\RetoDI.Views.profesores.frmProyectoo.resources
