@@ -10,12 +10,23 @@ namespace WinFormsApp1
 {
     public partial class ComentarProyectos : Form
     {
-
+        // private readonly ApiService _apiService;
+        private ControlAlumnos controlAlumnos;
+        private ControlProyectos controlProyectos;
+        private ControlProfesores controlProfesores;
+        private ControlCiclos controlCiclos;
+        private Alumnos alumnos;
+        private Proyectos proyectos;
+        private Profesores profesores;
+        private Ciclos ciclos;
 
         public ComentarProyectos()
         {
             InitializeComponent();
-
+            controlAlumnos = new ControlAlumnos();
+            controlProfesores = new ControlProfesores();
+            controlProyectos = new ControlProyectos();
+            controlCiclos = new ControlCiclos();
         }
 
 
@@ -26,37 +37,26 @@ namespace WinFormsApp1
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombreProyecto = txtBuscarProyecto.Text.Trim(); // Obtener el nombre del proyecto ingresado
-
-            if (string.IsNullOrEmpty(nombreProyecto))
-            {
-                MessageBox.Show("Por favor, ingrese un nombre de proyecto para buscar.");
-                return;
-            }
-
-            bool encontrado = false;
-
-            // Recorrer los elementos del ListView de proyectos
-            foreach (ListViewItem item in lblcomentar.Items)
-            {
-                // Si el nombre del proyecto coincide con el texto de búsqueda
-                if (item.Text.ToLower().Contains(nombreProyecto.ToLower()))  // Búsqueda insensible a mayúsculas/minúsculas
-                {
-                    // Seleccionar el item correspondiente en el ListView
-                    item.Selected = true;
-                    lblcomentar.EnsureVisible(item.Index); // Asegurar que el proyecto sea visible
-                    encontrado = true;
-                    break;
-                }
-            }
-
-            if (!encontrado)
-            {
-                MessageBox.Show("No se encontraron proyectos con ese nombre.");
-            }
         }
 
         private async Task btnAñadir_ClickAsync(object sender, EventArgs e)
+        {
+
+        }
+        private void lblcomentar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Verificar si hay un proyecto seleccionado
+            if (lblcomentar.SelectedItems.Count > 0)
+            {
+                // Obtener el proyecto desde el Tag del ListViewItem seleccionado
+                Proyecto proyecto = (Proyecto)lblcomentar.SelectedItems[0].Tag;
+
+                // Cargar el comentario en el TextBox (supongo que el TextBox se llama txtComentario)
+                txtComentario.Text = proyecto.comentarios;
+            }
+        }
+
+        private async void btnAñadir_Click(object sender, EventArgs e)
         {
             // Verificar si un proyecto ha sido seleccionado
             if (lblcomentar.SelectedItems.Count == 0)
@@ -64,11 +64,47 @@ namespace WinFormsApp1
                 MessageBox.Show("Por favor, seleccione un proyecto.");
                 return;
             }
+            if (lblcomentar.SelectedItems.Count > 0)
+            {
+                Proyecto proyecto = (Proyecto)lblcomentar.SelectedItems[0].Tag;
+                // Verificar que el comentario no esté vacío
+                if (string.IsNullOrEmpty(txtComentario.Text.Trim()))
+                {
+                    MessageBox.Show("Por favor, ingrese un comentario.");
+                    return;
+                }
 
-            // Verificar y guardar el comentario
-            // await VerificarComentarioExistente();
+                // Asignar el comentario ingresado en el TextBox al proyecto
+                proyecto.comentarios = txtComentario.Text.Trim();
+
+                // Llamar al método GuardarProyecto del controlador para guardar el comentario en la API
+                bool resultado = await controlProyectos.GuardarProyecto(proyecto);
+
+                // Verificar si el comentario fue guardado correctamente
+                if (resultado)
+                {
+                    foreach (ListViewItem item in lblcomentar.Items)
+                    {
+                        // Verificamos si el Tag coincide con el proyecto
+                        if (item.Tag == proyecto)
+                        {
+                            // Actualizamos el comentario en el ListViewItem
+                            item.SubItems[2].Text = proyecto.comentarios; // Suponiendo que la segunda columna contiene los comentarios
+                            break;
+                        }
+                    }                
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el comentario.");
+                }
+            }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
+
