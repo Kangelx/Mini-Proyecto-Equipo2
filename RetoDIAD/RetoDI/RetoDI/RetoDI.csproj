@@ -111,11 +111,11 @@
     <Compile Include="Views\profesores\ComentarProyectos.Designer.cs">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\profesores\frmProyectoo.cs">
+    <Compile Include="Views\profesores\frmProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\profesores\frmProyectoo.Designer.cs">
-      <DependentUpon>frmProyectoo.cs</DependentUpon>
+    <Compile Include="Views\profesores\frmProyecto.Designer.cs">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\profesores\SubirArchivos.cs">
       <SubType>Form</SubType>
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Views\profesores\ComentarProyectos.resx">
       <DependentUpon>ComentarProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\profesores\frmProyectoo.resx">
-      <DependentUpon>frmProyectoo.cs</DependentUpon>
+    <EmbeddedResource Include="Views\profesores\frmProyecto.resx">
+      <DependentUpon>frmProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\profesores\SubirArchivos.resx">
       <DependentUpon>SubirArchivos.cs</DependentUpon>
