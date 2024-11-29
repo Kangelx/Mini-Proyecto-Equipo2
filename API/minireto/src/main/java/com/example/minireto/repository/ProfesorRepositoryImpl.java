@@ -46,16 +46,12 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
 
     @Override
     public int update(Profesor profesor) {
-        try{
             return jdbcTemplate.update(
                     "UPDATE profesores SET nombre = ?, apellidos = ?, dni = ?, email = ?, password_encr = md5(?), telefono = ?, genero = ?, fechaNac = ?, especialidad = ?, activo = ?, admin = ? " +
                             " WHERE idProfesor = ?",
-                    profesor.getNombre(), profesor.getApellidos(), profesor.getDni(), profesor.getEmail(), profesor.getPassword_encr(), profesor.getTelefono(), profesor.getGenero(), profesor.getFechaNac(), profesor.getEspecialidad(), profesor.isActivo(), profesor.isAdmin(), profesor.getIdprofesor()
+                    profesor.getNombre(), profesor.getApellidos(), profesor.getDni(), profesor.getEmail(), profesor.getPassword_encr(), profesor.getTelefono(), profesor.getGenero().toString(), profesor.getFechaNac(), profesor.getEspecialidad(), profesor.isActivo(), profesor.isAdmin(), profesor.getIdprofesor()
 
             );
-        }catch (Exception e){
-            return -1;
-        }
     }
 
     @Override

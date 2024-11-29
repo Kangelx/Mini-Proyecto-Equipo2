@@ -57,7 +57,7 @@ public class ProfesorController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Profesor> updateProfesor(@PathVariable String id, @RequestBody Profesor profesor) {
-        Profesor existingProfesor = profesorRepository.findById(id);
+        Profesor existingProfesor = profesorRepository.findById(profesor.getIdprofesor());
         if (existingProfesor != null) {
             profesor.setIdprofesor(id);
             profesorRepository.update(profesor);

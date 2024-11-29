@@ -24,7 +24,7 @@ namespace RetoDI.Controles
 
 
         //Creamos nuestra petición,
-        public async Task<Evaluadas> GetAllProfesores()
+        public async Task<Evaluadas> GetAllEvaluan()
 
         {
             try

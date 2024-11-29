@@ -83,6 +83,8 @@ namespace RetoDI.Controles
                 // Verificar si la respuesta fue exitosa
                 if (response.IsSuccessStatusCode)
                 {
+                    MessageBox.Show("Alumno guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return true; // La calificación fue guardada con éxito
                 }
                 else

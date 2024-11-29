@@ -25,7 +25,7 @@ namespace RetoDI.Controles
 
 
         //Creamos nuestra petición,
-        public async Task<Ciclos> GetAllAlumnos()
+        public async Task<Ciclos> GetAllCiclos()
 
         {
             try
@@ -35,8 +35,7 @@ namespace RetoDI.Controles
 
                 //Creamos un objeto de tipo HttpResponseMessage, en el que le pasamos la URL
                 //que se quiere consultar
-                MessageBox.Show("no implementado");
-                HttpResponseMessage response = await client.GetAsync("http://localhost:4000/ciclos");
+                HttpResponseMessage response = await client.GetAsync("http://localhost:4000/ciclo");
 
                 //Verifica que la respuesta tenga un estado de éxito
                 //Si no es exitosa, lanza una excepción

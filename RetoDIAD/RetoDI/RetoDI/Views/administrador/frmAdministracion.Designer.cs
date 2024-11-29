@@ -33,11 +33,9 @@
             this.btnDatoProfesores = new System.Windows.Forms.Button();
             this.btnDatosAlumnos = new System.Windows.Forms.Button();
             this.pnlDatosProyecto = new System.Windows.Forms.Panel();
-            this.txtTutorProyecto = new System.Windows.Forms.TextBox();
             this.lblTutorProyecto = new System.Windows.Forms.Label();
             this.btnCancelarProyecto = new System.Windows.Forms.Button();
             this.btnAceptarProyecto = new System.Windows.Forms.Button();
-            this.txtCicloProyecto = new System.Windows.Forms.TextBox();
             this.txtComentariosProyecto = new System.Windows.Forms.TextBox();
             this.txtArchivosProyecto = new System.Windows.Forms.TextBox();
             this.txtMemoriaProyecto = new System.Windows.Forms.TextBox();
@@ -65,10 +63,7 @@
             this.btnAceptarProfesor = new System.Windows.Forms.Button();
             this.lblEspecialidadProfesor = new System.Windows.Forms.Label();
             this.txtEspecialidadProfesor = new System.Windows.Forms.TextBox();
-            this.txtAdminProfesor = new System.Windows.Forms.TextBox();
-            this.txtActivoProfesor = new System.Windows.Forms.TextBox();
             this.txtFechaNacProfesor = new System.Windows.Forms.TextBox();
-            this.txtGeneroProfesor = new System.Windows.Forms.TextBox();
             this.txtTelefonoProfesor = new System.Windows.Forms.TextBox();
             this.txtPasswordProfesor = new System.Windows.Forms.TextBox();
             this.txtEmailProfesor = new System.Windows.Forms.TextBox();
@@ -91,10 +86,7 @@
             this.pnlDatosAlumnos = new System.Windows.Forms.Panel();
             this.btnCancelarAlumnos = new System.Windows.Forms.Button();
             this.btnAceptarAlumnos = new System.Windows.Forms.Button();
-            this.txtCicloAlumno = new System.Windows.Forms.TextBox();
-            this.txtActivoAlumno = new System.Windows.Forms.TextBox();
             this.txtFechaNacAlumno = new System.Windows.Forms.TextBox();
-            this.txtGeneroAlumno = new System.Windows.Forms.TextBox();
             this.txtTelefonoAlumno = new System.Windows.Forms.TextBox();
             this.txtPasswordAlumno = new System.Windows.Forms.TextBox();
             this.txtEmailAlumno = new System.Windows.Forms.TextBox();
@@ -117,6 +109,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.cmbGeneroAlumno = new System.Windows.Forms.ComboBox();
+            this.cmbCicloAlumno = new System.Windows.Forms.ComboBox();
+            this.cmbActivoAlumno = new System.Windows.Forms.ComboBox();
+            this.cmbGeneroProfesor = new System.Windows.Forms.ComboBox();
+            this.cmbActivoProfesor = new System.Windows.Forms.ComboBox();
+            this.cmbAdminProfesor = new System.Windows.Forms.ComboBox();
+            this.cmbCicloProyecto = new System.Windows.Forms.ComboBox();
+            this.cmbTutorProyecto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -186,11 +186,11 @@
             // 
             // pnlDatosProyecto
             // 
-            this.pnlDatosProyecto.Controls.Add(this.txtTutorProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.cmbTutorProyecto);
+            this.pnlDatosProyecto.Controls.Add(this.cmbCicloProyecto);
             this.pnlDatosProyecto.Controls.Add(this.lblTutorProyecto);
             this.pnlDatosProyecto.Controls.Add(this.btnCancelarProyecto);
             this.pnlDatosProyecto.Controls.Add(this.btnAceptarProyecto);
-            this.pnlDatosProyecto.Controls.Add(this.txtCicloProyecto);
             this.pnlDatosProyecto.Controls.Add(this.txtComentariosProyecto);
             this.pnlDatosProyecto.Controls.Add(this.txtArchivosProyecto);
             this.pnlDatosProyecto.Controls.Add(this.txtMemoriaProyecto);
@@ -215,13 +215,6 @@
             this.pnlDatosProyecto.Name = "pnlDatosProyecto";
             this.pnlDatosProyecto.Size = new System.Drawing.Size(357, 42);
             this.pnlDatosProyecto.TabIndex = 22;
-            // 
-            // txtTutorProyecto
-            // 
-            this.txtTutorProyecto.Location = new System.Drawing.Point(328, 279);
-            this.txtTutorProyecto.Name = "txtTutorProyecto";
-            this.txtTutorProyecto.Size = new System.Drawing.Size(166, 20);
-            this.txtTutorProyecto.TabIndex = 24;
             // 
             // lblTutorProyecto
             // 
@@ -251,13 +244,6 @@
             this.btnAceptarProyecto.Text = "Aceptar";
             this.btnAceptarProyecto.UseVisualStyleBackColor = true;
             this.btnAceptarProyecto.Click += new System.EventHandler(this.btnAceptarProyecto_Click);
-            // 
-            // txtCicloProyecto
-            // 
-            this.txtCicloProyecto.Location = new System.Drawing.Point(328, 253);
-            this.txtCicloProyecto.Name = "txtCicloProyecto";
-            this.txtCicloProyecto.Size = new System.Drawing.Size(166, 20);
-            this.txtCicloProyecto.TabIndex = 20;
             // 
             // txtComentariosProyecto
             // 
@@ -289,6 +275,7 @@
             // 
             // txtFechaProyecto
             // 
+            this.txtFechaProyecto.Enabled = false;
             this.txtFechaProyecto.Location = new System.Drawing.Point(328, 123);
             this.txtFechaProyecto.Name = "txtFechaProyecto";
             this.txtFechaProyecto.Size = new System.Drawing.Size(166, 20);
@@ -441,14 +428,14 @@
             // 
             // pnlDatosProfesores
             // 
+            this.pnlDatosProfesores.Controls.Add(this.cmbAdminProfesor);
+            this.pnlDatosProfesores.Controls.Add(this.cmbActivoProfesor);
+            this.pnlDatosProfesores.Controls.Add(this.cmbGeneroProfesor);
             this.pnlDatosProfesores.Controls.Add(this.btnCancelarProfesor);
             this.pnlDatosProfesores.Controls.Add(this.btnAceptarProfesor);
             this.pnlDatosProfesores.Controls.Add(this.lblEspecialidadProfesor);
             this.pnlDatosProfesores.Controls.Add(this.txtEspecialidadProfesor);
-            this.pnlDatosProfesores.Controls.Add(this.txtAdminProfesor);
-            this.pnlDatosProfesores.Controls.Add(this.txtActivoProfesor);
             this.pnlDatosProfesores.Controls.Add(this.txtFechaNacProfesor);
-            this.pnlDatosProfesores.Controls.Add(this.txtGeneroProfesor);
             this.pnlDatosProfesores.Controls.Add(this.txtTelefonoProfesor);
             this.pnlDatosProfesores.Controls.Add(this.txtPasswordProfesor);
             this.pnlDatosProfesores.Controls.Add(this.txtEmailProfesor);
@@ -507,33 +494,13 @@
             this.txtEspecialidadProfesor.Size = new System.Drawing.Size(166, 20);
             this.txtEspecialidadProfesor.TabIndex = 21;
             // 
-            // txtAdminProfesor
-            // 
-            this.txtAdminProfesor.Location = new System.Drawing.Point(328, 279);
-            this.txtAdminProfesor.Name = "txtAdminProfesor";
-            this.txtAdminProfesor.Size = new System.Drawing.Size(166, 20);
-            this.txtAdminProfesor.TabIndex = 20;
-            // 
-            // txtActivoProfesor
-            // 
-            this.txtActivoProfesor.Location = new System.Drawing.Point(328, 253);
-            this.txtActivoProfesor.Name = "txtActivoProfesor";
-            this.txtActivoProfesor.Size = new System.Drawing.Size(166, 20);
-            this.txtActivoProfesor.TabIndex = 19;
-            // 
             // txtFechaNacProfesor
             // 
+            this.txtFechaNacProfesor.Enabled = false;
             this.txtFechaNacProfesor.Location = new System.Drawing.Point(328, 201);
             this.txtFechaNacProfesor.Name = "txtFechaNacProfesor";
             this.txtFechaNacProfesor.Size = new System.Drawing.Size(166, 20);
             this.txtFechaNacProfesor.TabIndex = 18;
-            // 
-            // txtGeneroProfesor
-            // 
-            this.txtGeneroProfesor.Location = new System.Drawing.Point(328, 175);
-            this.txtGeneroProfesor.Name = "txtGeneroProfesor";
-            this.txtGeneroProfesor.Size = new System.Drawing.Size(166, 20);
-            this.txtGeneroProfesor.TabIndex = 17;
             // 
             // txtTelefonoProfesor
             // 
@@ -544,6 +511,7 @@
             // 
             // txtPasswordProfesor
             // 
+            this.txtPasswordProfesor.Enabled = false;
             this.txtPasswordProfesor.Location = new System.Drawing.Point(328, 123);
             this.txtPasswordProfesor.Name = "txtPasswordProfesor";
             this.txtPasswordProfesor.Size = new System.Drawing.Size(166, 20);
@@ -696,12 +664,12 @@
             // 
             // pnlDatosAlumnos
             // 
+            this.pnlDatosAlumnos.Controls.Add(this.cmbActivoAlumno);
+            this.pnlDatosAlumnos.Controls.Add(this.cmbCicloAlumno);
+            this.pnlDatosAlumnos.Controls.Add(this.cmbGeneroAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.btnCancelarAlumnos);
             this.pnlDatosAlumnos.Controls.Add(this.btnAceptarAlumnos);
-            this.pnlDatosAlumnos.Controls.Add(this.txtCicloAlumno);
-            this.pnlDatosAlumnos.Controls.Add(this.txtActivoAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.txtFechaNacAlumno);
-            this.pnlDatosAlumnos.Controls.Add(this.txtGeneroAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.txtTelefonoAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.txtPasswordAlumno);
             this.pnlDatosAlumnos.Controls.Add(this.txtEmailAlumno);
@@ -744,22 +712,6 @@
             this.btnAceptarAlumnos.UseVisualStyleBackColor = true;
             this.btnAceptarAlumnos.Click += new System.EventHandler(this.btnAceptarAlumnos_Click);
             // 
-            // txtCicloAlumno
-            // 
-            this.txtCicloAlumno.Enabled = false;
-            this.txtCicloAlumno.Location = new System.Drawing.Point(328, 253);
-            this.txtCicloAlumno.Name = "txtCicloAlumno";
-            this.txtCicloAlumno.Size = new System.Drawing.Size(166, 20);
-            this.txtCicloAlumno.TabIndex = 20;
-            // 
-            // txtActivoAlumno
-            // 
-            this.txtActivoAlumno.Enabled = false;
-            this.txtActivoAlumno.Location = new System.Drawing.Point(328, 227);
-            this.txtActivoAlumno.Name = "txtActivoAlumno";
-            this.txtActivoAlumno.Size = new System.Drawing.Size(166, 20);
-            this.txtActivoAlumno.TabIndex = 19;
-            // 
             // txtFechaNacAlumno
             // 
             this.txtFechaNacAlumno.Enabled = false;
@@ -768,17 +720,8 @@
             this.txtFechaNacAlumno.Size = new System.Drawing.Size(166, 20);
             this.txtFechaNacAlumno.TabIndex = 18;
             // 
-            // txtGeneroAlumno
-            // 
-            this.txtGeneroAlumno.Enabled = false;
-            this.txtGeneroAlumno.Location = new System.Drawing.Point(328, 175);
-            this.txtGeneroAlumno.Name = "txtGeneroAlumno";
-            this.txtGeneroAlumno.Size = new System.Drawing.Size(166, 20);
-            this.txtGeneroAlumno.TabIndex = 17;
-            // 
             // txtTelefonoAlumno
             // 
-            this.txtTelefonoAlumno.Enabled = false;
             this.txtTelefonoAlumno.Location = new System.Drawing.Point(328, 149);
             this.txtTelefonoAlumno.Name = "txtTelefonoAlumno";
             this.txtTelefonoAlumno.Size = new System.Drawing.Size(166, 20);
@@ -794,7 +737,6 @@
             // 
             // txtEmailAlumno
             // 
-            this.txtEmailAlumno.Enabled = false;
             this.txtEmailAlumno.Location = new System.Drawing.Point(328, 97);
             this.txtEmailAlumno.Name = "txtEmailAlumno";
             this.txtEmailAlumno.Size = new System.Drawing.Size(166, 20);
@@ -802,7 +744,6 @@
             // 
             // txtDNIAlumno
             // 
-            this.txtDNIAlumno.Enabled = false;
             this.txtDNIAlumno.Location = new System.Drawing.Point(328, 71);
             this.txtDNIAlumno.Name = "txtDNIAlumno";
             this.txtDNIAlumno.Size = new System.Drawing.Size(166, 20);
@@ -810,7 +751,6 @@
             // 
             // txtApellidosAlumno
             // 
-            this.txtApellidosAlumno.Enabled = false;
             this.txtApellidosAlumno.Location = new System.Drawing.Point(328, 45);
             this.txtApellidosAlumno.Name = "txtApellidosAlumno";
             this.txtApellidosAlumno.Size = new System.Drawing.Size(166, 20);
@@ -974,6 +914,90 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // cmbGeneroAlumno
+            // 
+            this.cmbGeneroAlumno.FormattingEnabled = true;
+            this.cmbGeneroAlumno.Items.AddRange(new object[] {
+            "M",
+            "F",
+            "NB"});
+            this.cmbGeneroAlumno.Location = new System.Drawing.Point(328, 174);
+            this.cmbGeneroAlumno.Name = "cmbGeneroAlumno";
+            this.cmbGeneroAlumno.Size = new System.Drawing.Size(166, 21);
+            this.cmbGeneroAlumno.TabIndex = 27;
+            // 
+            // cmbCicloAlumno
+            // 
+            this.cmbCicloAlumno.FormattingEnabled = true;
+            this.cmbCicloAlumno.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbCicloAlumno.Location = new System.Drawing.Point(328, 255);
+            this.cmbCicloAlumno.Name = "cmbCicloAlumno";
+            this.cmbCicloAlumno.Size = new System.Drawing.Size(166, 21);
+            this.cmbCicloAlumno.TabIndex = 28;
+            // 
+            // cmbActivoAlumno
+            // 
+            this.cmbActivoAlumno.FormattingEnabled = true;
+            this.cmbActivoAlumno.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.cmbActivoAlumno.Location = new System.Drawing.Point(328, 228);
+            this.cmbActivoAlumno.Name = "cmbActivoAlumno";
+            this.cmbActivoAlumno.Size = new System.Drawing.Size(166, 21);
+            this.cmbActivoAlumno.TabIndex = 29;
+            // 
+            // cmbGeneroProfesor
+            // 
+            this.cmbGeneroProfesor.FormattingEnabled = true;
+            this.cmbGeneroProfesor.Items.AddRange(new object[] {
+            "M",
+            "F",
+            "NB"});
+            this.cmbGeneroProfesor.Location = new System.Drawing.Point(328, 174);
+            this.cmbGeneroProfesor.Name = "cmbGeneroProfesor";
+            this.cmbGeneroProfesor.Size = new System.Drawing.Size(166, 21);
+            this.cmbGeneroProfesor.TabIndex = 25;
+            // 
+            // cmbActivoProfesor
+            // 
+            this.cmbActivoProfesor.FormattingEnabled = true;
+            this.cmbActivoProfesor.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.cmbActivoProfesor.Location = new System.Drawing.Point(328, 253);
+            this.cmbActivoProfesor.Name = "cmbActivoProfesor";
+            this.cmbActivoProfesor.Size = new System.Drawing.Size(166, 21);
+            this.cmbActivoProfesor.TabIndex = 26;
+            // 
+            // cmbAdminProfesor
+            // 
+            this.cmbAdminProfesor.FormattingEnabled = true;
+            this.cmbAdminProfesor.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.cmbAdminProfesor.Location = new System.Drawing.Point(328, 280);
+            this.cmbAdminProfesor.Name = "cmbAdminProfesor";
+            this.cmbAdminProfesor.Size = new System.Drawing.Size(166, 21);
+            this.cmbAdminProfesor.TabIndex = 27;
+            // 
+            // cmbCicloProyecto
+            // 
+            this.cmbCicloProyecto.FormattingEnabled = true;
+            this.cmbCicloProyecto.Location = new System.Drawing.Point(328, 253);
+            this.cmbCicloProyecto.Name = "cmbCicloProyecto";
+            this.cmbCicloProyecto.Size = new System.Drawing.Size(166, 21);
+            this.cmbCicloProyecto.TabIndex = 25;
+            // 
+            // cmbTutorProyecto
+            // 
+            this.cmbTutorProyecto.FormattingEnabled = true;
+            this.cmbTutorProyecto.Location = new System.Drawing.Point(328, 279);
+            this.cmbTutorProyecto.Name = "cmbTutorProyecto";
+            this.cmbTutorProyecto.Size = new System.Drawing.Size(166, 21);
+            this.cmbTutorProyecto.TabIndex = 26;
+            // 
             // frmAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1030,17 +1054,11 @@
         private System.Windows.Forms.TextBox txtEmailAlumno;
         private System.Windows.Forms.TextBox txtDNIAlumno;
         private System.Windows.Forms.TextBox txtApellidosAlumno;
-        private System.Windows.Forms.TextBox txtCicloAlumno;
-        private System.Windows.Forms.TextBox txtActivoAlumno;
         private System.Windows.Forms.TextBox txtFechaNacAlumno;
-        private System.Windows.Forms.TextBox txtGeneroAlumno;
         private System.Windows.Forms.TextBox txtTelefonoAlumno;
         private System.Windows.Forms.TextBox txtPasswordAlumno;
         private System.Windows.Forms.Panel pnlDatosProfesores;
-        private System.Windows.Forms.TextBox txtAdminProfesor;
-        private System.Windows.Forms.TextBox txtActivoProfesor;
         private System.Windows.Forms.TextBox txtFechaNacProfesor;
-        private System.Windows.Forms.TextBox txtGeneroProfesor;
         private System.Windows.Forms.TextBox txtTelefonoProfesor;
         private System.Windows.Forms.TextBox txtPasswordProfesor;
         private System.Windows.Forms.TextBox txtEmailProfesor;
@@ -1061,7 +1079,6 @@
         private System.Windows.Forms.Label lblApellidosProfesor;
         private System.Windows.Forms.Label lblNombreProfesor;
         private System.Windows.Forms.Panel pnlDatosProyecto;
-        private System.Windows.Forms.TextBox txtCicloProyecto;
         private System.Windows.Forms.TextBox txtComentariosProyecto;
         private System.Windows.Forms.TextBox txtArchivosProyecto;
         private System.Windows.Forms.TextBox txtMemoriaProyecto;
@@ -1092,7 +1109,14 @@
         private System.Windows.Forms.Button btnAceptarAlumnos;
         private System.Windows.Forms.Button btnCancelarProyecto;
         private System.Windows.Forms.Button btnAceptarProyecto;
-        private System.Windows.Forms.TextBox txtTutorProyecto;
         private System.Windows.Forms.Label lblTutorProyecto;
+        private System.Windows.Forms.ComboBox cmbGeneroAlumno;
+        private System.Windows.Forms.ComboBox cmbCicloAlumno;
+        private System.Windows.Forms.ComboBox cmbActivoAlumno;
+        private System.Windows.Forms.ComboBox cmbActivoProfesor;
+        private System.Windows.Forms.ComboBox cmbGeneroProfesor;
+        private System.Windows.Forms.ComboBox cmbAdminProfesor;
+        private System.Windows.Forms.ComboBox cmbCicloProyecto;
+        private System.Windows.Forms.ComboBox cmbTutorProyecto;
     }
 }

@@ -8,18 +8,18 @@ namespace RetoDI.Models
 {
     public class Profesor
     {
-        public int Id { get; set; }
+        public string idprofesor { get; set; }
 
-        public string Nombre { get; set; }
-        public string Apellidos { get; set; }
-        public string DNI { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string ContraseñaEncriptada { get; set; }
-        public string Telefono { get; set; }
-        public string Genero { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Especialidad { get; set; }
-        public bool ActivoActualmente { get; set; }
-        public bool EsAdministrador { get; set; }
+        public string nombre { get; set; }
+        public string apellidos { get; set; }
+        public string dni { get; set; }
+        public string email { get; set; }
+        public string password_encr { get; set; }
+        public string telefono { get; set; }
+        public string genero { get; set; }
+        public DateTime fechaNac { get; set; }
+        public string especialidad { get; set; }
+        public bool activo { get; set; }
+        public bool admin { get; set; }
     }
 }
