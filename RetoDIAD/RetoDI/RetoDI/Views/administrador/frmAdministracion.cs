@@ -45,22 +45,15 @@ namespace RetoDI.Administrador
             controlCiclos = new ControlCiclos();
 
 
-            try
-            {
-                Bitmap img = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
-                this.BackgroundImage = img;
-                this.BackgroundImageLayout = ImageLayout.Zoom;
-            }
-            catch (Exception ex)
-            {
-
-            }
+            
 
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmBotones frmBotones = new frmBotones();
+            frmBotones.Show();
         }
 
 
@@ -363,8 +356,14 @@ namespace RetoDI.Administrador
             btnDatoProyecto_Click(sender, e);
         }
 
+        public void MostrarNombreProfesor()
+        {
+            lblNombre.Text = $"Bienvenido {SessionData.NombreProfesor} {SessionData.ApellidosProfesor}";
+        }
 
-
-
+        private void frmAdministracion_Load(object sender, EventArgs e)
+        {
+            MostrarNombreProfesor();
+        }
     }
 }

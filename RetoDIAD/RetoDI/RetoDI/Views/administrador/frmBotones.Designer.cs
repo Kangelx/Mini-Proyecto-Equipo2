@@ -106,7 +106,6 @@
             this.Name = "Botones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Botones";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Botones_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

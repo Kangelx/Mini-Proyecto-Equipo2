@@ -22,14 +22,14 @@ namespace RetoDI
 {
     public partial class frmBotones : Form
     {
-        frmLogin inicio;
-        public frmBotones(frmLogin frmLogin)
+
+        public frmBotones()
         {
             InitializeComponent();
-            inicio = frmLogin;
+
             if (SessionData.TipoUsuario != "Administrador")
             {
-                btnAministracion.Hide();
+                btnAministracion.Enabled = false;  // Deshabilitar el botón (no solo ocultarlo)
             }
         }
 
@@ -49,18 +49,23 @@ namespace RetoDI
 
         private void btnGestion_Click(object sender, EventArgs e)
         {
-            frmGestiiónInterna gestioninterna = new frmGestiiónInterna();
+            frmGestionInterna gestioninterna = new frmGestionInterna();
             gestioninterna.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show(
+                        "¿Está seguro de que desea salir de la aplicación?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
         }
 
-        private void Botones_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            inicio.Show();
-        }
+       
     }
 }
