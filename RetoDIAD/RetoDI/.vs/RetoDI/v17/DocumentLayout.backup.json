@@ -1,0 +1,211 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\controles\\controlproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\controles\\controlproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\administrador\\frmgestii\u00F3ninterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\administrador\\frmgestii\u00F3ninterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\frmproyectoo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\frmproyectoo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\frmproyectoo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\frmproyectoo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\administrador\\frmgestii\u00F3ninterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\administrador\\frmgestii\u00F3ninterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\frmproyectoo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\frmproyectoo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\controles\\controlrealizan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\controles\\controlrealizan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\calificaralumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\calificaralumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\models\\realizada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\models\\realizada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|i:\\fpcarmen\\minireto\\mini-proyecto-equipo2\\retodiad\\retodi\\retodi\\views\\profesores\\calificaralumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF1CF912-CEDD-4C16-A763-34205CA499DE}|RetoDI\\RetoDI.csproj|solutionrelative:retodi\\views\\profesores\\calificaralumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 288,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmGestii\u00F3nInterna.cs [Dise\u00F1o]",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T11:28:11.805Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmProyectoo.Designer.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.Designer.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\frmProyectoo.Designer.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.Designer.cs*",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\frmProyectoo.Designer.cs*",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAnwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T11:27:02.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmProyectoo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\frmProyectoo.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\frmProyectoo.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T11:25:02.155Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmProyectoo.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\frmProyectoo.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\frmProyectoo.cs*",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\frmProyectoo.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T11:25:15.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmGestii\u00F3nInterna.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "RelativeToolTip": "RetoDI\\Views\\administrador\\frmGestii\u00F3nInterna.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwGAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:03:00.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControlProyectos.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlProyectos.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Controles\\ControlProyectos.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlProyectos.cs",
+              "RelativeToolTip": "RetoDI\\Controles\\ControlProyectos.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:56:29.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Realizada.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Models\\Realizada.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Models\\Realizada.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Models\\Realizada.cs",
+              "RelativeToolTip": "RetoDI\\Models\\Realizada.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:52:10.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ControlRealizan.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlRealizan.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Controles\\ControlRealizan.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Controles\\ControlRealizan.cs",
+              "RelativeToolTip": "RetoDI\\Controles\\ControlRealizan.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAwGcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:51:09.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalificarAlumnos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\CalificarAlumnos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\CalificarAlumnos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:39:28.533Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CalificarAlumnos.cs",
+              "DocumentMoniker": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "RelativeDocumentMoniker": "RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "ToolTip": "I:\\fpcarmen\\MINIRETO\\Mini-Proyecto-Equipo2\\RetoDIAD\\RetoDI\\RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "RelativeToolTip": "RetoDI\\Views\\profesores\\CalificarAlumnos.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwDcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:39:33.416Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 112,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 173,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
